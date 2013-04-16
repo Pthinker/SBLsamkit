@@ -1,0 +1,33 @@
+####                       SBLsamkit module 4.19                            ####
+#                                                                              #
+#    SBLsamkit is part of a series of modules developed for Systems Biology    #
+#    Laboratory UK, a community interest company involved in clinically        #
+#    focussed research in immunology and molecular biology.                    #
+#                                                                              #
+####   Copyright 2010-2011 Systems Biology Laboratory, All Rights Reserved  ####
+
+
+
+# The DEFAULT section is used to defines variables which can be referenced by 
+# individual stream sets.  Variable substitution (called "interpolation") is 
+# achived by using the variable name in a %()s construct.  For example if you 
+# define a variable "var1" as "mm01,0,1000,mm01,1001,2000,mm01,2001,-1" you 
+# can use the shorthand %(var1)s anywhere you would normally use the full 
+# string you just defined.
+
+[DEFAULT]
+mm04=mm04,84385596,84386838
+mm06=mm06,136354311,136360000,mm06,136360001,136363070
+mm10=mm10,112258073,112259851
+mm11=mm11,64289031,64289995
+mm14=mm14,21059074,21072999
+mm17=mm17,8103683,8104714
+mm18=mm18,77476326,77478062
+RNAMES=%(mm04)s,%(mm06)s,%(mm10)s,%(mm11)s,%(mm14)s,%(mm17)s,%(mm18)s
+
+[section01]
+st1=cjp,UUE,rf,rng,[%(RNAMES)s],sam,csv1
+st2=rjp.ff,UUE,ff,rng,[%(RNAMES)s],sam,csv1
+st3=rjp.rr,UUE,rr,rng,[%(RNAMES)s],sam,csv1
+st4=stp.all,UUE,fr,rng,[%(RNAMES)s],sam,csv1
+

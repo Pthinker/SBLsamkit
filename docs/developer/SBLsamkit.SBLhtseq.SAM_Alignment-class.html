@@ -1,0 +1,1696 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>SBLsamkit.SBLhtseq.SAM_Alignment</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="SBLsamkit-module.html">Package&nbsp;SBLsamkit</a> ::
+        <a href="SBLsamkit.SBLhtseq-module.html">Module&nbsp;SBLhtseq</a> ::
+        Class&nbsp;SAM_Alignment
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SAM_Alignment</h1><p class="nomargin-top"><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+                  object --+            
+                           |            
+                ??.Alignment --+        
+                               |        
+??.AlignmentWithSequenceReversal --+    
+                                   |    
+                    ??.SAM_Alignment --+
+                                       |
+                                      <strong class="uidshort">SAM_Alignment</strong>
+</pre>
+
+<hr />
+<p>Subclass of the HTSeq.SAM_Alignment class.  This subclass stores 
+  additional information from the record such as the input record itself, 
+  and parses the tag elements which HTSeq.SAM_Alignment does not yet 
+  do.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">line</span>)</span><br />
+      Call super class __init__ and then supplement it by saving the input 
+      line and parsing the tags and saving them in a dict.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__getflagbit__" class="summary-sig-name">__getflagbit__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mask</span>)</span><br />
+      A convenient method of querying individual flag bits, this method 
+      takes a single input argument: the bit (an index from 1 to 11).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__getflagbit__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__setflagbit__" class="summary-sig-name">__setflagbit__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mask</span>,
+        <span class="summary-sig-arg">state</span>)</span><br />
+      A convenient method of manipulating flag bits, this method takes two 
+      input arguments:  the bit (an index from 1 to 11) and the state 'on',
+      'off' or 'toggle'</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__setflagbit__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__set_properties__" class="summary-sig-name">__set_properties__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      This internal method sets up properties for each of the names fields 
+      in the SAM standard document.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__set_properties__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__getMinPhred" class="summary-sig-name" onclick="show_private();">__getMinPhred</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Compute minimum PHRED score and return it.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__getMinPhred">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.copy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#matchRNAME" class="summary-sig-name">matchRNAME</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rname</span>)</span><br />
+      Given an rname (string) returns True or False depending on whether 
+      the rname (including wildcards) matches self.RNAME.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchRNAME">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#matchPOS" class="summary-sig-name">matchPOS</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rangeTuple</span>,
+        <span class="summary-sig-arg">flank</span>,
+        <span class="summary-sig-arg">RHS</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Given a range tuple defined as (minPos,maxPos), returns True or False
+      depending on whether self.POS falls inside the defined range, using 
+      &quot;flank&quot; as a margin.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchPOS">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="matchPHREDvalue"></a><span class="summary-sig-name">matchPHREDvalue</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rangeTuple</span>)</span><br />
+      Given a range tuple defined as (minPhred,maxPhred), return True or 
+      False depending on whether the phred score falls within the range</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchPHREDvalue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#matchNMvalue" class="summary-sig-name">matchNMvalue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rangeTuple</span>)</span><br />
+      Given a range tuple defined as (minNM,maxNM), returns True or False 
+      depending on whether the NM:i tag integer value falls inside the 
+      defined range.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchNMvalue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#matchRPvalue" class="summary-sig-name">matchRPvalue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rangeTuple</span>)</span><br />
+      Given a range tuple defined as (minRP,maxRP), returns True or False 
+      depending on whether the ZN:i tag integer value falls inside the 
+      defined range.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchRPvalue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#matchRNAMEandPOS" class="summary-sig-name">matchRNAMEandPOS</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">rnameTuple</span>,
+        <span class="summary-sig-arg">flank</span>,
+        <span class="summary-sig-arg">RHS</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Given an RNAME tuple defined as (RNAME, minPos, maxPos), returns True
+      or False depending on whether self.RNAME matches and self.POS falls 
+      inside the defined range.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchRNAMEandPOS">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__set_additional_attributes__" class="summary-sig-name">__set_additional_attributes__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Sets up additional useful attributes, outside the standard SAM spec.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__set_additional_attributes__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#__set_strand__" class="summary-sig-name">__set_strand__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Sets the strand direction where applicable.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__set_strand__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><i>unreachable</i>.SAM_Alignment</code></b>:
+      <code>__new__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><i>unreachable</i>.Alignment</code></b>:
+      <code>__repr__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#QNAME" class="summary-name">QNAME</a><br />
+      SAM record QNAME value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#FLAG" class="summary-name">FLAG</a><br />
+      SAM record FLAG value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#RNAME" class="summary-name">RNAME</a><br />
+      SAM record RNAME value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#POS" class="summary-name">POS</a><br />
+      SAM record POS value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#POSL1" class="summary-name">POSL1</a><br />
+      L1 (left-hand) position POS value (always same as POS)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#POSR2" class="summary-name">POSR2</a><br />
+      R1 (left-hand) position POS value (always POS + LENGTH) (See samkit 4
+      spec 4)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#READ_BEGIN" class="summary-name">READ_BEGIN</a><br />
+      Overall position of first base in the sequence.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#READ_END" class="summary-name">READ_END</a><br />
+      Overall position of last base in the sequence.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#LENGTH" class="summary-name">LENGTH</a><br />
+      Sequence length
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#MAPQ" class="summary-name">MAPQ</a><br />
+      SAM record MAPQ value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#CIGAR" class="summary-name">CIGAR</a><br />
+      SAM record CIGAR value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#MRNM" class="summary-name">MRNM</a><br />
+      SAM record MRNM value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#MPOS" class="summary-name">MPOS</a><br />
+      SAM record MPOS value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#ISIZE" class="summary-name">ISIZE</a><br />
+      SAM record ISIZE value
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#SEQ" class="summary-name">SEQ</a><br />
+      SAM record unmoodified SEQ string (*NEVER* reverse complemented)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#QUAL" class="summary-name">QUAL</a><br />
+      SAM record unmodified QUAL string
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#MINPHRED" class="summary-name">MINPHRED</a><br />
+      Minimim Phred score
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#TAGS" class="summary-name">TAGS</a><br />
+      SAM record tags array:
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#STRAND" class="summary-name">STRAND</a><br />
+      SAM record strand
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#mapped" class="summary-name">mapped</a><br />
+      Sam record is marked as mapped.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#STRING" class="summary-name">STRING</a><br />
+      This property returns a string format of the current fields in the 
+      SAM_Alignment object.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#M" class="summary-name">M</a><br />
+      Record is mapped - either uniquely mapped or repeat mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#U" class="summary-name">U</a><br />
+      A convenience property which returns True if this record is uniquely 
+      mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#nM" class="summary-name">nM</a><br />
+      A convenience property which returns True if this record is not 
+      mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#rN" class="summary-name">rN</a><br />
+      A convenience property which returns True if this record is repeat 
+      mapped (Novoalign)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#rS" class="summary-name">rS</a><br />
+      A convenience property which returns True if this record is repeat 
+      mapped (stampy)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#rM" class="summary-name">rM</a><br />
+      Top-level repeat-mapped filter (matches rN and rS)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#rMM" class="summary-name">rMM</a><br />
+      Convenience property - used by matchWithRangeList in Stream.py.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#X" class="summary-name">X</a><br />
+      A convenience property - returns True if *either* not mapped or 
+      repeat mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#A" class="summary-name">A</a><br />
+      A convenience property which always returns True (match Any) mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#QC" class="summary-name">QC</a><br />
+      A convenience property which returns True if this record has been 
+      marked quality failure by the aligner ( 'ZS:Z:QC' )
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#CLC1" class="summary-name">CLC1</a><br />
+      This property returns True if self.CIGAR contains the letter 'I' at 
+      the beginning, after up to three numerical digits, or at the end.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#f" class="summary-name">f</a><br />
+      Convenience property which returns True if the record is forward 
+      mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#r" class="summary-name">r</a><br />
+      Convenience property which returns True if the record is reverse 
+      mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#x" class="summary-name">x</a><br />
+      Returns True if record is not uniquely mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SBLhtseq.SAM_Alignment-class.html#s" class="summary-name">s</a><br />
+      Returns True is either forward or reverse mapped
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><i>unreachable</i>.SAM_Alignment</code></b>:
+      <code>aQual</code>,
+      <code>cigar</code>,
+      <code>duplicate</code>,
+      <code>flags</code>,
+      <code>inferred_insert_size</code>,
+      <code>mate_aligned</code>,
+      <code>mate_start</code>,
+      <code>paired_end</code>,
+      <code>passed_filter</code>,
+      <code>pe_which</code>,
+      <code>primary</code>,
+      <code>proper_pair</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><i>unreachable</i>.AlignmentWithSequenceReversal</code></b>:
+      <code>iv</code>,
+      <code>read</code>,
+      <code>read_as_aligned</code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><i>unreachable</i>.AlignmentWithSequenceReversal</code></b> (private):
+      <code>_read_as_sequenced</code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><i>unreachable</i>.Alignment</code></b>:
+      <code>aligned</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">line</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Call super class __init__ and then supplement it by saving the input 
+  line and parsing the tags and saving them in a dict.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__getflagbit__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__getflagbit__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mask</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__getflagbit__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A convenient method of querying individual flag bits, this method 
+  takes a single input argument: the bit (an index from 1 to 11).</p>
+  <p>See also: __setflagbit__()</p>
+  <p>Flag bits are defined as follows: SAM_NONE                0x0000  null
+  SAM_MAPPED       0      0x0001  read is paired in sequencing 
+  SAM_PROPERPAIR   1      0x0002  read is mapped in proper pair 
+  SAM_UNMAPPED     2      0x0004  this sequence is unmapped 
+  SAM_MATEUNMAPPED 3      0x0008  mate sequence is unmapped SAM_QUERYSTRAND
+  4      0x0010  query strand (0=&gt;forward, 1=&gt;reverse) SAM_MATESTRAND
+  5      0x0020  mate strand  (0=&gt;forward, 1=&gt;reverse) SAM_PAIRFIRST
+  6      0x0040  read is first in pair SAM_PAIRSECOND   7      0x0080  read
+  is second in pair SAM_NOTPRIMARY          0x0100  alignment is not 
+  primary SAM_CHECKFAIL           0x0200  read failed platform/vendor 
+  checks SAM_DUPLICATE           0x0400  read is PCR or optical 
+  duplicate</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__setflagbit__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__setflagbit__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mask</span>,
+        <span class="sig-arg">state</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__setflagbit__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A convenient method of manipulating flag bits, this method takes two 
+  input arguments:  the bit (an index from 1 to 11) and the state 'on', 
+  'off' or 'toggle'</p>
+  <p>Flag bits are defined as follows: SAM_NONE                0x0000  null
+  SAM_MAPPED       0      0x0001  read is paired in sequencing 
+  SAM_PROPERPAIR   1      0x0002  read is mapped in proper pair 
+  SAM_UNMAPPED     2      0x0004  this sequence is unmapped 
+  SAM_MATEUNMAPPED 3      0x0008  mate sequence is unmapped SAM_QUERYSTRAND
+  4      0x0010  query strand (0=&gt;forward, 1=&gt;reverse) SAM_MATESTRAND
+  5      0x0020  mate strand  (0=&gt;forward, 1=&gt;reverse) SAM_PAIRFIRST
+  6      0x0040  read is first in pair SAM_PAIRSECOND   7      0x0080  read
+  is second in pair SAM_NOTPRIMARY          0x0100  alignment is not 
+  primary SAM_CHECKFAIL           0x0200  read failed platform/vendor 
+  checks SAM_DUPLICATE           0x0400  read is PCR or optical 
+  duplicate</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__set_properties__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__set_properties__</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__set_properties__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This internal method sets up properties for each of the names fields 
+  in the SAM standard document.  Currently these are:</p>
+  <p>QNAME FLAG RNAME POS MAPQ CIGAR MRNM MPOS ISIZE SEQ QUAL 
+  [TAG:VTYPE:VALUE,]</p>
+  <p>We store the sequence and quality score string as read from the SAM 
+  file, (HTSeq reverse-complements the sequence and phred scores for 
+  records which are deemed to have come from the reverse reference).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__getMinPhred"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__getMinPhred</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__getMinPhred">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compute minimum PHRED score and return it.  PHRED score is stored as a
+  string of ASCII characters which encode the PHRED value plus 33 (to make 
+  the characters fall within the normal printable ASCII range</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchRNAME"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchRNAME</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rname</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchRNAME">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given an rname (string) returns True or False depending on whether the
+  rname (including wildcards) matches self.RNAME.  If rname is a tuple 
+  describing an rname string, minPos and maxPos, extract the first string 
+  and use that for matching</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchPOS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchPOS</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rangeTuple</span>,
+        <span class="sig-arg">flank</span>,
+        <span class="sig-arg">RHS</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchPOS">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a range tuple defined as (minPos,maxPos), returns True or False 
+  depending on whether self.POS falls inside the defined range, using 
+  &quot;flank&quot; as a margin.  If the optional RHS argument is True, 
+  match against the POSR2 position instead of the default POSL1 
+  position.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchNMvalue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchNMvalue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rangeTuple</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchNMvalue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a range tuple defined as (minNM,maxNM), returns True or False 
+  depending on whether the NM:i tag integer value falls inside the defined 
+  range.  If no NM:i tag exists, return False</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchRPvalue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchRPvalue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rangeTuple</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchRPvalue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a range tuple defined as (minRP,maxRP), returns True or False 
+  depending on whether the ZN:i tag integer value falls inside the defined 
+  range.  If no ZN:i tag or ZS:Z:R exists, assume a ZN:i value of zero and 
+  test for inclusion in minRP,maxRP range as usual (e.g. matchRPvalue will 
+  pass (return True) if no ZS:Z:R/ZN:i tags are present but minRP is 0)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchRNAMEandPOS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchRNAMEandPOS</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">rnameTuple</span>,
+        <span class="sig-arg">flank</span>,
+        <span class="sig-arg">RHS</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.matchRNAMEandPOS">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given an RNAME tuple defined as (RNAME, minPos, maxPos), returns True 
+  or False depending on whether self.RNAME matches and self.POS falls 
+  inside the defined range.  The optionsl RHS will be passed to matchNAME, 
+  where, if True, the POSR2 value will be used for matching instead of the 
+  default posL1</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__set_additional_attributes__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__set_additional_attributes__</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__set_additional_attributes__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets up additional useful attributes, outside the standard SAM spec. 
+  These are used as convenience by samkit3.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__set_strand__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__set_strand__</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SBLhtseq-pysrc.html#SAM_Alignment.__set_strand__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the strand direction where applicable.  If the strand is mapped 
+  (0x0004 is not set, 0x0008 is), use flag 0x0010.  If the strand is 
+  unmapped but the mate is mapped, (0x0004 is set, 0x0008 is not), instead 
+  use flag 0x00020 SAM_NONE                0x0000  null SAM_MAPPED
+  0x0001  read is paired in sequencing SAM_PROPERPAIR          0x0002  read
+  is mapped in proper pair SAM_UNMAPPED            0x0004  this sequence is
+  unmapped SAM_MATEUNMAPPED        0x0008  mate sequence is unmapped 
+  SAM_QUERYSTRAND         0x0010  query strand (0=&gt;forward, 
+  1=&gt;reverse) SAM_MATESTRAND          0x0020  mate strand  
+  (0=&gt;forward, 1=&gt;reverse) SAM_PAIRFIRST           0x0040  read is 
+  first in pair SAM_PAIRSECOND          0x0080  read is second in pair 
+  SAM_NOTPRIMARY          0x0100  alignment is not primary SAM_CHECKFAIL
+  0x0200  read failed platform/vendor checks SAM_DUPLICATE           0x0400
+  read is PCR or optical duplicate</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="QNAME"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">QNAME</h3>
+  <p>SAM record QNAME value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.QNAME(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record QNAME value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="FLAG"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">FLAG</h3>
+  <p>SAM record FLAG value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.FLAG(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record FLAG value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="RNAME"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">RNAME</h3>
+  <p>SAM record RNAME value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.RNAME(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record RNAME value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="POS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">POS</h3>
+  <p>SAM record POS value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.POS(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record POS value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="POSL1"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">POSL1</h3>
+  <p>L1 (left-hand) position POS value (always same as POS)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.POSL1(<span class="summary-sig-arg">self</span>)</span>
+        - L1 (left-hand) position POS value (always same as POS)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="POSR2"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">POSR2</h3>
+  <p>R1 (left-hand) position POS value (always POS + LENGTH) (See samkit 4 
+  spec 4)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.POSR2(<span class="summary-sig-arg">self</span>)</span>
+        - R1 (left-hand) position POS value (always POS + LENGTH) (See samkit 4 spec 
+4)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="READ_BEGIN"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">READ_BEGIN</h3>
+  <p>Overall position of first base in the sequence. Same as POSL1</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.READ_BEGIN(<span class="summary-sig-arg">self</span>)</span>
+        - Overall position of first base in the sequence.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="READ_END"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">READ_END</h3>
+  <p>Overall position of last base in the sequence. BEGIN + readLength</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.READ_END(<span class="summary-sig-arg">self</span>)</span>
+        - Overall position of last base in the sequence.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="LENGTH"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">LENGTH</h3>
+  <p>Sequence length</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.LENGTH(<span class="summary-sig-arg">self</span>)</span>
+        - Sequence length
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MAPQ"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MAPQ</h3>
+  <p>SAM record MAPQ value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MAPQ(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record MAPQ value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="CIGAR"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">CIGAR</h3>
+  <p>SAM record CIGAR value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.CIGAR(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record CIGAR value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MRNM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MRNM</h3>
+  <p>SAM record MRNM value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MRNM(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record MRNM value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MPOS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MPOS</h3>
+  <p>SAM record MPOS value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MPOS(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record MPOS value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="ISIZE"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">ISIZE</h3>
+  <p>SAM record ISIZE value</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.ISIZE(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record ISIZE value
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="SEQ"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">SEQ</h3>
+  <p>SAM record unmoodified SEQ string (*NEVER* reverse complemented)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.SEQ(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record unmoodified SEQ string (*NEVER* reverse complemented)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="QUAL"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">QUAL</h3>
+  <p>SAM record unmodified QUAL string</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.QUAL(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record unmodified QUAL string
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MINPHRED"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MINPHRED</h3>
+  <p>Minimim Phred score</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MINPHRED(<span class="summary-sig-arg">self</span>)</span>
+        - Minimim Phred score
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="TAGS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">TAGS</h3>
+  <p>SAM record tags array:</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.TAGS(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record tags array:
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="STRAND"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">STRAND</h3>
+  <p>SAM record strand</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.STRAND(<span class="summary-sig-arg">self</span>)</span>
+        - SAM record strand
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="mapped"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">mapped</h3>
+  <p>Sam record is marked as mapped.  If the CIGAR string is '*' we can 
+  assume the record is not uniquely aligned.  Don't confuse this with the 
+  &quot;mapped&quot; flag bits.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.mapped(<span class="summary-sig-arg">self</span>)</span>
+        - Sam record is marked as mapped.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="STRING"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">STRING</h3>
+  <p>This property returns a string format of the current fields in the 
+  SAM_Alignment object.  So at any time the state of the SAM record (e.g. 
+  after altering attributes e.g. manual reverse-complement) can be 
+  converted back into a string.  By default self.SEQ will return the 
+  sequence as read in.</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.STRING(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns a string format of the current fields in the 
+SAM_Alignment object.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="M"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">M</h3>
+  <p>Record is mapped - either uniquely mapped or repeat mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.M(<span class="summary-sig-arg">self</span>)</span>
+        - Record is mapped - either uniquely mapped or repeat mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="U"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">U</h3>
+  <p>A convenience property which returns True if this record is uniquely 
+  mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.U(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property which returns True if this record is uniquely mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="nM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">nM</h3>
+  <p>A convenience property which returns True if this record is not 
+  mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.nM(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property which returns True if this record is not mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rN"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rN</h3>
+  <p>A convenience property which returns True if this record is repeat 
+  mapped (Novoalign)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rN(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property which returns True if this record is repeat mapped 
+(Novoalign)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rS</h3>
+  <p>A convenience property which returns True if this record is repeat 
+  mapped (stampy)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rS(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property which returns True if this record is repeat mapped 
+(stampy)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rM</h3>
+  <p>Top-level repeat-mapped filter (matches rN and rS)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rM(<span class="summary-sig-arg">self</span>)</span>
+        - Top-level repeat-mapped filter (matches rN and rS)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rMM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rMM</h3>
+  <p>Convenience property - used by matchWithRangeList in Stream.py. 
+  Returns true if the record is marked repeat-mapped, but *is* mapped (has 
+  an RNAME and POS</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rMM(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - used by matchWithRangeList in Stream.py.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="X"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">X</h3>
+  <p>A convenience property - returns True if *either* not mapped or repeat
+  mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.X(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property - returns True if *either* not mapped or repeat 
+mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="A"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">A</h3>
+  <p>A convenience property which always returns True (match Any) 
+  mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.A(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property which always returns True (match Any) mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="QC"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">QC</h3>
+  <p>A convenience property which returns True if this record has been 
+  marked quality failure by the aligner ( 'ZS:Z:QC' )</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.QC(<span class="summary-sig-arg">self</span>)</span>
+        - A convenience property which returns True if this record has been marked 
+quality failure by the aligner ( 'ZS:Z:QC' )
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="CLC1"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">CLC1</h3>
+  <p>This property returns True if self.CIGAR contains the letter 'I' at 
+  the beginning, after up to three numerical digits, or at the end.  See 
+  the --ssN,CLC1 filter for more information</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.CLC1(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True if self.CIGAR contains the letter 'I' at the 
+beginning, after up to three numerical digits, or at the end.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="f"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">f</h3>
+  <p>Convenience property which returns True if the record is forward 
+  mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.f(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property which returns True if the record is forward mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="r"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">r</h3>
+  <p>Convenience property which returns True if the record is reverse 
+  mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.r(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property which returns True if the record is reverse mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="x"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">x</h3>
+  <p>Returns True if record is not uniquely mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.x(<span class="summary-sig-arg">self</span>)</span>
+        - Returns True if record is not uniquely mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="s"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">s</h3>
+  <p>Returns True is either forward or reverse mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.s(<span class="summary-sig-arg">self</span>)</span>
+        - Returns True is either forward or reverse mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar  7 00:44:13 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,1824 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>SBLsamkit.SAM.SAMPair</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="SBLsamkit-module.html">Package&nbsp;SBLsamkit</a> ::
+        <a href="SBLsamkit.SAM-module.html">Module&nbsp;SAM</a> ::
+        Class&nbsp;SAMPair
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="SBLsamkit.SAM.SAMPair-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SAMPair</h1><p class="nomargin-top"><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">SAMPair</strong>
+</pre>
+
+<hr />
+<p>A class describing a read pair.  Both reads of a pair are stored, and 
+  some pair-specific attributes are set, such as the computed distance 
+  between their start positions.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">first</span>,
+        <span class="summary-sig-arg">second</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      String representation of the SAM pair</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__str__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="writeSAM"></a><span class="summary-sig-name">writeSAM</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">outputfile</span>,
+        <span class="summary-sig-arg">gzipFlag</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">closeWhenDone</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Basic output method - overridden in the Operators subclasses to add 
+      proper-pair handling.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.writeSAM">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#reverse_complement" class="summary-sig-name">reverse_complement</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns a copy of the self with the appropriate strands 
+      reverse-complemented for output.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.reverse_complement">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#proper_pair" class="summary-sig-name">proper_pair</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">target</span>,
+        <span class="summary-sig-arg">opts</span>)</span><br />
+      Returns a copy of the self with the appropriate strands modified into
+      a virtual proper pair.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.proper_pair">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#proper_pairOLD" class="summary-sig-name">proper_pairOLD</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">target</span>,
+        <span class="summary-sig-arg">opts</span>)</span><br />
+      Returns a copy of the self with the appropriate strands modified into
+      a virtual proper pair.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.proper_pairOLD">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ordered_pair"></a><span class="summary-sig-name">ordered_pair</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stream</span>,
+        <span class="summary-sig-arg">op</span>)</span><br />
+      Returns a copy of the self with the appropriate strands ordered 
+      depending on the order operator mode and stream type.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.ordered_pair">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#writeFASTQ" class="summary-sig-name">writeFASTQ</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">outputfiles</span>,
+        <span class="summary-sig-arg">gzipFlag</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">closeWhenDone</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Basic output method - overridden in the Operators subclasses to add 
+      proper-pair handling.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.writeFASTQ">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.SAM.SAMPair-class.html#__open__" class="summary-sig-name">__open__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">flags</span>,
+        <span class="summary-sig-arg">gzipped</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Opens a file handle with the specified flags.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__open__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__write_fastq__"></a><span class="summary-sig-name">__write_fastq__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">record</span>,
+        <span class="summary-sig-arg">filehandle</span>,
+        <span class="summary-sig-arg">append_to_name</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      This private method handles writing a single SAM record to an open 
+      file handle in FASTQ format</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__write_fastq__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.copy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="swap"></a><span class="summary-sig-name">swap</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns a copy if self where the strands are swapped</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.swap">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#RNAMEpair" class="summary-name">RNAMEpair</a><br />
+      Returns a string containing the sorted RNAME pair comma-separated, 
+      useful as a dictionary key for example.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UX" class="summary-name">UX</a><br />
+      This property returns True if one record is U and the other is X
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UnM" class="summary-name">UnM</a><br />
+      This property returns True when one record is U and the other is nM 
+      (in either order)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UrM" class="summary-name">UrM</a><br />
+      This property returns True when one record is U and the other is rM 
+      (in either order)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UrN" class="summary-name">UrN</a><br />
+      This property returns True when one record is U and the other is rN 
+      (in either order); (rN means mapped in novoalign style)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UrS" class="summary-name">UrS</a><br />
+      This property returns True when one record is U and the other is rS 
+      (in either order); (rS means mapped in novoalign style)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UU" class="summary-name">UU</a><br />
+      This property returns True only if both records in the pair are 
+      uniquely mapped
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UUE" class="summary-name">UUE</a><br />
+      A more specific version of the UU property, where both records must 
+      be mapped to the same RNAMEs
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UUD" class="summary-name">UUD</a><br />
+      In a similar vein to UUE, both records must be uniquely mapped, but 
+      to *different* RNAMEs
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UA" class="summary-name">UA</a><br />
+      At least one record in the pair is U
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MX" class="summary-name">MX</a><br />
+      One record is M, the other is X, in either order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MnM" class="summary-name">MnM</a><br />
+      One record is M, the other is nM, in either order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MrM" class="summary-name">MrM</a><br />
+      One record is M, the other is rM, in either order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MrN" class="summary-name">MrN</a><br />
+      One record is M, the other is rN (repeat mapped/novoalign), in either
+      order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MrS" class="summary-name">MrS</a><br />
+      One record is M, the other is rS (repeat mapped, stampy), in either 
+      order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MM" class="summary-name">MM</a><br />
+      Both records are M
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MME" class="summary-name">MME</a><br />
+      A more specific version of the MM property, where both records must 
+      be mapped to the same RNAMEs
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MMD" class="summary-name">MMD</a><br />
+      In a similar vein to MME, both records must be mapped, but to 
+      *different* RNAMEs
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#MA" class="summary-name">MA</a><br />
+      At least one record in the pair is M
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#nMnM" class="summary-name">nMnM</a><br />
+      Convenience property - matches any record pair where both records are
+      not mapped (nM)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rMrM" class="summary-name">rMrM</a><br />
+      Convenience property - matches any record pair where both records are
+      repeat mapped (rM)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rNrN" class="summary-name">rNrN</a><br />
+      Convenience property - matches any record pair where both records are
+      repeat mapped in novoalign parlance (rN)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rSrS" class="summary-name">rSrS</a><br />
+      Convenience property - matches any record pair where both records are
+      repeat mapped in stampy parlance (rS)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#nMrM" class="summary-name">nMrM</a><br />
+      Convenience property - matches any record pair where one record is 
+      unmapped (nM) and the other is repeat mapped (rM), in either order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#nMrN" class="summary-name">nMrN</a><br />
+      Convenience property - matches any record pair where one record is 
+      unmapped (nM) and the other is repeat mapped in novoalign paralace 
+      (rN), in either order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#nMrS" class="summary-name">nMrS</a><br />
+      Convenience property - matches any record pair where one record is 
+      unmapped (nM) and the other is repeat mapped in stampy parlance (rS),
+      in either order
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#nMA" class="summary-name">nMA</a><br />
+      Convenience property - matches any record pair where at least one 
+      record is unmapped (nM)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rMA" class="summary-name">rMA</a><br />
+      Convenience property - matches any record pair where at least one 
+      record is repeat mapped (rM)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rNA" class="summary-name">rNA</a><br />
+      Convenience property - matches any record pair where at least one 
+      record is repeat mapped in novoalign parlance (rN)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rSA" class="summary-name">rSA</a><br />
+      Convenience property - matches any record pair where at least one 
+      record is repeat mapped in stampy parlance (rS)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#XX" class="summary-name">XX</a><br />
+      Convenience property - matches any record pair where *neither* record
+      is U
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#XA" class="summary-name">XA</a><br />
+      Convenience property - matches any record pair where at least one 
+      record is X (i.e.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#AA" class="summary-name">AA</a><br />
+      Convenience property - matches any record pair, since each record 
+      will always return True for the A property
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#QC" class="summary-name">QC</a><br />
+      Returns true if either record in the pair failed any QC tests
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#CLC1" class="summary-name">CLC1</a><br />
+      One or both records contain an 'I' in the CIGAR string
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UQC" class="summary-name">UQC</a><br />
+      ** Internally used ONLY ** This property returns True when one record
+      is U and the other is tagged as a &quot;QC&quot; failed read (in 
+      either order)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#UCLC1" class="summary-name">UCLC1</a><br />
+      ** Internally used ONLY ** This property returns True when one record
+      is U and the other is tagged as a &quot;CLC1&quot; read (in either 
+      order)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#fr" class="summary-name">fr</a><br />
+      This property returns True ONLY if the leftmost strand in the pair is
+      forward AND the rightmost strand is reverse (+/-)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rf" class="summary-name">rf</a><br />
+      This property returns True ONLY if the leftmost strand in the pair is
+      reverse AND the rightmost strand is forward: (-/+)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#ssd" class="summary-name">ssd</a><br />
+      This property returns True if the pair is either fr or rf
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#fx" class="summary-name">fx</a><br />
+      This property returns True if the U strand in a UX pair is mapped to 
+      the forward strand
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rx" class="summary-name">rx</a><br />
+      This property returns True if the U strand in a UX pair is mapped to 
+      the forward strand
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#ff" class="summary-name">ff</a><br />
+      This property indicates whether both strands are forward-facing (+/+)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#rr" class="summary-name">rr</a><br />
+      This property indicates whether both strands are reverse-facing (-/-)
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#sse" class="summary-name">sse</a><br />
+      This property returns True if the pair is either ff or rr
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#aa" class="summary-name">aa</a><br />
+      This property returns True always
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#left" class="summary-name">left</a><br />
+      Returns the left-most record of the pair
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.SAM.SAMPair-class.html#right" class="summary-name">right</a><br />
+      Returns the right-most record of the pair
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">first</span>,
+        <span class="sig-arg">second</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__str__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Informal representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__str__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>String representation of the SAM pair</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__str__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="reverse_complement"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reverse_complement</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.reverse_complement">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a copy of the self with the appropriate strands 
+  reverse-complemented for output.  Note that we assign the altered reads 
+  to the _read attribute, which is then always assumed to contain the 
+  sequence in &quot;ready for output&quot; orientation.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="proper_pair"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">proper_pair</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">target</span>,
+        <span class="sig-arg">opts</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.proper_pair">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a copy of the self with the appropriate strands modified into 
+  a virtual proper pair.  If self is not UUE, return an unmodified copy</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="proper_pairOLD"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">proper_pairOLD</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">target</span>,
+        <span class="sig-arg">opts</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.proper_pairOLD">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a copy of the self with the appropriate strands modified into 
+  a virtual proper pair.  If self is not UUE, return an unmodified copy</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="writeFASTQ"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">writeFASTQ</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">outputfiles</span>,
+        <span class="sig-arg">gzipFlag</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">closeWhenDone</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.writeFASTQ">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Basic output method - overridden in the Operators subclasses to add 
+  proper-pair handling.  NOTE: This basic method does NO reverse-complement
+  processing.  If outputfiles[1] is None, both records will be written to 
+  the same file (outputfiles[0]), i.e. a shuffled output file.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="__open__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__open__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">filename</span>,
+        <span class="sig-arg">flags</span>,
+        <span class="sig-arg">gzipped</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.SAM-pysrc.html#SAMPair.__open__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Opens a file handle with the specified flags.  If gzipped is True, the
+  filename will have '.gz' appended to it and gzip.open() will be used 
+  instead of open().  In either case, returns the open file handle For 
+  maximum portabililty, the filename may also be an open filehandle (or 
+  filehandle-like object such as a StringIO object) in which case it is 
+  returned unchanged (and in that case the flags and optional gzipped 
+  argument are ignored)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="RNAMEpair"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">RNAMEpair</h3>
+  <p>Returns a string containing the sorted RNAME pair comma-separated, 
+  useful as a dictionary key for example.  The pair of RNAMEs is sorted 
+  such that the pair will be the same regardless of the order they appear 
+  in the record pair</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.RNAMEpair(<span class="summary-sig-arg">self</span>)</span>
+        - Returns a string containing the sorted RNAME pair comma-separated, useful 
+as a dictionary key for example.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UX</h3>
+  <p>This property returns True if one record is U and the other is X</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UX(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True if one record is U and the other is X
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UnM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UnM</h3>
+  <p>This property returns True when one record is U and the other is nM 
+  (in either order)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UnM(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True when one record is U and the other is nM (in 
+either order)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UrM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UrM</h3>
+  <p>This property returns True when one record is U and the other is rM 
+  (in either order)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UrM(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True when one record is U and the other is rM (in 
+either order)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UrN"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UrN</h3>
+  <p>This property returns True when one record is U and the other is rN 
+  (in either order); (rN means mapped in novoalign style)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UrN(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True when one record is U and the other is rN (in 
+either order); (rN means mapped in novoalign style)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UrS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UrS</h3>
+  <p>This property returns True when one record is U and the other is rS 
+  (in either order); (rS means mapped in novoalign style)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UrS(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True when one record is U and the other is rS (in 
+either order); (rS means mapped in novoalign style)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UU"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UU</h3>
+  <p>This property returns True only if both records in the pair are 
+  uniquely mapped</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UU(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True only if both records in the pair are uniquely 
+mapped
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UUE"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UUE</h3>
+  <p>A more specific version of the UU property, where both records must be
+  mapped to the same RNAMEs</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UUE(<span class="summary-sig-arg">self</span>)</span>
+        - A more specific version of the UU property, where both records must be 
+mapped to the same RNAMEs
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UUD"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UUD</h3>
+  <p>In a similar vein to UUE, both records must be uniquely mapped, but to
+  *different* RNAMEs</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UUD(<span class="summary-sig-arg">self</span>)</span>
+        - In a similar vein to UUE, both records must be uniquely mapped, but to 
+*different* RNAMEs
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UA</h3>
+  <p>At least one record in the pair is U</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UA(<span class="summary-sig-arg">self</span>)</span>
+        - At least one record in the pair is U
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MX</h3>
+  <p>One record is M, the other is X, in either order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MX(<span class="summary-sig-arg">self</span>)</span>
+        - One record is M, the other is X, in either order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MnM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MnM</h3>
+  <p>One record is M, the other is nM, in either order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MnM(<span class="summary-sig-arg">self</span>)</span>
+        - One record is M, the other is nM, in either order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MrM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MrM</h3>
+  <p>One record is M, the other is rM, in either order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MrM(<span class="summary-sig-arg">self</span>)</span>
+        - One record is M, the other is rM, in either order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MrN"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MrN</h3>
+  <p>One record is M, the other is rN (repeat mapped/novoalign), in either 
+  order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MrN(<span class="summary-sig-arg">self</span>)</span>
+        - One record is M, the other is rN (repeat mapped/novoalign), in either order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MrS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MrS</h3>
+  <p>One record is M, the other is rS (repeat mapped, stampy), in either 
+  order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MrS(<span class="summary-sig-arg">self</span>)</span>
+        - One record is M, the other is rS (repeat mapped, stampy), in either order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MM</h3>
+  <p>Both records are M</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MM(<span class="summary-sig-arg">self</span>)</span>
+        - Both records are M
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MME"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MME</h3>
+  <p>A more specific version of the MM property, where both records must be
+  mapped to the same RNAMEs</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MME(<span class="summary-sig-arg">self</span>)</span>
+        - A more specific version of the MM property, where both records must be 
+mapped to the same RNAMEs
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MMD"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MMD</h3>
+  <p>In a similar vein to MME, both records must be mapped, but to 
+  *different* RNAMEs</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MMD(<span class="summary-sig-arg">self</span>)</span>
+        - In a similar vein to MME, both records must be mapped, but to *different* 
+RNAMEs
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="MA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">MA</h3>
+  <p>At least one record in the pair is M</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.MA(<span class="summary-sig-arg">self</span>)</span>
+        - At least one record in the pair is M
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="nMnM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">nMnM</h3>
+  <p>Convenience property - matches any record pair where both records are 
+  not mapped (nM)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.nMnM(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where both records are not 
+mapped (nM)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rMrM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rMrM</h3>
+  <p>Convenience property - matches any record pair where both records are 
+  repeat mapped (rM)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rMrM(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where both records are 
+repeat mapped (rM)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rNrN"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rNrN</h3>
+  <p>Convenience property - matches any record pair where both records are 
+  repeat mapped in novoalign parlance (rN)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rNrN(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where both records are 
+repeat mapped in novoalign parlance (rN)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rSrS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rSrS</h3>
+  <p>Convenience property - matches any record pair where both records are 
+  repeat mapped in stampy parlance (rS)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rSrS(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where both records are 
+repeat mapped in stampy parlance (rS)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="nMrM"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">nMrM</h3>
+  <p>Convenience property - matches any record pair where one record is 
+  unmapped (nM) and the other is repeat mapped (rM), in either order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.nMrM(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where one record is unmapped
+(nM) and the other is repeat mapped (rM), in either order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="nMrN"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">nMrN</h3>
+  <p>Convenience property - matches any record pair where one record is 
+  unmapped (nM) and the other is repeat mapped in novoalign paralace (rN), 
+  in either order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.nMrN(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where one record is unmapped
+(nM) and the other is repeat mapped in novoalign paralace (rN), in either 
+order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="nMrS"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">nMrS</h3>
+  <p>Convenience property - matches any record pair where one record is 
+  unmapped (nM) and the other is repeat mapped in stampy parlance (rS), in 
+  either order</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.nMrS(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where one record is unmapped
+(nM) and the other is repeat mapped in stampy parlance (rS), in either 
+order
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="nMA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">nMA</h3>
+  <p>Convenience property - matches any record pair where at least one 
+  record is unmapped (nM)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.nMA(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where at least one record is
+unmapped (nM)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rMA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rMA</h3>
+  <p>Convenience property - matches any record pair where at least one 
+  record is repeat mapped (rM)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rMA(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where at least one record is
+repeat mapped (rM)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rNA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rNA</h3>
+  <p>Convenience property - matches any record pair where at least one 
+  record is repeat mapped in novoalign parlance (rN)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rNA(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where at least one record is
+repeat mapped in novoalign parlance (rN)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rSA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rSA</h3>
+  <p>Convenience property - matches any record pair where at least one 
+  record is repeat mapped in stampy parlance (rS)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rSA(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where at least one record is
+repeat mapped in stampy parlance (rS)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="XX"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">XX</h3>
+  <p>Convenience property - matches any record pair where *neither* record 
+  is U</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.XX(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where *neither* record is U
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="XA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">XA</h3>
+  <p>Convenience property - matches any record pair where at least one 
+  record is X (i.e. either nM or rM)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.XA(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair where at least one record is
+X (i.e.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="AA"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">AA</h3>
+  <p>Convenience property - matches any record pair, since each record will
+  always return True for the A property</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.AA(<span class="summary-sig-arg">self</span>)</span>
+        - Convenience property - matches any record pair, since each record will 
+always return True for the A property
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="QC"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">QC</h3>
+  <p>Returns true if either record in the pair failed any QC tests</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.QC(<span class="summary-sig-arg">self</span>)</span>
+        - Returns true if either record in the pair failed any QC tests
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="CLC1"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">CLC1</h3>
+  <p>One or both records contain an 'I' in the CIGAR string</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.CLC1(<span class="summary-sig-arg">self</span>)</span>
+        - One or both records contain an 'I' in the CIGAR string
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UQC"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UQC</h3>
+  <p>** Internally used ONLY ** This property returns True when one record 
+  is U and the other is tagged as a &quot;QC&quot; failed read (in either 
+  order)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UQC(<span class="summary-sig-arg">self</span>)</span>
+        - ** Internally used ONLY ** This property returns True when one record is U 
+and the other is tagged as a &quot;QC&quot; failed read (in either order)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="UCLC1"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">UCLC1</h3>
+  <p>** Internally used ONLY ** This property returns True when one record 
+  is U and the other is tagged as a &quot;CLC1&quot; read (in either 
+  order)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.UCLC1(<span class="summary-sig-arg">self</span>)</span>
+        - ** Internally used ONLY ** This property returns True when one record is U 
+and the other is tagged as a &quot;CLC1&quot; read (in either order)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fr"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">fr</h3>
+  <p>This property returns True ONLY if the leftmost strand in the pair is 
+  forward AND the rightmost strand is reverse (+/-)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.fr(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True ONLY if the leftmost strand in the pair is 
+forward AND the rightmost strand is reverse (+/-)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rf"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rf</h3>
+  <p>This property returns True ONLY if the leftmost strand in the pair is 
+  reverse AND the rightmost strand is forward: (-/+)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rf(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True ONLY if the leftmost strand in the pair is 
+reverse AND the rightmost strand is forward: (-/+)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="ssd"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">ssd</h3>
+  <p>This property returns True if the pair is either fr or rf</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.ssd(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True if the pair is either fr or rf
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fx"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">fx</h3>
+  <p>This property returns True if the U strand in a UX pair is mapped to 
+  the forward strand</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.fx(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True if the U strand in a UX pair is mapped to the 
+forward strand
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rx"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rx</h3>
+  <p>This property returns True if the U strand in a UX pair is mapped to 
+  the forward strand</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rx(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True if the U strand in a UX pair is mapped to the 
+forward strand
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="ff"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">ff</h3>
+  <p>This property indicates whether both strands are forward-facing 
+  (+/+)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.ff(<span class="summary-sig-arg">self</span>)</span>
+        - This property indicates whether both strands are forward-facing (+/+)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="rr"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">rr</h3>
+  <p>This property indicates whether both strands are reverse-facing 
+  (-/-)</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.rr(<span class="summary-sig-arg">self</span>)</span>
+        - This property indicates whether both strands are reverse-facing (-/-)
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sse"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">sse</h3>
+  <p>This property returns True if the pair is either ff or rr</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.sse(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True if the pair is either ff or rr
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="aa"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">aa</h3>
+  <p>This property returns True always</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.aa(<span class="summary-sig-arg">self</span>)</span>
+        - This property returns True always
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="left"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">left</h3>
+  <p>Returns the left-most record of the pair</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.left(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the left-most record of the pair
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="right"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">right</h3>
+  <p>Returns the right-most record of the pair</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.right(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the right-most record of the pair
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar  7 00:44:13 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

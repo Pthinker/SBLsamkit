@@ -1,0 +1,52 @@
+####                       SBLsamkit module 4.19                            ####
+#                                                                              #
+#    SBLsamkit is part of a series of modules developed for Systems Biology    #
+#    Laboratory UK, a community interest company involved in clinically        #
+#    focussed research in immunology and molecular biology.                    #
+#                                                                              #
+####   Copyright 2010-2011 Systems Biology Laboratory, All Rights Reserved  ####
+
+
+
+# One way to make stream sets easier to read, is to wrap stream definitions 
+# over multiple lines, just make sure to begin each line after the first with
+# one or more spaces, as shown here:
+
+[section01]
+st1=cjp,UUE,rf,rng,
+    [mm04,84385596,84386838,
+     mm06,136354311,136363070,
+     mm10,112258073,112259851,
+     mm11,64289031,64289995,
+     mm14,21059074,21072999,
+     mm17,8103683,8104714,
+     mm18,77476326,77478062],
+    sam,csv1
+st2=rjp.ff,UUE,ff,rng,
+    [mm04,84385596,84386838,
+     mm06,136354311,136363070,
+     mm10,112258073,112259851,
+     mm11,64289031,64289995,
+     mm14,21059074,21072999,
+     mm17,8103683,8104714,
+     mm18,77476326,77478062],
+    sam,csv1
+st3=rjp.rr,UUE,rr,rng,
+    [mm04,84385596,84386838,
+     mm06,136354311,136363070,
+     mm10,112258073,112259851,
+     mm11,64289031,64289995,
+     mm14,21059074,21072999,
+     mm17,8103683,8104714,
+     mm18,77476326,77478062],
+    sam,csv1
+st4=stp.all,UUE,fr,rng,
+    [mm04,84385596,84386838,
+     mm06,136354311,136363070,
+     mm10,112258073,112259851,
+     mm11,64289031,64289995,
+     mm14,21059074,21072999,
+     mm17,8103683,8104714,
+     mm18,77476326,77478062],
+    sam,csv1
+

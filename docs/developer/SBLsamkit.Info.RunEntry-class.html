@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>SBLsamkit.Info.RunEntry</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="SBLsamkit-module.html">Package&nbsp;SBLsamkit</a> ::
+        <a href="SBLsamkit.Info-module.html">Module&nbsp;Info</a> ::
+        Class&nbsp;RunEntry
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="SBLsamkit.Info.RunEntry-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class RunEntry</h1><p class="nomargin-top"><span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+    
+         |    
+     <a href="SBLsamkit.Info.Entry-class.html">Entry</a> --+
+             |
+            <strong class="uidshort">RunEntry</strong>
+</pre>
+
+<hr />
+<p>Subclass of the basic Entry class which adds suport for the program 
+  run subsection of the .info file ELN entry</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Info.RunEntry-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">app</span>,
+        <span class="summary-sig-arg">version</span>,
+        <span class="summary-sig-arg">arglist</span>,
+        <span class="summary-sig-arg">tstamp</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">entType</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">Automatic</code><code class="variable-quote">'</code></span>)</span><br />
+      Initialize object with current timestamp is no timestamp provided</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Info.RunEntry-class.html#addRunSection" class="summary-sig-name">addRunSection</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pct</span>,
+        <span class="summary-sig-arg">pctLim</span>,
+        <span class="summary-sig-arg">inputfile</span>,
+        <span class="summary-sig-arg">outputdir</span>,
+        <span class="summary-sig-arg">outputfiles</span>,
+        <span class="summary-sig-arg">rangefiles</span>,
+        <span class="summary-sig-arg">statsDict</span>)</span><br />
+      Sets up the run subsection and inserts it into the beginning of the 
+      ELN entry.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry.addRunSection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addRunStats"></a><span class="summary-sig-name">addRunStats</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">statsDict</span>)</span><br />
+      Returns a list of strings containing the run statistics</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry.addRunStats">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="filemodtime"></a><span class="summary-sig-name">filemodtime</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">filename</span>)</span><br />
+      Returns the file modification time as a string</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry.filemodtime">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="SBLsamkit.Info.Entry-class.html">Entry</a></code></b>:
+      <code><a href="SBLsamkit.Info.Entry-class.html#__repr__">__repr__</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#__unindent__">__unindent__</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#__wrapline__">__wrapline__</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#append">append</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#blank">blank</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#end">end</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#prepend">prepend</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#start">start</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="SBLsamkit.Info.Entry-class.html">Entry</a></code></b>:
+      <code><a href="SBLsamkit.Info.Entry-class.html#INDENT">INDENT</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#MAXLINE">MAXLINE</a></code>,
+      <code><a href="SBLsamkit.Info.Entry-class.html#TS">TS</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#ArgListSection" class="summary-name">ArgListSection</a><br />
+      Adds the argument list to the ELN entry
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#CommandLineSection" class="summary-name">CommandLineSection</a><br />
+      Returns a list of strings which describe the command line used when 
+      the calling program was run
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#InputFileSection" class="summary-name">InputFileSection</a><br />
+      Returns the input file section as a list of strings
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#OutputFileSection" class="summary-name">OutputFileSection</a><br />
+      Returns the output file section as a list of strings
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#OutputDirSection" class="summary-name">OutputDirSection</a><br />
+      Returns the output directory section as a list of strings
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#RangeFileSection" class="summary-name">RangeFileSection</a><br />
+      Returns any range files as a list of strings
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Info.RunEntry-class.html#PercentileSection" class="summary-name">PercentileSection</a><br />
+      If the --percentile option was used, this property returns a list of 
+      strings describing the computed values of each computed variable
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="SBLsamkit.Info.Entry-class.html">Entry</a></code></b>:
+      <code><a href="SBLsamkit.Info.Entry-class.html#now">now</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">app</span>,
+        <span class="sig-arg">version</span>,
+        <span class="sig-arg">arglist</span>,
+        <span class="sig-arg">tstamp</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">entType</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">Automatic</code><code class="variable-quote">'</code></span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize object with current timestamp is no timestamp provided</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addRunSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addRunSection</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pct</span>,
+        <span class="sig-arg">pctLim</span>,
+        <span class="sig-arg">inputfile</span>,
+        <span class="sig-arg">outputdir</span>,
+        <span class="sig-arg">outputfiles</span>,
+        <span class="sig-arg">rangefiles</span>,
+        <span class="sig-arg">statsDict</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Info-pysrc.html#RunEntry.addRunSection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets up the run subsection and inserts it into the beginning of the 
+  ELN entry.  This allows us to set up the run subsection at any time 
+  before writing the file and it will still be at the beginning of the ELN 
+  entry.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="ArgListSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">ArgListSection</h3>
+  <p>Adds the argument list to the ELN entry</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.ArgListSection(<span class="summary-sig-arg">self</span>)</span>
+        - Adds the argument list to the ELN entry
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="CommandLineSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">CommandLineSection</h3>
+  <p>Returns a list of strings which describe the command line used when 
+  the calling program was run</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.CommandLineSection(<span class="summary-sig-arg">self</span>)</span>
+        - Returns a list of strings which describe the command line used when the 
+calling program was run
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="InputFileSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">InputFileSection</h3>
+  <p>Returns the input file section as a list of strings</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.InputFileSection(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the input file section as a list of strings
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="OutputFileSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">OutputFileSection</h3>
+  <p>Returns the output file section as a list of strings</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.OutputFileSection(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the output file section as a list of strings
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="OutputDirSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">OutputDirSection</h3>
+  <p>Returns the output directory section as a list of strings</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.OutputDirSection(<span class="summary-sig-arg">self</span>)</span>
+        - Returns the output directory section as a list of strings
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="RangeFileSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">RangeFileSection</h3>
+  <p>Returns any range files as a list of strings</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.RangeFileSection(<span class="summary-sig-arg">self</span>)</span>
+        - Returns any range files as a list of strings
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="PercentileSection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">PercentileSection</h3>
+  <p>If the --percentile option was used, this property returns a list of 
+  strings describing the computed values of each computed variable</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.PercentileSection(<span class="summary-sig-arg">self</span>)</span>
+        - If the --percentile option was used, this property returns a list of 
+strings describing the computed values of each computed variable
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar  7 00:44:13 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

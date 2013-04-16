@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: SBLsamkit
+Version: 4.19
+Summary: SBLsamkit SAM Utilities
+Home-page: http://www.sbl-uk.org
+Author: Brian Sheehan
+Author-email: sheehan@bgstech.com
+License: UNKNOWN
+Description: Python package which extends the capabilities of the
+        HTSeq package for filtering SAM streams based on multiple criteria
+Platform: Unix
+Platform: Linux
+Platform: Mac OS X

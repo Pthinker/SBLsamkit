@@ -1,0 +1,17 @@
+####                       SBLsamkit module 4.19                            ####
+#                                                                              #
+#    SBLsamkit is part of a series of modules developed for Systems Biology    #
+#    Laboratory UK, a community interest company involved in clinically        #
+#    focussed research in immunology and molecular biology.                    #
+#                                                                              #
+####   Copyright 2010-2011 Systems Biology Laboratory, All Rights Reserved  ####
+
+
+
+# In simple cases, just define the streams as you would pass them on the
+# command line, but without the -- at the beginning:
+
+[section01]
+st1=stp,UUE,fr,sam
+st2=all,UX,aa,fastq,noinfo
+

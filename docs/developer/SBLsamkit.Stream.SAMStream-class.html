@@ -1,0 +1,1246 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>SBLsamkit.Stream.SAMStream</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="SBLsamkit-module.html">Package&nbsp;SBLsamkit</a> ::
+        <a href="SBLsamkit.Stream-module.html">Module&nbsp;Stream</a> ::
+        Class&nbsp;SAMStream
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="SBLsamkit.Stream.SAMStream-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SAMStream</h1><p class="nomargin-top"><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">SAMStream</strong>
+</pre>
+
+<hr />
+<p>Basic SAM Stream class describing common stream/filter operations. 
+  Specific streams are designed as subclasses of this basic filter. The 
+  base SAMStream class allows all recognized LL classes.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">myname</span>,
+        <span class="summary-sig-arg">optionString</span>)</span><br />
+      Sets up default parameters.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#op" class="summary-sig-name">op</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">operator</span>)</span><br />
+      Convenience method which returns whether the passed-in operator 
+      string exists in self.ops['ops'].</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.op">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="orderOp"></a><span class="summary-sig-name">orderOp</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns a list of tuples containing each order operator (if any) and 
+      the sub-stream which it will operator on</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.orderOp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#leftStream" class="summary-sig-name">leftStream</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">operator</span>)</span><br />
+      Return the substream declared to the left of a specific operator.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.leftStream">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="applyEX"></a><span class="summary-sig-name">applyEX</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">matchedFlag</span>)</span><br />
+      Checks if the OP_EX operator is in effect, and if so returns the 
+      inverse of the provided boolean flag, otherwise it returns the same 
+      value passed in.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.applyEX">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="recordStats"></a><span class="summary-sig-name">recordStats</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">matchedFlag</span>)</span><br />
+      Examinines incoming pair and records counts for LL (all pairs) and SS
+      (UUE pairs only) as well as a list and count of rnames and rname 
+      pairs, as appropriate</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.recordStats">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#evaluatePairMapping" class="summary-sig-name">evaluatePairMapping</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">attribute</span>)</span><br />
+      Multi-processor SBLsamkit exposed massive memory accumulation when 
+      StreamProcessor tasks used an eval() or exec as a way to determine 
+      which object property to examine.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.evaluatePairMapping">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#match" class="summary-sig-name">match</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>)</span><br />
+      Test pair for a given filter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.match">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#matchWithRangeList" class="summary-sig-name">matchWithRangeList</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>)</span><br />
+      Compares pair against each rname in self.ops['rnames'] and returns 
+      True if any match is found on either strand.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithRangeList">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="matchWithRangePairList"></a><span class="summary-sig-name">matchWithRangePairList</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>)</span><br />
+      Compares pair against each pair of rnames in self.ops['rnames'] and 
+      returns True if a match is found on both strands where each strand 
+      matches each rname in the pair.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithRangePairList">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#matchWithSize" class="summary-sig-name">matchWithSize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>)</span><br />
+      Simplest match method, this returns True if the insert length of of 
+      the pair falls between the lower and higher size limits (iLrange) 
+      inclusive the lower limit (i.e.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithSize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="matchWithPHRED"></a><span class="summary-sig-name">matchWithPHRED</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">filter</span>)</span><br />
+      Filter match method, this returns True if the phred score of each 
+      record (FP_PHREDF) or either record (FP_PHREDFA) falls between the 
+      specified min and max values provided in the filter (inclusive)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithPHRED">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#matchWithNMrange" class="summary-sig-name">matchWithNMrange</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">filter</span>)</span><br />
+      Filter match method, this returns True if the NM:i tag is present and
+      the value defined falls within self.ops['NMrange'].</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithNMrange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#matchWithRPrange" class="summary-sig-name">matchWithRPrange</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">filter</span>)</span><br />
+      Filter match method, this returns True if the ZN:i tag is present and
+      the value defined falls within self.ops['RPrange'].</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithRPrange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#next" class="summary-sig-name">next</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">options</span>,
+        <span class="summary-sig-arg">countOnly</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Returns the pair which came in if the match method returns false, 
+      others return None, to prevent the pair getting processed by another,
+      following filter.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.next">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#examinenext" class="summary-sig-name">examinenext</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">options</span>)</span><br />
+      A convenience wrapper for self.next(), this method calls next() with 
+      the optional countOnly argument set to True.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.examinenext">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#write" class="summary-sig-name">write</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">fileroot</span>)</span><br />
+      Controls writing the SAM and/or FASTQ format output records, after 
+      applying whatever transformations are necessary.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.write">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="writefailsafe"></a><span class="summary-sig-name">writefailsafe</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">options</span>,
+        <span class="summary-sig-arg">err</span>)</span><br />
+      Attempt to write pair to a &quot;error&quot; stream for later 
+      analysis without terminating the running process.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.writefailsafe">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ProcessPair"></a><span class="summary-sig-name">ProcessPair</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pair</span>,
+        <span class="summary-sig-arg">outputoperator</span>,
+        <span class="summary-sig-arg">fileroot</span>)</span><br />
+      Processes output pair to apply proper pair conversions if requested, 
+      and reverse-complementing strands for FASTQ output etc.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.ProcessPair">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#outputFiles" class="summary-sig-name">outputFiles</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">opts</span>)</span><br />
+      Generate a list of one or more output files derived from the 
+      opts.output_dir and opts.inputfile attributes.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.outputFiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="parseOperatorTokens"></a><span class="summary-sig-name">parseOperatorTokens</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tokens</span>)</span><br />
+      The default option string reads follows: 
+      --stN=suffix,[LL,][ss,][iL,min,max][,rname list|rname 
+      pair][,op1,op2,...]</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.parseOperatorTokens">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#extractILRange" class="summary-sig-name">extractILRange</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tokens</span>)</span><br />
+      Extracts iLmin,iLmax values from the operator list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.extractILRange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#extractFilterIntRange" class="summary-sig-name">extractFilterIntRange</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tokens</span>,
+        <span class="summary-sig-arg">filter</span>)</span><br />
+      Extracts Nmin,Nmax values from the operator list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.extractFilterIntRange">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#extractRnames" class="summary-sig-name">extractRnames</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tokens</span>)</span><br />
+      Extracts Range lists from the operator list.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.extractRnames">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDefaults"></a><span class="summary-sig-name">setDefaults</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.setDefaults">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="copy"></a><span class="summary-sig-name">copy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns a deep copy of itself.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.copy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="SBLsamkit.Stream.SAMStream-class.html#evaluatedFloat" class="summary-sig-name">evaluatedFloat</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">floatVal</span>)</span><br />
+      This is a property which returns the floatVal unaltered if it is an 
+      float (or typcasts up if an int).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.evaluatedFloat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Stream.SAMStream-class.html#streamSuffix" class="summary-name">streamSuffix</a><br />
+      Generates a stream suffix (used to construct the output filename) by 
+      appending each operator name (where those operators dictate an extra 
+      suffix).
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Stream.SAMStream-class.html#evaluatediLrange" class="summary-name">evaluatediLrange</a><br />
+      This is a property which returns the iLrange list unaltered if both 
+      values are ints.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="SBLsamkit.Stream.SAMStream-class.html#OutputFiles" class="summary-name">OutputFiles</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">myname</span>,
+        <span class="sig-arg">optionString</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets up default parameters.  No LL, suffix, or operators defined. 
+  Default 'ss' selector is 'AA'</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="op"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">op</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">operator</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.op">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Convenience method which returns whether the passed-in operator string
+  exists in self.ops['ops'].  If the operator is OP_ORDER ('order') it will
+  have a trailing secondary operator (e.g. order:LL).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="leftStream"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">leftStream</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">operator</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.leftStream">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the substream declared to the left of a specific operator.  So 
+  for instance if an operator sequence looks like 
+  &quot;sam,order,LL,fastq&quot; and we passed &quot;order:LL&quot; as the 
+  operator this should return &quot;sam&quot;.  It's a way of letting us 
+  apply an operator to a single output sub-stream. Note that if no 
+  sub-stream was declared to the left of the provided operator it's assumed
+  to be &quot;sam&quot;</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="evaluatePairMapping"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">evaluatePairMapping</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>,
+        <span class="sig-arg">attribute</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.evaluatePairMapping">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Multi-processor SBLsamkit exposed massive memory accumulation when 
+  StreamProcessor tasks used an eval() or exec as a way to determine which 
+  object property to examine.  This method circumvents the issue by 
+  exlicitly calling the named attribute.   It will also raise an 
+  AttributeError if the attribute isn't a valid LL_ or SS_ operator.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="match"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">match</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.match">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Test pair for a given filter.  First it verifies the LL and ss filters
+  pass, and if that check succeeds, it will next call the 
+  self.matchWithSizes() method.  If that succeeds, it will finally, based 
+  on the defined operations for the stream (in the self.ops dict), call one
+  of two specific match methods:</p>
+  <p>RNAME range list:       self.matchWithRangeList() RNAME range pair 
+  list:  self.matchWithRangePairList()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchWithRangeList"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchWithRangeList</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithRangeList">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compares pair against each rname in self.ops['rnames'] and returns 
+  True if any match is found on either strand.  If a scope has been 
+  specified (part of the rngf operator) matching is more restrictive:</p>
+  <p>'L1':      left-most record must match POS if both records match RNAME
+  and matching RNAME record must match POS if just one match</p>
+  <p>'R2':      right-most record must match POSR2 if both records match 
+  RNAME, matching RNAME record must match POSR2 if just one match</p>
+  <p>'L1ANDR2': both must match, leftmost to POSL1, right-most to POSR2 no 
+  match if only one record matches the RNAME</p>
+  <p>'L1ORR2':  either left must match POSL1, or right must match POSR2. 
+  For a single RNAME match, either L1 or R2 matches allowed.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchWithSize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchWithSize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithSize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Simplest match method, this returns True if the insert length of of 
+  the pair falls between the lower and higher size limits (iLrange) 
+  inclusive the lower limit (i.e. iLmin &lt;= pair.absiL &lt; iLmax).</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchWithNMrange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchWithNMrange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>,
+        <span class="sig-arg">filter</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithNMrange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Filter match method, this returns True if the NM:i tag is present and 
+  the value defined falls within self.ops['NMrange'].  Depending of whether
+  the 'filters' (self.ops['filters') contains NMf or NMfa, a True value can
+  be returned if either (NMfa) or both (NMf) records match NOTE: Beginning 
+  with SBLsamkit-4.10 this method has been corrected to only apply the test
+  to mapped records.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="matchWithRPrange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">matchWithRPrange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>,
+        <span class="sig-arg">filter</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.matchWithRPrange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Filter match method, this returns True if the ZN:i tag is present and 
+  the value defined falls within self.ops['RPrange'].  Depending of whether
+  the 'filters' (self.ops['filters') contains RPf or RPfa, a True value can
+  be returned if either (RPfa) or both (RPf) records match</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="next"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">next</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>,
+        <span class="sig-arg">options</span>,
+        <span class="sig-arg">countOnly</span>=<span class="sig-default">False</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.next">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the pair which came in if the match method returns false, 
+  others return None, to prevent the pair getting processed by another, 
+  following filter. If the corresponding converter has the 'pass' operator 
+  however, it will return the pair which it has output. Other converters 
+  may also return an unmodified pair, for example the 'strand' operator.  
+  The optional countOnly operator can be set to True in which case record 
+  pairs are analyzed and stats are recorded, but nothing is written</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="examinenext"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">examinenext</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>,
+        <span class="sig-arg">options</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.examinenext">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A convenience wrapper for self.next(), this method calls next() with 
+  the optional countOnly argument set to True.  This processes the stream 
+  just as it usually does, but without writing any output.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="write"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">write</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pair</span>,
+        <span class="sig-arg">fileroot</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.write">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Controls writing the SAM and/or FASTQ format output records, after 
+  applying whatever transformations are necessary.  Saves output filename 
+  in a 'set' attribute (only one copy of any item added is retained), which
+  will be used by the writeInfoFiles() function (in the Processor module) 
+  after the run has completed.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="outputFiles"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">outputFiles</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">opts</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.outputFiles">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Generate a list of one or more output files derived from the 
+  opts.output_dir and opts.inputfile attributes.  If opts.output_dir is 
+  None, an output directory named from the current date &amp; time is 
+  generated</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="extractILRange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">extractILRange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tokens</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.extractILRange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Extracts iLmin,iLmax values from the operator list.  Supports variable
+  substitution (as defined by the --percentile option) and basic math 
+  operations (+, -, *, /).  Throws an exception if iLmin &gt;= iLmax or if 
+  the iLrange values and/or expression is not valid.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="extractFilterIntRange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">extractFilterIntRange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tokens</span>,
+        <span class="sig-arg">filter</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.extractFilterIntRange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Extracts Nmin,Nmax values from the operator list. Unlike the more 
+  sophisticated extractILRange() method, this only accepts two integer 
+  values (represented of course as strings) as a tuple (Nmin,Nmax), where 
+  Nmax must be &gt;= Nmin.  Throws an exception if the first two tokens in 
+  the list do not fit these criterea.  Returns the integer range as a list,
+  along with the remaining tokens.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="extractRnames"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">extractRnames</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tokens</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.extractRnames">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Extracts Range lists from the operator list.  A Range is defined as a 
+  tuple or one or more (RNAME,minPos,maxPos) tuples, where minPos and 
+  maxPos must be integers.  Also accepts range or range pair lists in 
+  seperate files via the 'rngf' and 'rngpf' operators Optional 
+  flank,footprint,and repeat subcommands must be extracted also (range, and
+  rangefile only)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="evaluatedFloat"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">evaluatedFloat</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">floatVal</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="SBLsamkit.Stream-pysrc.html#SAMStream.evaluatedFloat">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>This is a property which returns the floatVal unaltered if it is an 
+  float (or typcasts up if an int).  If the value is a list it should 
+  contain a valid python expression, in which case it will be evaluated and
+  the result will be returned. A string is recursively passed as a 
+  single-item list</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== PROPERTY DETAILS ==================== -->
+<a name="section-PropertyDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Property Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-PropertyDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="streamSuffix"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">streamSuffix</h3>
+  <p>Generates a stream suffix (used to construct the output filename) by 
+  appending each operator name (where those operators dictate an extra 
+  suffix).  Valid operators which can be appended to the suffix include: 
+  OP_EX, NOTE:  The OP_SH operator also implies a suffix but in this case 
+  it replaces the .1.fastq and .2.fastq extensions for FASTQ files with a 
+  single .sh.fastq (shuffled FASTQ file) - see self.write()</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.streamSuffix(<span class="summary-sig-arg">self</span>)</span>
+        - Generates a stream suffix (used to construct the output filename) by 
+appending each operator name (where those operators dictate an extra 
+suffix).
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="evaluatediLrange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">evaluatediLrange</h3>
+  <p>This is a property which returns the iLrange list unaltered if both 
+  values are ints.  If either value is a string it will contain a valid 
+  python expression, in which case it will be evaluated and the result will
+  be returned.  An easy way to assign these back to the iLrange list 
+  is:</p>
+  <p>stream.ops['iLrange'] = stream.evaluatediLrange</p>
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.evaluatediLrange(<span class="summary-sig-arg">self</span>)</span>
+        - This is a property which returns the iLrange list unaltered if both values 
+are ints.
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="OutputFiles"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">OutputFiles</h3>
+  
+  <dl class="fields">
+    <dt>Get Method:</dt>
+    <dd class="value"><span class="summary-sig"><i>unreachable</i>.OutputFiles(<span class="summary-sig-arg">self</span>)</span>
+    </dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar  7 00:44:13 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

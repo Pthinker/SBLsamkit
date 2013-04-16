@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>SBLsamkit.Operators</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="SBLsamkit-module.html">Package&nbsp;SBLsamkit</a> ::
+        Module&nbsp;Operators
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="SBLsamkit.Operators-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="SBLsamkit.Operators-module.html">Module SBLsamkit.Operators</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">####                       SBLsamkit module 4.19                            ####</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment">#                                                                              #</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment">#    SBLsamkit is part of a series of modules developed for Systems Biology    #</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">#    Laboratory UK, a community interest company involved in clinically        #</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment">#    focussed research in immunology and molecular biology.                    #</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment">#                                                                              #</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment">####   Copyright 2010-2011 Systems Biology Laboratory, All Rights Reserved  ####</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-docstring">"""Constants defining operators and location and strand selector strings"""</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment">#============================================================================#</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"># IMPORTANT.  Please refer to the SAMStream.evaluatePairMapping() object method</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"># defined in Stream.py.  If you add or remove and Location or strand mapping</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"># names in this file (LL_ or SS_), YOU MUST UPDATE the aforementioned method</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"># with the same changed names.</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment">#============================================================================#</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment"># Location mapping names. See LL properties section of SAM.SAMPair class</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable SBLsamkit.LL_UX=SBLsamkit-module.html#LL_UX,Variable SBLsamkit.MultiProcess.LL_UX=SBLsamkit.MultiProcess-module.html#LL_UX,Variable SBLsamkit.Operators.LL_UX=SBLsamkit.Operators-module.html#LL_UX,Variable SBLsamkit.Parser.LL_UX=SBLsamkit.Parser-module.html#LL_UX,Variable SBLsamkit.Processor.LL_UX=SBLsamkit.Processor-module.html#LL_UX,Variable SBLsamkit.Stats.LL_UX=SBLsamkit.Stats-module.html#LL_UX,Variable SBLsamkit.Stream.LL_UX=SBLsamkit.Stream-module.html#LL_UX"><a title="SBLsamkit.LL_UX
+SBLsamkit.MultiProcess.LL_UX
+SBLsamkit.Operators.LL_UX
+SBLsamkit.Parser.LL_UX
+SBLsamkit.Processor.LL_UX
+SBLsamkit.Stats.LL_UX
+SBLsamkit.Stream.LL_UX" class="py-name" href="#" onclick="return doclink('link-0', 'LL_UX', 'link-0');">LL_UX</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'UX'</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable SBLsamkit.LL_UNM=SBLsamkit-module.html#LL_UNM,Variable SBLsamkit.MultiProcess.LL_UNM=SBLsamkit.MultiProcess-module.html#LL_UNM,Variable SBLsamkit.Operators.LL_UNM=SBLsamkit.Operators-module.html#LL_UNM,Variable SBLsamkit.Parser.LL_UNM=SBLsamkit.Parser-module.html#LL_UNM,Variable SBLsamkit.Processor.LL_UNM=SBLsamkit.Processor-module.html#LL_UNM,Variable SBLsamkit.Stats.LL_UNM=SBLsamkit.Stats-module.html#LL_UNM,Variable SBLsamkit.Stream.LL_UNM=SBLsamkit.Stream-module.html#LL_UNM"><a title="SBLsamkit.LL_UNM
+SBLsamkit.MultiProcess.LL_UNM
+SBLsamkit.Operators.LL_UNM
+SBLsamkit.Parser.LL_UNM
+SBLsamkit.Processor.LL_UNM
+SBLsamkit.Stats.LL_UNM
+SBLsamkit.Stream.LL_UNM" class="py-name" href="#" onclick="return doclink('link-1', 'LL_UNM', 'link-1');">LL_UNM</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'UnM'</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable SBLsamkit.LL_URM=SBLsamkit-module.html#LL_URM,Variable SBLsamkit.MultiProcess.LL_URM=SBLsamkit.MultiProcess-module.html#LL_URM,Variable SBLsamkit.Operators.LL_URM=SBLsamkit.Operators-module.html#LL_URM,Variable SBLsamkit.Parser.LL_URM=SBLsamkit.Parser-module.html#LL_URM,Variable SBLsamkit.Processor.LL_URM=SBLsamkit.Processor-module.html#LL_URM,Variable SBLsamkit.Stats.LL_URM=SBLsamkit.Stats-module.html#LL_URM,Variable SBLsamkit.Stream.LL_URM=SBLsamkit.Stream-module.html#LL_URM"><a title="SBLsamkit.LL_URM
+SBLsamkit.MultiProcess.LL_URM
+SBLsamkit.Operators.LL_URM
+SBLsamkit.Parser.LL_URM
+SBLsamkit.Processor.LL_URM
+SBLsamkit.Stats.LL_URM
+SBLsamkit.Stream.LL_URM" class="py-name" href="#" onclick="return doclink('link-2', 'LL_URM', 'link-2');">LL_URM</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'UrM'</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable SBLsamkit.LL_URN=SBLsamkit-module.html#LL_URN,Variable SBLsamkit.MultiProcess.LL_URN=SBLsamkit.MultiProcess-module.html#LL_URN,Variable SBLsamkit.Operators.LL_URN=SBLsamkit.Operators-module.html#LL_URN,Variable SBLsamkit.Parser.LL_URN=SBLsamkit.Parser-module.html#LL_URN,Variable SBLsamkit.Processor.LL_URN=SBLsamkit.Processor-module.html#LL_URN,Variable SBLsamkit.Stats.LL_URN=SBLsamkit.Stats-module.html#LL_URN,Variable SBLsamkit.Stream.LL_URN=SBLsamkit.Stream-module.html#LL_URN"><a title="SBLsamkit.LL_URN
+SBLsamkit.MultiProcess.LL_URN
+SBLsamkit.Operators.LL_URN
+SBLsamkit.Parser.LL_URN
+SBLsamkit.Processor.LL_URN
+SBLsamkit.Stats.LL_URN
+SBLsamkit.Stream.LL_URN" class="py-name" href="#" onclick="return doclink('link-3', 'LL_URN', 'link-3');">LL_URN</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'UrN'</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable SBLsamkit.LL_URS=SBLsamkit-module.html#LL_URS,Variable SBLsamkit.MultiProcess.LL_URS=SBLsamkit.MultiProcess-module.html#LL_URS,Variable SBLsamkit.Operators.LL_URS=SBLsamkit.Operators-module.html#LL_URS,Variable SBLsamkit.Parser.LL_URS=SBLsamkit.Parser-module.html#LL_URS,Variable SBLsamkit.Processor.LL_URS=SBLsamkit.Processor-module.html#LL_URS,Variable SBLsamkit.Stats.LL_URS=SBLsamkit.Stats-module.html#LL_URS,Variable SBLsamkit.Stream.LL_URS=SBLsamkit.Stream-module.html#LL_URS"><a title="SBLsamkit.LL_URS
+SBLsamkit.MultiProcess.LL_URS
+SBLsamkit.Operators.LL_URS
+SBLsamkit.Parser.LL_URS
+SBLsamkit.Processor.LL_URS
+SBLsamkit.Stats.LL_URS
+SBLsamkit.Stream.LL_URS" class="py-name" href="#" onclick="return doclink('link-4', 'LL_URS', 'link-4');">LL_URS</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'UrS'</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt id="link-5" class="py-name" targets="Variable SBLsamkit.LL_UU=SBLsamkit-module.html#LL_UU,Variable SBLsamkit.MultiProcess.LL_UU=SBLsamkit.MultiProcess-module.html#LL_UU,Variable SBLsamkit.Operators.LL_UU=SBLsamkit.Operators-module.html#LL_UU,Variable SBLsamkit.Parser.LL_UU=SBLsamkit.Parser-module.html#LL_UU,Variable SBLsamkit.Processor.LL_UU=SBLsamkit.Processor-module.html#LL_UU,Variable SBLsamkit.Stats.LL_UU=SBLsamkit.Stats-module.html#LL_UU,Variable SBLsamkit.Stream.LL_UU=SBLsamkit.Stream-module.html#LL_UU"><a title="SBLsamkit.LL_UU
+SBLsamkit.MultiProcess.LL_UU
+SBLsamkit.Operators.LL_UU
+SBLsamkit.Parser.LL_UU
+SBLsamkit.Processor.LL_UU
+SBLsamkit.Stats.LL_UU
+SBLsamkit.Stream.LL_UU" class="py-name" href="#" onclick="return doclink('link-5', 'LL_UU', 'link-5');">LL_UU</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'UU'</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt id="link-6" class="py-name" targets="Variable SBLsamkit.LL_UUE=SBLsamkit-module.html#LL_UUE,Variable SBLsamkit.MultiProcess.LL_UUE=SBLsamkit.MultiProcess-module.html#LL_UUE,Variable SBLsamkit.Operators.LL_UUE=SBLsamkit.Operators-module.html#LL_UUE,Variable SBLsamkit.Parser.LL_UUE=SBLsamkit.Parser-module.html#LL_UUE,Variable SBLsamkit.Processor.LL_UUE=SBLsamkit.Processor-module.html#LL_UUE,Variable SBLsamkit.Stats.LL_UUE=SBLsamkit.Stats-module.html#LL_UUE,Variable SBLsamkit.Stream.LL_UUE=SBLsamkit.Stream-module.html#LL_UUE"><a title="SBLsamkit.LL_UUE
+SBLsamkit.MultiProcess.LL_UUE
+SBLsamkit.Operators.LL_UUE
+SBLsamkit.Parser.LL_UUE
+SBLsamkit.Processor.LL_UUE
+SBLsamkit.Stats.LL_UUE
+SBLsamkit.Stream.LL_UUE" class="py-name" href="#" onclick="return doclink('link-6', 'LL_UUE', 'link-6');">LL_UUE</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'UUE'</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Variable SBLsamkit.LL_UUD=SBLsamkit-module.html#LL_UUD,Variable SBLsamkit.MultiProcess.LL_UUD=SBLsamkit.MultiProcess-module.html#LL_UUD,Variable SBLsamkit.Operators.LL_UUD=SBLsamkit.Operators-module.html#LL_UUD,Variable SBLsamkit.Parser.LL_UUD=SBLsamkit.Parser-module.html#LL_UUD,Variable SBLsamkit.Processor.LL_UUD=SBLsamkit.Processor-module.html#LL_UUD,Variable SBLsamkit.Stats.LL_UUD=SBLsamkit.Stats-module.html#LL_UUD,Variable SBLsamkit.Stream.LL_UUD=SBLsamkit.Stream-module.html#LL_UUD"><a title="SBLsamkit.LL_UUD
+SBLsamkit.MultiProcess.LL_UUD
+SBLsamkit.Operators.LL_UUD
+SBLsamkit.Parser.LL_UUD
+SBLsamkit.Processor.LL_UUD
+SBLsamkit.Stats.LL_UUD
+SBLsamkit.Stream.LL_UUD" class="py-name" href="#" onclick="return doclink('link-7', 'LL_UUD', 'link-7');">LL_UUD</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'UUD'</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt id="link-8" class="py-name" targets="Variable SBLsamkit.LL_UA=SBLsamkit-module.html#LL_UA,Variable SBLsamkit.MultiProcess.LL_UA=SBLsamkit.MultiProcess-module.html#LL_UA,Variable SBLsamkit.Operators.LL_UA=SBLsamkit.Operators-module.html#LL_UA,Variable SBLsamkit.Parser.LL_UA=SBLsamkit.Parser-module.html#LL_UA,Variable SBLsamkit.Processor.LL_UA=SBLsamkit.Processor-module.html#LL_UA,Variable SBLsamkit.Stats.LL_UA=SBLsamkit.Stats-module.html#LL_UA,Variable SBLsamkit.Stream.LL_UA=SBLsamkit.Stream-module.html#LL_UA"><a title="SBLsamkit.LL_UA
+SBLsamkit.MultiProcess.LL_UA
+SBLsamkit.Operators.LL_UA
+SBLsamkit.Parser.LL_UA
+SBLsamkit.Processor.LL_UA
+SBLsamkit.Stats.LL_UA
+SBLsamkit.Stream.LL_UA" class="py-name" href="#" onclick="return doclink('link-8', 'LL_UA', 'link-8');">LL_UA</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'UA'</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt id="link-9" class="py-name" targets="Variable SBLsamkit.LL_XX=SBLsamkit-module.html#LL_XX,Variable SBLsamkit.MultiProcess.LL_XX=SBLsamkit.MultiProcess-module.html#LL_XX,Variable SBLsamkit.Operators.LL_XX=SBLsamkit.Operators-module.html#LL_XX,Variable SBLsamkit.Parser.LL_XX=SBLsamkit.Parser-module.html#LL_XX,Variable SBLsamkit.Processor.LL_XX=SBLsamkit.Processor-module.html#LL_XX,Variable SBLsamkit.Stats.LL_XX=SBLsamkit.Stats-module.html#LL_XX,Variable SBLsamkit.Stream.LL_XX=SBLsamkit.Stream-module.html#LL_XX"><a title="SBLsamkit.LL_XX
+SBLsamkit.MultiProcess.LL_XX
+SBLsamkit.Operators.LL_XX
+SBLsamkit.Parser.LL_XX
+SBLsamkit.Processor.LL_XX
+SBLsamkit.Stats.LL_XX
+SBLsamkit.Stream.LL_XX" class="py-name" href="#" onclick="return doclink('link-9', 'LL_XX', 'link-9');">LL_XX</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'XX'</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable SBLsamkit.LL_XA=SBLsamkit-module.html#LL_XA,Variable SBLsamkit.MultiProcess.LL_XA=SBLsamkit.MultiProcess-module.html#LL_XA,Variable SBLsamkit.Operators.LL_XA=SBLsamkit.Operators-module.html#LL_XA,Variable SBLsamkit.Parser.LL_XA=SBLsamkit.Parser-module.html#LL_XA,Variable SBLsamkit.Processor.LL_XA=SBLsamkit.Processor-module.html#LL_XA,Variable SBLsamkit.Stats.LL_XA=SBLsamkit.Stats-module.html#LL_XA,Variable SBLsamkit.Stream.LL_XA=SBLsamkit.Stream-module.html#LL_XA"><a title="SBLsamkit.LL_XA
+SBLsamkit.MultiProcess.LL_XA
+SBLsamkit.Operators.LL_XA
+SBLsamkit.Parser.LL_XA
+SBLsamkit.Processor.LL_XA
+SBLsamkit.Stats.LL_XA
+SBLsamkit.Stream.LL_XA" class="py-name" href="#" onclick="return doclink('link-10', 'LL_XA', 'link-10');">LL_XA</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'XA'</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt id="link-11" class="py-name" targets="Variable SBLsamkit.LL_MX=SBLsamkit-module.html#LL_MX,Variable SBLsamkit.MultiProcess.LL_MX=SBLsamkit.MultiProcess-module.html#LL_MX,Variable SBLsamkit.Operators.LL_MX=SBLsamkit.Operators-module.html#LL_MX,Variable SBLsamkit.Parser.LL_MX=SBLsamkit.Parser-module.html#LL_MX,Variable SBLsamkit.Processor.LL_MX=SBLsamkit.Processor-module.html#LL_MX,Variable SBLsamkit.Stats.LL_MX=SBLsamkit.Stats-module.html#LL_MX,Variable SBLsamkit.Stream.LL_MX=SBLsamkit.Stream-module.html#LL_MX"><a title="SBLsamkit.LL_MX
+SBLsamkit.MultiProcess.LL_MX
+SBLsamkit.Operators.LL_MX
+SBLsamkit.Parser.LL_MX
+SBLsamkit.Processor.LL_MX
+SBLsamkit.Stats.LL_MX
+SBLsamkit.Stream.LL_MX" class="py-name" href="#" onclick="return doclink('link-11', 'LL_MX', 'link-11');">LL_MX</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'MX'</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt id="link-12" class="py-name" targets="Variable SBLsamkit.LL_MM=SBLsamkit-module.html#LL_MM,Variable SBLsamkit.MultiProcess.LL_MM=SBLsamkit.MultiProcess-module.html#LL_MM,Variable SBLsamkit.Operators.LL_MM=SBLsamkit.Operators-module.html#LL_MM,Variable SBLsamkit.Parser.LL_MM=SBLsamkit.Parser-module.html#LL_MM,Variable SBLsamkit.Processor.LL_MM=SBLsamkit.Processor-module.html#LL_MM,Variable SBLsamkit.Stats.LL_MM=SBLsamkit.Stats-module.html#LL_MM,Variable SBLsamkit.Stream.LL_MM=SBLsamkit.Stream-module.html#LL_MM"><a title="SBLsamkit.LL_MM
+SBLsamkit.MultiProcess.LL_MM
+SBLsamkit.Operators.LL_MM
+SBLsamkit.Parser.LL_MM
+SBLsamkit.Processor.LL_MM
+SBLsamkit.Stats.LL_MM
+SBLsamkit.Stream.LL_MM" class="py-name" href="#" onclick="return doclink('link-12', 'LL_MM', 'link-12');">LL_MM</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'MM'</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt id="link-13" class="py-name" targets="Variable SBLsamkit.LL_MNM=SBLsamkit-module.html#LL_MNM,Variable SBLsamkit.MultiProcess.LL_MNM=SBLsamkit.MultiProcess-module.html#LL_MNM,Variable SBLsamkit.Operators.LL_MNM=SBLsamkit.Operators-module.html#LL_MNM,Variable SBLsamkit.Parser.LL_MNM=SBLsamkit.Parser-module.html#LL_MNM,Variable SBLsamkit.Processor.LL_MNM=SBLsamkit.Processor-module.html#LL_MNM,Variable SBLsamkit.Stats.LL_MNM=SBLsamkit.Stats-module.html#LL_MNM,Variable SBLsamkit.Stream.LL_MNM=SBLsamkit.Stream-module.html#LL_MNM"><a title="SBLsamkit.LL_MNM
+SBLsamkit.MultiProcess.LL_MNM
+SBLsamkit.Operators.LL_MNM
+SBLsamkit.Parser.LL_MNM
+SBLsamkit.Processor.LL_MNM
+SBLsamkit.Stats.LL_MNM
+SBLsamkit.Stream.LL_MNM" class="py-name" href="#" onclick="return doclink('link-13', 'LL_MNM', 'link-13');">LL_MNM</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'MnM'</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt id="link-14" class="py-name" targets="Variable SBLsamkit.LL_MRM=SBLsamkit-module.html#LL_MRM,Variable SBLsamkit.MultiProcess.LL_MRM=SBLsamkit.MultiProcess-module.html#LL_MRM,Variable SBLsamkit.Operators.LL_MRM=SBLsamkit.Operators-module.html#LL_MRM,Variable SBLsamkit.Parser.LL_MRM=SBLsamkit.Parser-module.html#LL_MRM,Variable SBLsamkit.Processor.LL_MRM=SBLsamkit.Processor-module.html#LL_MRM,Variable SBLsamkit.Stats.LL_MRM=SBLsamkit.Stats-module.html#LL_MRM,Variable SBLsamkit.Stream.LL_MRM=SBLsamkit.Stream-module.html#LL_MRM"><a title="SBLsamkit.LL_MRM
+SBLsamkit.MultiProcess.LL_MRM
+SBLsamkit.Operators.LL_MRM
+SBLsamkit.Parser.LL_MRM
+SBLsamkit.Processor.LL_MRM
+SBLsamkit.Stats.LL_MRM
+SBLsamkit.Stream.LL_MRM" class="py-name" href="#" onclick="return doclink('link-14', 'LL_MRM', 'link-14');">LL_MRM</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'MrM'</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt id="link-15" class="py-name" targets="Variable SBLsamkit.LL_MRN=SBLsamkit-module.html#LL_MRN,Variable SBLsamkit.MultiProcess.LL_MRN=SBLsamkit.MultiProcess-module.html#LL_MRN,Variable SBLsamkit.Operators.LL_MRN=SBLsamkit.Operators-module.html#LL_MRN,Variable SBLsamkit.Parser.LL_MRN=SBLsamkit.Parser-module.html#LL_MRN,Variable SBLsamkit.Processor.LL_MRN=SBLsamkit.Processor-module.html#LL_MRN,Variable SBLsamkit.Stats.LL_MRN=SBLsamkit.Stats-module.html#LL_MRN,Variable SBLsamkit.Stream.LL_MRN=SBLsamkit.Stream-module.html#LL_MRN"><a title="SBLsamkit.LL_MRN
+SBLsamkit.MultiProcess.LL_MRN
+SBLsamkit.Operators.LL_MRN
+SBLsamkit.Parser.LL_MRN
+SBLsamkit.Processor.LL_MRN
+SBLsamkit.Stats.LL_MRN
+SBLsamkit.Stream.LL_MRN" class="py-name" href="#" onclick="return doclink('link-15', 'LL_MRN', 'link-15');">LL_MRN</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'MrN'</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt id="link-16" class="py-name" targets="Variable SBLsamkit.LL_MRS=SBLsamkit-module.html#LL_MRS,Variable SBLsamkit.MultiProcess.LL_MRS=SBLsamkit.MultiProcess-module.html#LL_MRS,Variable SBLsamkit.Operators.LL_MRS=SBLsamkit.Operators-module.html#LL_MRS,Variable SBLsamkit.Parser.LL_MRS=SBLsamkit.Parser-module.html#LL_MRS,Variable SBLsamkit.Processor.LL_MRS=SBLsamkit.Processor-module.html#LL_MRS,Variable SBLsamkit.Stats.LL_MRS=SBLsamkit.Stats-module.html#LL_MRS,Variable SBLsamkit.Stream.LL_MRS=SBLsamkit.Stream-module.html#LL_MRS"><a title="SBLsamkit.LL_MRS
+SBLsamkit.MultiProcess.LL_MRS
+SBLsamkit.Operators.LL_MRS
+SBLsamkit.Parser.LL_MRS
+SBLsamkit.Processor.LL_MRS
+SBLsamkit.Stats.LL_MRS
+SBLsamkit.Stream.LL_MRS" class="py-name" href="#" onclick="return doclink('link-16', 'LL_MRS', 'link-16');">LL_MRS</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'MrS'</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt id="link-17" class="py-name" targets="Variable SBLsamkit.LL_MME=SBLsamkit-module.html#LL_MME,Variable SBLsamkit.MultiProcess.LL_MME=SBLsamkit.MultiProcess-module.html#LL_MME,Variable SBLsamkit.Operators.LL_MME=SBLsamkit.Operators-module.html#LL_MME,Variable SBLsamkit.Parser.LL_MME=SBLsamkit.Parser-module.html#LL_MME,Variable SBLsamkit.Processor.LL_MME=SBLsamkit.Processor-module.html#LL_MME,Variable SBLsamkit.Stats.LL_MME=SBLsamkit.Stats-module.html#LL_MME,Variable SBLsamkit.Stream.LL_MME=SBLsamkit.Stream-module.html#LL_MME"><a title="SBLsamkit.LL_MME
+SBLsamkit.MultiProcess.LL_MME
+SBLsamkit.Operators.LL_MME
+SBLsamkit.Parser.LL_MME
+SBLsamkit.Processor.LL_MME
+SBLsamkit.Stats.LL_MME
+SBLsamkit.Stream.LL_MME" class="py-name" href="#" onclick="return doclink('link-17', 'LL_MME', 'link-17');">LL_MME</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'MME'</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt id="link-18" class="py-name" targets="Variable SBLsamkit.LL_MMD=SBLsamkit-module.html#LL_MMD,Variable SBLsamkit.MultiProcess.LL_MMD=SBLsamkit.MultiProcess-module.html#LL_MMD,Variable SBLsamkit.Operators.LL_MMD=SBLsamkit.Operators-module.html#LL_MMD,Variable SBLsamkit.Parser.LL_MMD=SBLsamkit.Parser-module.html#LL_MMD,Variable SBLsamkit.Processor.LL_MMD=SBLsamkit.Processor-module.html#LL_MMD,Variable SBLsamkit.Stats.LL_MMD=SBLsamkit.Stats-module.html#LL_MMD,Variable SBLsamkit.Stream.LL_MMD=SBLsamkit.Stream-module.html#LL_MMD"><a title="SBLsamkit.LL_MMD
+SBLsamkit.MultiProcess.LL_MMD
+SBLsamkit.Operators.LL_MMD
+SBLsamkit.Parser.LL_MMD
+SBLsamkit.Processor.LL_MMD
+SBLsamkit.Stats.LL_MMD
+SBLsamkit.Stream.LL_MMD" class="py-name" href="#" onclick="return doclink('link-18', 'LL_MMD', 'link-18');">LL_MMD</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'MMD'</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt id="link-19" class="py-name" targets="Variable SBLsamkit.LL_MA=SBLsamkit-module.html#LL_MA,Variable SBLsamkit.MultiProcess.LL_MA=SBLsamkit.MultiProcess-module.html#LL_MA,Variable SBLsamkit.Operators.LL_MA=SBLsamkit.Operators-module.html#LL_MA,Variable SBLsamkit.Parser.LL_MA=SBLsamkit.Parser-module.html#LL_MA,Variable SBLsamkit.Processor.LL_MA=SBLsamkit.Processor-module.html#LL_MA,Variable SBLsamkit.Stats.LL_MA=SBLsamkit.Stats-module.html#LL_MA,Variable SBLsamkit.Stream.LL_MA=SBLsamkit.Stream-module.html#LL_MA"><a title="SBLsamkit.LL_MA
+SBLsamkit.MultiProcess.LL_MA
+SBLsamkit.Operators.LL_MA
+SBLsamkit.Parser.LL_MA
+SBLsamkit.Processor.LL_MA
+SBLsamkit.Stats.LL_MA
+SBLsamkit.Stream.LL_MA" class="py-name" href="#" onclick="return doclink('link-19', 'LL_MA', 'link-19');">LL_MA</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'MA'</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt id="link-20" class="py-name" targets="Variable SBLsamkit.LL_NMNM=SBLsamkit-module.html#LL_NMNM,Variable SBLsamkit.MultiProcess.LL_NMNM=SBLsamkit.MultiProcess-module.html#LL_NMNM,Variable SBLsamkit.Operators.LL_NMNM=SBLsamkit.Operators-module.html#LL_NMNM,Variable SBLsamkit.Parser.LL_NMNM=SBLsamkit.Parser-module.html#LL_NMNM,Variable SBLsamkit.Processor.LL_NMNM=SBLsamkit.Processor-module.html#LL_NMNM,Variable SBLsamkit.Stats.LL_NMNM=SBLsamkit.Stats-module.html#LL_NMNM,Variable SBLsamkit.Stream.LL_NMNM=SBLsamkit.Stream-module.html#LL_NMNM"><a title="SBLsamkit.LL_NMNM
+SBLsamkit.MultiProcess.LL_NMNM
+SBLsamkit.Operators.LL_NMNM
+SBLsamkit.Parser.LL_NMNM
+SBLsamkit.Processor.LL_NMNM
+SBLsamkit.Stats.LL_NMNM
+SBLsamkit.Stream.LL_NMNM" class="py-name" href="#" onclick="return doclink('link-20', 'LL_NMNM', 'link-20');">LL_NMNM</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'nMnM'</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable SBLsamkit.LL_RMRM=SBLsamkit-module.html#LL_RMRM,Variable SBLsamkit.MultiProcess.LL_RMRM=SBLsamkit.MultiProcess-module.html#LL_RMRM,Variable SBLsamkit.Operators.LL_RMRM=SBLsamkit.Operators-module.html#LL_RMRM,Variable SBLsamkit.Parser.LL_RMRM=SBLsamkit.Parser-module.html#LL_RMRM,Variable SBLsamkit.Processor.LL_RMRM=SBLsamkit.Processor-module.html#LL_RMRM,Variable SBLsamkit.Stats.LL_RMRM=SBLsamkit.Stats-module.html#LL_RMRM,Variable SBLsamkit.Stream.LL_RMRM=SBLsamkit.Stream-module.html#LL_RMRM"><a title="SBLsamkit.LL_RMRM
+SBLsamkit.MultiProcess.LL_RMRM
+SBLsamkit.Operators.LL_RMRM
+SBLsamkit.Parser.LL_RMRM
+SBLsamkit.Processor.LL_RMRM
+SBLsamkit.Stats.LL_RMRM
+SBLsamkit.Stream.LL_RMRM" class="py-name" href="#" onclick="return doclink('link-21', 'LL_RMRM', 'link-21');">LL_RMRM</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'rMrM'</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable SBLsamkit.LL_RNRN=SBLsamkit-module.html#LL_RNRN,Variable SBLsamkit.MultiProcess.LL_RNRN=SBLsamkit.MultiProcess-module.html#LL_RNRN,Variable SBLsamkit.Operators.LL_RNRN=SBLsamkit.Operators-module.html#LL_RNRN,Variable SBLsamkit.Parser.LL_RNRN=SBLsamkit.Parser-module.html#LL_RNRN,Variable SBLsamkit.Processor.LL_RNRN=SBLsamkit.Processor-module.html#LL_RNRN,Variable SBLsamkit.Stats.LL_RNRN=SBLsamkit.Stats-module.html#LL_RNRN,Variable SBLsamkit.Stream.LL_RNRN=SBLsamkit.Stream-module.html#LL_RNRN"><a title="SBLsamkit.LL_RNRN
+SBLsamkit.MultiProcess.LL_RNRN
+SBLsamkit.Operators.LL_RNRN
+SBLsamkit.Parser.LL_RNRN
+SBLsamkit.Processor.LL_RNRN
+SBLsamkit.Stats.LL_RNRN
+SBLsamkit.Stream.LL_RNRN" class="py-name" href="#" onclick="return doclink('link-22', 'LL_RNRN', 'link-22');">LL_RNRN</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'rNrN'</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt id="link-23" class="py-name" targets="Variable SBLsamkit.LL_RSRS=SBLsamkit-module.html#LL_RSRS,Variable SBLsamkit.MultiProcess.LL_RSRS=SBLsamkit.MultiProcess-module.html#LL_RSRS,Variable SBLsamkit.Operators.LL_RSRS=SBLsamkit.Operators-module.html#LL_RSRS,Variable SBLsamkit.Parser.LL_RSRS=SBLsamkit.Parser-module.html#LL_RSRS,Variable SBLsamkit.Processor.LL_RSRS=SBLsamkit.Processor-module.html#LL_RSRS,Variable SBLsamkit.Stats.LL_RSRS=SBLsamkit.Stats-module.html#LL_RSRS,Variable SBLsamkit.Stream.LL_RSRS=SBLsamkit.Stream-module.html#LL_RSRS"><a title="SBLsamkit.LL_RSRS
+SBLsamkit.MultiProcess.LL_RSRS
+SBLsamkit.Operators.LL_RSRS
+SBLsamkit.Parser.LL_RSRS
+SBLsamkit.Processor.LL_RSRS
+SBLsamkit.Stats.LL_RSRS
+SBLsamkit.Stream.LL_RSRS" class="py-name" href="#" onclick="return doclink('link-23', 'LL_RSRS', 'link-23');">LL_RSRS</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'rSrS'</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt id="link-24" class="py-name" targets="Variable SBLsamkit.LL_NMRM=SBLsamkit-module.html#LL_NMRM,Variable SBLsamkit.MultiProcess.LL_NMRM=SBLsamkit.MultiProcess-module.html#LL_NMRM,Variable SBLsamkit.Operators.LL_NMRM=SBLsamkit.Operators-module.html#LL_NMRM,Variable SBLsamkit.Parser.LL_NMRM=SBLsamkit.Parser-module.html#LL_NMRM,Variable SBLsamkit.Processor.LL_NMRM=SBLsamkit.Processor-module.html#LL_NMRM,Variable SBLsamkit.Stats.LL_NMRM=SBLsamkit.Stats-module.html#LL_NMRM,Variable SBLsamkit.Stream.LL_NMRM=SBLsamkit.Stream-module.html#LL_NMRM"><a title="SBLsamkit.LL_NMRM
+SBLsamkit.MultiProcess.LL_NMRM
+SBLsamkit.Operators.LL_NMRM
+SBLsamkit.Parser.LL_NMRM
+SBLsamkit.Processor.LL_NMRM
+SBLsamkit.Stats.LL_NMRM
+SBLsamkit.Stream.LL_NMRM" class="py-name" href="#" onclick="return doclink('link-24', 'LL_NMRM', 'link-24');">LL_NMRM</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'nMrM'</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt id="link-25" class="py-name" targets="Variable SBLsamkit.LL_NMRN=SBLsamkit-module.html#LL_NMRN,Variable SBLsamkit.MultiProcess.LL_NMRN=SBLsamkit.MultiProcess-module.html#LL_NMRN,Variable SBLsamkit.Operators.LL_NMRN=SBLsamkit.Operators-module.html#LL_NMRN,Variable SBLsamkit.Parser.LL_NMRN=SBLsamkit.Parser-module.html#LL_NMRN,Variable SBLsamkit.Processor.LL_NMRN=SBLsamkit.Processor-module.html#LL_NMRN,Variable SBLsamkit.Stats.LL_NMRN=SBLsamkit.Stats-module.html#LL_NMRN,Variable SBLsamkit.Stream.LL_NMRN=SBLsamkit.Stream-module.html#LL_NMRN"><a title="SBLsamkit.LL_NMRN
+SBLsamkit.MultiProcess.LL_NMRN
+SBLsamkit.Operators.LL_NMRN
+SBLsamkit.Parser.LL_NMRN
+SBLsamkit.Processor.LL_NMRN
+SBLsamkit.Stats.LL_NMRN
+SBLsamkit.Stream.LL_NMRN" class="py-name" href="#" onclick="return doclink('link-25', 'LL_NMRN', 'link-25');">LL_NMRN</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'nMrN'</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt id="link-26" class="py-name" targets="Variable SBLsamkit.LL_NMRS=SBLsamkit-module.html#LL_NMRS,Variable SBLsamkit.MultiProcess.LL_NMRS=SBLsamkit.MultiProcess-module.html#LL_NMRS,Variable SBLsamkit.Operators.LL_NMRS=SBLsamkit.Operators-module.html#LL_NMRS,Variable SBLsamkit.Parser.LL_NMRS=SBLsamkit.Parser-module.html#LL_NMRS,Variable SBLsamkit.Processor.LL_NMRS=SBLsamkit.Processor-module.html#LL_NMRS,Variable SBLsamkit.Stats.LL_NMRS=SBLsamkit.Stats-module.html#LL_NMRS,Variable SBLsamkit.Stream.LL_NMRS=SBLsamkit.Stream-module.html#LL_NMRS"><a title="SBLsamkit.LL_NMRS
+SBLsamkit.MultiProcess.LL_NMRS
+SBLsamkit.Operators.LL_NMRS
+SBLsamkit.Parser.LL_NMRS
+SBLsamkit.Processor.LL_NMRS
+SBLsamkit.Stats.LL_NMRS
+SBLsamkit.Stream.LL_NMRS" class="py-name" href="#" onclick="return doclink('link-26', 'LL_NMRS', 'link-26');">LL_NMRS</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'nMrS'</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt id="link-27" class="py-name" targets="Variable SBLsamkit.LL_NMA=SBLsamkit-module.html#LL_NMA,Variable SBLsamkit.MultiProcess.LL_NMA=SBLsamkit.MultiProcess-module.html#LL_NMA,Variable SBLsamkit.Operators.LL_NMA=SBLsamkit.Operators-module.html#LL_NMA,Variable SBLsamkit.Parser.LL_NMA=SBLsamkit.Parser-module.html#LL_NMA,Variable SBLsamkit.Processor.LL_NMA=SBLsamkit.Processor-module.html#LL_NMA,Variable SBLsamkit.Stats.LL_NMA=SBLsamkit.Stats-module.html#LL_NMA,Variable SBLsamkit.Stream.LL_NMA=SBLsamkit.Stream-module.html#LL_NMA"><a title="SBLsamkit.LL_NMA
+SBLsamkit.MultiProcess.LL_NMA
+SBLsamkit.Operators.LL_NMA
+SBLsamkit.Parser.LL_NMA
+SBLsamkit.Processor.LL_NMA
+SBLsamkit.Stats.LL_NMA
+SBLsamkit.Stream.LL_NMA" class="py-name" href="#" onclick="return doclink('link-27', 'LL_NMA', 'link-27');">LL_NMA</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'nMA'</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt id="link-28" class="py-name" targets="Variable SBLsamkit.LL_RMA=SBLsamkit-module.html#LL_RMA,Variable SBLsamkit.MultiProcess.LL_RMA=SBLsamkit.MultiProcess-module.html#LL_RMA,Variable SBLsamkit.Operators.LL_RMA=SBLsamkit.Operators-module.html#LL_RMA,Variable SBLsamkit.Parser.LL_RMA=SBLsamkit.Parser-module.html#LL_RMA,Variable SBLsamkit.Processor.LL_RMA=SBLsamkit.Processor-module.html#LL_RMA,Variable SBLsamkit.Stats.LL_RMA=SBLsamkit.Stats-module.html#LL_RMA,Variable SBLsamkit.Stream.LL_RMA=SBLsamkit.Stream-module.html#LL_RMA"><a title="SBLsamkit.LL_RMA
+SBLsamkit.MultiProcess.LL_RMA
+SBLsamkit.Operators.LL_RMA
+SBLsamkit.Parser.LL_RMA
+SBLsamkit.Processor.LL_RMA
+SBLsamkit.Stats.LL_RMA
+SBLsamkit.Stream.LL_RMA" class="py-name" href="#" onclick="return doclink('link-28', 'LL_RMA', 'link-28');">LL_RMA</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'rMA'</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt id="link-29" class="py-name" targets="Variable SBLsamkit.LL_RNA=SBLsamkit-module.html#LL_RNA,Variable SBLsamkit.MultiProcess.LL_RNA=SBLsamkit.MultiProcess-module.html#LL_RNA,Variable SBLsamkit.Operators.LL_RNA=SBLsamkit.Operators-module.html#LL_RNA,Variable SBLsamkit.Parser.LL_RNA=SBLsamkit.Parser-module.html#LL_RNA,Variable SBLsamkit.Processor.LL_RNA=SBLsamkit.Processor-module.html#LL_RNA,Variable SBLsamkit.Stats.LL_RNA=SBLsamkit.Stats-module.html#LL_RNA,Variable SBLsamkit.Stream.LL_RNA=SBLsamkit.Stream-module.html#LL_RNA"><a title="SBLsamkit.LL_RNA
+SBLsamkit.MultiProcess.LL_RNA
+SBLsamkit.Operators.LL_RNA
+SBLsamkit.Parser.LL_RNA
+SBLsamkit.Processor.LL_RNA
+SBLsamkit.Stats.LL_RNA
+SBLsamkit.Stream.LL_RNA" class="py-name" href="#" onclick="return doclink('link-29', 'LL_RNA', 'link-29');">LL_RNA</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'rNA'</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt id="link-30" class="py-name" targets="Variable SBLsamkit.LL_RSA=SBLsamkit-module.html#LL_RSA,Variable SBLsamkit.MultiProcess.LL_RSA=SBLsamkit.MultiProcess-module.html#LL_RSA,Variable SBLsamkit.Operators.LL_RSA=SBLsamkit.Operators-module.html#LL_RSA,Variable SBLsamkit.Parser.LL_RSA=SBLsamkit.Parser-module.html#LL_RSA,Variable SBLsamkit.Processor.LL_RSA=SBLsamkit.Processor-module.html#LL_RSA,Variable SBLsamkit.Stats.LL_RSA=SBLsamkit.Stats-module.html#LL_RSA,Variable SBLsamkit.Stream.LL_RSA=SBLsamkit.Stream-module.html#LL_RSA"><a title="SBLsamkit.LL_RSA
+SBLsamkit.MultiProcess.LL_RSA
+SBLsamkit.Operators.LL_RSA
+SBLsamkit.Parser.LL_RSA
+SBLsamkit.Processor.LL_RSA
+SBLsamkit.Stats.LL_RSA
+SBLsamkit.Stream.LL_RSA" class="py-name" href="#" onclick="return doclink('link-30', 'LL_RSA', 'link-30');">LL_RSA</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'rSA'</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt id="link-31" class="py-name" targets="Variable SBLsamkit.LL_QC=SBLsamkit-module.html#LL_QC,Variable SBLsamkit.MultiProcess.LL_QC=SBLsamkit.MultiProcess-module.html#LL_QC,Variable SBLsamkit.Operators.LL_QC=SBLsamkit.Operators-module.html#LL_QC,Variable SBLsamkit.Parser.LL_QC=SBLsamkit.Parser-module.html#LL_QC,Variable SBLsamkit.Processor.LL_QC=SBLsamkit.Processor-module.html#LL_QC,Variable SBLsamkit.Stats.LL_QC=SBLsamkit.Stats-module.html#LL_QC,Variable SBLsamkit.Stream.LL_QC=SBLsamkit.Stream-module.html#LL_QC"><a title="SBLsamkit.LL_QC
+SBLsamkit.MultiProcess.LL_QC
+SBLsamkit.Operators.LL_QC
+SBLsamkit.Parser.LL_QC
+SBLsamkit.Processor.LL_QC
+SBLsamkit.Stats.LL_QC
+SBLsamkit.Stream.LL_QC" class="py-name" href="#" onclick="return doclink('link-31', 'LL_QC', 'link-31');">LL_QC</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'QC'</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt id="link-32" class="py-name" targets="Variable SBLsamkit.LL_CLC1=SBLsamkit-module.html#LL_CLC1,Variable SBLsamkit.MultiProcess.LL_CLC1=SBLsamkit.MultiProcess-module.html#LL_CLC1,Variable SBLsamkit.Operators.LL_CLC1=SBLsamkit.Operators-module.html#LL_CLC1,Variable SBLsamkit.Parser.LL_CLC1=SBLsamkit.Parser-module.html#LL_CLC1,Variable SBLsamkit.Processor.LL_CLC1=SBLsamkit.Processor-module.html#LL_CLC1,Variable SBLsamkit.Stats.LL_CLC1=SBLsamkit.Stats-module.html#LL_CLC1,Variable SBLsamkit.Stream.LL_CLC1=SBLsamkit.Stream-module.html#LL_CLC1"><a title="SBLsamkit.LL_CLC1
+SBLsamkit.MultiProcess.LL_CLC1
+SBLsamkit.Operators.LL_CLC1
+SBLsamkit.Parser.LL_CLC1
+SBLsamkit.Processor.LL_CLC1
+SBLsamkit.Stats.LL_CLC1
+SBLsamkit.Stream.LL_CLC1" class="py-name" href="#" onclick="return doclink('link-32', 'LL_CLC1', 'link-32');">LL_CLC1</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'CLC1'</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt id="link-33" class="py-name" targets="Variable SBLsamkit.LL_AA=SBLsamkit-module.html#LL_AA,Variable SBLsamkit.MultiProcess.LL_AA=SBLsamkit.MultiProcess-module.html#LL_AA,Variable SBLsamkit.Operators.LL_AA=SBLsamkit.Operators-module.html#LL_AA,Variable SBLsamkit.Parser.LL_AA=SBLsamkit.Parser-module.html#LL_AA,Variable SBLsamkit.Processor.LL_AA=SBLsamkit.Processor-module.html#LL_AA,Variable SBLsamkit.Stats.LL_AA=SBLsamkit.Stats-module.html#LL_AA,Variable SBLsamkit.Stream.LL_AA=SBLsamkit.Stream-module.html#LL_AA"><a title="SBLsamkit.LL_AA
+SBLsamkit.MultiProcess.LL_AA
+SBLsamkit.Operators.LL_AA
+SBLsamkit.Parser.LL_AA
+SBLsamkit.Processor.LL_AA
+SBLsamkit.Stats.LL_AA
+SBLsamkit.Stream.LL_AA" class="py-name" href="#" onclick="return doclink('link-33', 'LL_AA', 'link-33');">LL_AA</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'AA'</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-comment"># Strand mapping names. See SS properties section of SAM.SAMPair class</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt id="link-34" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_FR=SBLsamkit.MultiProcess-module.html#SS_FR,Variable SBLsamkit.Operators.SS_FR=SBLsamkit.Operators-module.html#SS_FR,Variable SBLsamkit.Parser.SS_FR=SBLsamkit.Parser-module.html#SS_FR,Variable SBLsamkit.Processor.SS_FR=SBLsamkit.Processor-module.html#SS_FR,Variable SBLsamkit.SS_FR=SBLsamkit-module.html#SS_FR,Variable SBLsamkit.Stats.SS_FR=SBLsamkit.Stats-module.html#SS_FR,Variable SBLsamkit.Stream.SS_FR=SBLsamkit.Stream-module.html#SS_FR"><a title="SBLsamkit.MultiProcess.SS_FR
+SBLsamkit.Operators.SS_FR
+SBLsamkit.Parser.SS_FR
+SBLsamkit.Processor.SS_FR
+SBLsamkit.SS_FR
+SBLsamkit.Stats.SS_FR
+SBLsamkit.Stream.SS_FR" class="py-name" href="#" onclick="return doclink('link-34', 'SS_FR', 'link-34');">SS_FR</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'fr'</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt id="link-35" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_RF=SBLsamkit.MultiProcess-module.html#SS_RF,Variable SBLsamkit.Operators.SS_RF=SBLsamkit.Operators-module.html#SS_RF,Variable SBLsamkit.Parser.SS_RF=SBLsamkit.Parser-module.html#SS_RF,Variable SBLsamkit.Processor.SS_RF=SBLsamkit.Processor-module.html#SS_RF,Variable SBLsamkit.SS_RF=SBLsamkit-module.html#SS_RF,Variable SBLsamkit.Stats.SS_RF=SBLsamkit.Stats-module.html#SS_RF,Variable SBLsamkit.Stream.SS_RF=SBLsamkit.Stream-module.html#SS_RF"><a title="SBLsamkit.MultiProcess.SS_RF
+SBLsamkit.Operators.SS_RF
+SBLsamkit.Parser.SS_RF
+SBLsamkit.Processor.SS_RF
+SBLsamkit.SS_RF
+SBLsamkit.Stats.SS_RF
+SBLsamkit.Stream.SS_RF" class="py-name" href="#" onclick="return doclink('link-35', 'SS_RF', 'link-35');">SS_RF</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'rf'</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt id="link-36" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_SSD=SBLsamkit.MultiProcess-module.html#SS_SSD,Variable SBLsamkit.Operators.SS_SSD=SBLsamkit.Operators-module.html#SS_SSD,Variable SBLsamkit.Parser.SS_SSD=SBLsamkit.Parser-module.html#SS_SSD,Variable SBLsamkit.Processor.SS_SSD=SBLsamkit.Processor-module.html#SS_SSD,Variable SBLsamkit.SS_SSD=SBLsamkit-module.html#SS_SSD,Variable SBLsamkit.Stats.SS_SSD=SBLsamkit.Stats-module.html#SS_SSD,Variable SBLsamkit.Stream.SS_SSD=SBLsamkit.Stream-module.html#SS_SSD"><a title="SBLsamkit.MultiProcess.SS_SSD
+SBLsamkit.Operators.SS_SSD
+SBLsamkit.Parser.SS_SSD
+SBLsamkit.Processor.SS_SSD
+SBLsamkit.SS_SSD
+SBLsamkit.Stats.SS_SSD
+SBLsamkit.Stream.SS_SSD" class="py-name" href="#" onclick="return doclink('link-36', 'SS_SSD', 'link-36');">SS_SSD</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'ssd'</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt id="link-37" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_FX=SBLsamkit.MultiProcess-module.html#SS_FX,Variable SBLsamkit.Operators.SS_FX=SBLsamkit.Operators-module.html#SS_FX,Variable SBLsamkit.Parser.SS_FX=SBLsamkit.Parser-module.html#SS_FX,Variable SBLsamkit.Processor.SS_FX=SBLsamkit.Processor-module.html#SS_FX,Variable SBLsamkit.SS_FX=SBLsamkit-module.html#SS_FX,Variable SBLsamkit.Stats.SS_FX=SBLsamkit.Stats-module.html#SS_FX,Variable SBLsamkit.Stream.SS_FX=SBLsamkit.Stream-module.html#SS_FX"><a title="SBLsamkit.MultiProcess.SS_FX
+SBLsamkit.Operators.SS_FX
+SBLsamkit.Parser.SS_FX
+SBLsamkit.Processor.SS_FX
+SBLsamkit.SS_FX
+SBLsamkit.Stats.SS_FX
+SBLsamkit.Stream.SS_FX" class="py-name" href="#" onclick="return doclink('link-37', 'SS_FX', 'link-37');">SS_FX</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'fx'</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt id="link-38" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_RX=SBLsamkit.MultiProcess-module.html#SS_RX,Variable SBLsamkit.Operators.SS_RX=SBLsamkit.Operators-module.html#SS_RX,Variable SBLsamkit.Parser.SS_RX=SBLsamkit.Parser-module.html#SS_RX,Variable SBLsamkit.Processor.SS_RX=SBLsamkit.Processor-module.html#SS_RX,Variable SBLsamkit.SS_RX=SBLsamkit-module.html#SS_RX,Variable SBLsamkit.Stats.SS_RX=SBLsamkit.Stats-module.html#SS_RX,Variable SBLsamkit.Stream.SS_RX=SBLsamkit.Stream-module.html#SS_RX"><a title="SBLsamkit.MultiProcess.SS_RX
+SBLsamkit.Operators.SS_RX
+SBLsamkit.Parser.SS_RX
+SBLsamkit.Processor.SS_RX
+SBLsamkit.SS_RX
+SBLsamkit.Stats.SS_RX
+SBLsamkit.Stream.SS_RX" class="py-name" href="#" onclick="return doclink('link-38', 'SS_RX', 'link-38');">SS_RX</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'rx'</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"><tt id="link-39" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_FF=SBLsamkit.MultiProcess-module.html#SS_FF,Variable SBLsamkit.Operators.SS_FF=SBLsamkit.Operators-module.html#SS_FF,Variable SBLsamkit.Parser.SS_FF=SBLsamkit.Parser-module.html#SS_FF,Variable SBLsamkit.Processor.SS_FF=SBLsamkit.Processor-module.html#SS_FF,Variable SBLsamkit.SS_FF=SBLsamkit-module.html#SS_FF,Variable SBLsamkit.Stats.SS_FF=SBLsamkit.Stats-module.html#SS_FF,Variable SBLsamkit.Stream.SS_FF=SBLsamkit.Stream-module.html#SS_FF"><a title="SBLsamkit.MultiProcess.SS_FF
+SBLsamkit.Operators.SS_FF
+SBLsamkit.Parser.SS_FF
+SBLsamkit.Processor.SS_FF
+SBLsamkit.SS_FF
+SBLsamkit.Stats.SS_FF
+SBLsamkit.Stream.SS_FF" class="py-name" href="#" onclick="return doclink('link-39', 'SS_FF', 'link-39');">SS_FF</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'ff'</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_RR=SBLsamkit.MultiProcess-module.html#SS_RR,Variable SBLsamkit.Operators.SS_RR=SBLsamkit.Operators-module.html#SS_RR,Variable SBLsamkit.Parser.SS_RR=SBLsamkit.Parser-module.html#SS_RR,Variable SBLsamkit.Processor.SS_RR=SBLsamkit.Processor-module.html#SS_RR,Variable SBLsamkit.SS_RR=SBLsamkit-module.html#SS_RR,Variable SBLsamkit.Stats.SS_RR=SBLsamkit.Stats-module.html#SS_RR,Variable SBLsamkit.Stream.SS_RR=SBLsamkit.Stream-module.html#SS_RR"><a title="SBLsamkit.MultiProcess.SS_RR
+SBLsamkit.Operators.SS_RR
+SBLsamkit.Parser.SS_RR
+SBLsamkit.Processor.SS_RR
+SBLsamkit.SS_RR
+SBLsamkit.Stats.SS_RR
+SBLsamkit.Stream.SS_RR" class="py-name" href="#" onclick="return doclink('link-40', 'SS_RR', 'link-40');">SS_RR</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'rr'</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt id="link-41" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_SSE=SBLsamkit.MultiProcess-module.html#SS_SSE,Variable SBLsamkit.Operators.SS_SSE=SBLsamkit.Operators-module.html#SS_SSE,Variable SBLsamkit.Parser.SS_SSE=SBLsamkit.Parser-module.html#SS_SSE,Variable SBLsamkit.Processor.SS_SSE=SBLsamkit.Processor-module.html#SS_SSE,Variable SBLsamkit.SS_SSE=SBLsamkit-module.html#SS_SSE,Variable SBLsamkit.Stats.SS_SSE=SBLsamkit.Stats-module.html#SS_SSE,Variable SBLsamkit.Stream.SS_SSE=SBLsamkit.Stream-module.html#SS_SSE"><a title="SBLsamkit.MultiProcess.SS_SSE
+SBLsamkit.Operators.SS_SSE
+SBLsamkit.Parser.SS_SSE
+SBLsamkit.Processor.SS_SSE
+SBLsamkit.SS_SSE
+SBLsamkit.Stats.SS_SSE
+SBLsamkit.Stream.SS_SSE" class="py-name" href="#" onclick="return doclink('link-41', 'SS_SSE', 'link-41');">SS_SSE</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'sse'</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt id="link-42" class="py-name" targets="Variable SBLsamkit.MultiProcess.SS_AA=SBLsamkit.MultiProcess-module.html#SS_AA,Variable SBLsamkit.Operators.SS_AA=SBLsamkit.Operators-module.html#SS_AA,Variable SBLsamkit.Parser.SS_AA=SBLsamkit.Parser-module.html#SS_AA,Variable SBLsamkit.Processor.SS_AA=SBLsamkit.Processor-module.html#SS_AA,Variable SBLsamkit.SS_AA=SBLsamkit-module.html#SS_AA,Variable SBLsamkit.Stats.SS_AA=SBLsamkit.Stats-module.html#SS_AA,Variable SBLsamkit.Stream.SS_AA=SBLsamkit.Stream-module.html#SS_AA"><a title="SBLsamkit.MultiProcess.SS_AA
+SBLsamkit.Operators.SS_AA
+SBLsamkit.Parser.SS_AA
+SBLsamkit.Processor.SS_AA
+SBLsamkit.SS_AA
+SBLsamkit.Stats.SS_AA
+SBLsamkit.Stream.SS_AA" class="py-name" href="#" onclick="return doclink('link-42', 'SS_AA', 'link-42');">SS_AA</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'aa'</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-comment"># Filter names</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt id="link-43" class="py-name" targets="Variable SBLsamkit.FP_NMF=SBLsamkit-module.html#FP_NMF,Variable SBLsamkit.MultiProcess.FP_NMF=SBLsamkit.MultiProcess-module.html#FP_NMF,Variable SBLsamkit.Operators.FP_NMF=SBLsamkit.Operators-module.html#FP_NMF,Variable SBLsamkit.Parser.FP_NMF=SBLsamkit.Parser-module.html#FP_NMF,Variable SBLsamkit.Processor.FP_NMF=SBLsamkit.Processor-module.html#FP_NMF,Variable SBLsamkit.Stats.FP_NMF=SBLsamkit.Stats-module.html#FP_NMF,Variable SBLsamkit.Stream.FP_NMF=SBLsamkit.Stream-module.html#FP_NMF"><a title="SBLsamkit.FP_NMF
+SBLsamkit.MultiProcess.FP_NMF
+SBLsamkit.Operators.FP_NMF
+SBLsamkit.Parser.FP_NMF
+SBLsamkit.Processor.FP_NMF
+SBLsamkit.Stats.FP_NMF
+SBLsamkit.Stream.FP_NMF" class="py-name" href="#" onclick="return doclink('link-43', 'FP_NMF', 'link-43');">FP_NMF</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'NMf'</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt id="link-44" class="py-name" targets="Variable SBLsamkit.FP_NMFA=SBLsamkit-module.html#FP_NMFA,Variable SBLsamkit.MultiProcess.FP_NMFA=SBLsamkit.MultiProcess-module.html#FP_NMFA,Variable SBLsamkit.Operators.FP_NMFA=SBLsamkit.Operators-module.html#FP_NMFA,Variable SBLsamkit.Parser.FP_NMFA=SBLsamkit.Parser-module.html#FP_NMFA,Variable SBLsamkit.Processor.FP_NMFA=SBLsamkit.Processor-module.html#FP_NMFA,Variable SBLsamkit.Stats.FP_NMFA=SBLsamkit.Stats-module.html#FP_NMFA,Variable SBLsamkit.Stream.FP_NMFA=SBLsamkit.Stream-module.html#FP_NMFA"><a title="SBLsamkit.FP_NMFA
+SBLsamkit.MultiProcess.FP_NMFA
+SBLsamkit.Operators.FP_NMFA
+SBLsamkit.Parser.FP_NMFA
+SBLsamkit.Processor.FP_NMFA
+SBLsamkit.Stats.FP_NMFA
+SBLsamkit.Stream.FP_NMFA" class="py-name" href="#" onclick="return doclink('link-44', 'FP_NMFA', 'link-44');">FP_NMFA</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'NMfa'</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt id="link-45" class="py-name" targets="Variable SBLsamkit.FP_RPF=SBLsamkit-module.html#FP_RPF,Variable SBLsamkit.MultiProcess.FP_RPF=SBLsamkit.MultiProcess-module.html#FP_RPF,Variable SBLsamkit.Operators.FP_RPF=SBLsamkit.Operators-module.html#FP_RPF,Variable SBLsamkit.Parser.FP_RPF=SBLsamkit.Parser-module.html#FP_RPF,Variable SBLsamkit.Processor.FP_RPF=SBLsamkit.Processor-module.html#FP_RPF,Variable SBLsamkit.Stats.FP_RPF=SBLsamkit.Stats-module.html#FP_RPF,Variable SBLsamkit.Stream.FP_RPF=SBLsamkit.Stream-module.html#FP_RPF"><a title="SBLsamkit.FP_RPF
+SBLsamkit.MultiProcess.FP_RPF
+SBLsamkit.Operators.FP_RPF
+SBLsamkit.Parser.FP_RPF
+SBLsamkit.Processor.FP_RPF
+SBLsamkit.Stats.FP_RPF
+SBLsamkit.Stream.FP_RPF" class="py-name" href="#" onclick="return doclink('link-45', 'FP_RPF', 'link-45');">FP_RPF</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'RPf'</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable SBLsamkit.FP_RPFA=SBLsamkit-module.html#FP_RPFA,Variable SBLsamkit.MultiProcess.FP_RPFA=SBLsamkit.MultiProcess-module.html#FP_RPFA,Variable SBLsamkit.Operators.FP_RPFA=SBLsamkit.Operators-module.html#FP_RPFA,Variable SBLsamkit.Parser.FP_RPFA=SBLsamkit.Parser-module.html#FP_RPFA,Variable SBLsamkit.Processor.FP_RPFA=SBLsamkit.Processor-module.html#FP_RPFA,Variable SBLsamkit.Stats.FP_RPFA=SBLsamkit.Stats-module.html#FP_RPFA,Variable SBLsamkit.Stream.FP_RPFA=SBLsamkit.Stream-module.html#FP_RPFA"><a title="SBLsamkit.FP_RPFA
+SBLsamkit.MultiProcess.FP_RPFA
+SBLsamkit.Operators.FP_RPFA
+SBLsamkit.Parser.FP_RPFA
+SBLsamkit.Processor.FP_RPFA
+SBLsamkit.Stats.FP_RPFA
+SBLsamkit.Stream.FP_RPFA" class="py-name" href="#" onclick="return doclink('link-46', 'FP_RPFA', 'link-46');">FP_RPFA</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'RPfa'</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt id="link-47" class="py-name" targets="Variable SBLsamkit.FP_PHREDF=SBLsamkit-module.html#FP_PHREDF,Variable SBLsamkit.MultiProcess.FP_PHREDF=SBLsamkit.MultiProcess-module.html#FP_PHREDF,Variable SBLsamkit.Operators.FP_PHREDF=SBLsamkit.Operators-module.html#FP_PHREDF,Variable SBLsamkit.Parser.FP_PHREDF=SBLsamkit.Parser-module.html#FP_PHREDF,Variable SBLsamkit.Processor.FP_PHREDF=SBLsamkit.Processor-module.html#FP_PHREDF,Variable SBLsamkit.Stats.FP_PHREDF=SBLsamkit.Stats-module.html#FP_PHREDF,Variable SBLsamkit.Stream.FP_PHREDF=SBLsamkit.Stream-module.html#FP_PHREDF"><a title="SBLsamkit.FP_PHREDF
+SBLsamkit.MultiProcess.FP_PHREDF
+SBLsamkit.Operators.FP_PHREDF
+SBLsamkit.Parser.FP_PHREDF
+SBLsamkit.Processor.FP_PHREDF
+SBLsamkit.Stats.FP_PHREDF
+SBLsamkit.Stream.FP_PHREDF" class="py-name" href="#" onclick="return doclink('link-47', 'FP_PHREDF', 'link-47');">FP_PHREDF</a></tt>  <tt class="py-op">=</tt> <tt class="py-string">'phredf'</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt id="link-48" class="py-name" targets="Variable SBLsamkit.FP_PHREDFA=SBLsamkit-module.html#FP_PHREDFA,Variable SBLsamkit.MultiProcess.FP_PHREDFA=SBLsamkit.MultiProcess-module.html#FP_PHREDFA,Variable SBLsamkit.Operators.FP_PHREDFA=SBLsamkit.Operators-module.html#FP_PHREDFA,Variable SBLsamkit.Parser.FP_PHREDFA=SBLsamkit.Parser-module.html#FP_PHREDFA,Variable SBLsamkit.Processor.FP_PHREDFA=SBLsamkit.Processor-module.html#FP_PHREDFA,Variable SBLsamkit.Stats.FP_PHREDFA=SBLsamkit.Stats-module.html#FP_PHREDFA,Variable SBLsamkit.Stream.FP_PHREDFA=SBLsamkit.Stream-module.html#FP_PHREDFA"><a title="SBLsamkit.FP_PHREDFA
+SBLsamkit.MultiProcess.FP_PHREDFA
+SBLsamkit.Operators.FP_PHREDFA
+SBLsamkit.Parser.FP_PHREDFA
+SBLsamkit.Processor.FP_PHREDFA
+SBLsamkit.Stats.FP_PHREDFA
+SBLsamkit.Stream.FP_PHREDFA" class="py-name" href="#" onclick="return doclink('link-48', 'FP_PHREDFA', 'link-48');">FP_PHREDFA</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'phredfa'</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-comment"># Operator names</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt id="link-49" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_FASTQ=SBLsamkit.MultiProcess-module.html#OP_FASTQ,Variable SBLsamkit.OP_FASTQ=SBLsamkit-module.html#OP_FASTQ,Variable SBLsamkit.Operators.OP_FASTQ=SBLsamkit.Operators-module.html#OP_FASTQ,Variable SBLsamkit.Parser.OP_FASTQ=SBLsamkit.Parser-module.html#OP_FASTQ,Variable SBLsamkit.Processor.OP_FASTQ=SBLsamkit.Processor-module.html#OP_FASTQ,Variable SBLsamkit.Stats.OP_FASTQ=SBLsamkit.Stats-module.html#OP_FASTQ,Variable SBLsamkit.Stream.OP_FASTQ=SBLsamkit.Stream-module.html#OP_FASTQ"><a title="SBLsamkit.MultiProcess.OP_FASTQ
+SBLsamkit.OP_FASTQ
+SBLsamkit.Operators.OP_FASTQ
+SBLsamkit.Parser.OP_FASTQ
+SBLsamkit.Processor.OP_FASTQ
+SBLsamkit.Stats.OP_FASTQ
+SBLsamkit.Stream.OP_FASTQ" class="py-name" href="#" onclick="return doclink('link-49', 'OP_FASTQ', 'link-49');">OP_FASTQ</a></tt>   <tt class="py-op">=</tt> <tt class="py-string">'fastq'</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt id="link-50" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_SAM=SBLsamkit.MultiProcess-module.html#OP_SAM,Variable SBLsamkit.OP_SAM=SBLsamkit-module.html#OP_SAM,Variable SBLsamkit.Operators.OP_SAM=SBLsamkit.Operators-module.html#OP_SAM,Variable SBLsamkit.Parser.OP_SAM=SBLsamkit.Parser-module.html#OP_SAM,Variable SBLsamkit.Processor.OP_SAM=SBLsamkit.Processor-module.html#OP_SAM,Variable SBLsamkit.Stats.OP_SAM=SBLsamkit.Stats-module.html#OP_SAM,Variable SBLsamkit.Stream.OP_SAM=SBLsamkit.Stream-module.html#OP_SAM"><a title="SBLsamkit.MultiProcess.OP_SAM
+SBLsamkit.OP_SAM
+SBLsamkit.Operators.OP_SAM
+SBLsamkit.Parser.OP_SAM
+SBLsamkit.Processor.OP_SAM
+SBLsamkit.Stats.OP_SAM
+SBLsamkit.Stream.OP_SAM" class="py-name" href="#" onclick="return doclink('link-50', 'OP_SAM', 'link-50');">OP_SAM</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'sam'</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt id="link-51" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_SAMPP=SBLsamkit.MultiProcess-module.html#OP_SAMPP,Variable SBLsamkit.OP_SAMPP=SBLsamkit-module.html#OP_SAMPP,Variable SBLsamkit.Operators.OP_SAMPP=SBLsamkit.Operators-module.html#OP_SAMPP,Variable SBLsamkit.Parser.OP_SAMPP=SBLsamkit.Parser-module.html#OP_SAMPP,Variable SBLsamkit.Processor.OP_SAMPP=SBLsamkit.Processor-module.html#OP_SAMPP,Variable SBLsamkit.Stats.OP_SAMPP=SBLsamkit.Stats-module.html#OP_SAMPP,Variable SBLsamkit.Stream.OP_SAMPP=SBLsamkit.Stream-module.html#OP_SAMPP"><a title="SBLsamkit.MultiProcess.OP_SAMPP
+SBLsamkit.OP_SAMPP
+SBLsamkit.Operators.OP_SAMPP
+SBLsamkit.Parser.OP_SAMPP
+SBLsamkit.Processor.OP_SAMPP
+SBLsamkit.Stats.OP_SAMPP
+SBLsamkit.Stream.OP_SAMPP" class="py-name" href="#" onclick="return doclink('link-51', 'OP_SAMPP', 'link-51');">OP_SAMPP</a></tt>   <tt class="py-op">=</tt> <tt class="py-string">'sam,pp'</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt id="link-52" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_FASTQPP=SBLsamkit.MultiProcess-module.html#OP_FASTQPP,Variable SBLsamkit.OP_FASTQPP=SBLsamkit-module.html#OP_FASTQPP,Variable SBLsamkit.Operators.OP_FASTQPP=SBLsamkit.Operators-module.html#OP_FASTQPP,Variable SBLsamkit.Parser.OP_FASTQPP=SBLsamkit.Parser-module.html#OP_FASTQPP,Variable SBLsamkit.Processor.OP_FASTQPP=SBLsamkit.Processor-module.html#OP_FASTQPP,Variable SBLsamkit.Stats.OP_FASTQPP=SBLsamkit.Stats-module.html#OP_FASTQPP,Variable SBLsamkit.Stream.OP_FASTQPP=SBLsamkit.Stream-module.html#OP_FASTQPP"><a title="SBLsamkit.MultiProcess.OP_FASTQPP
+SBLsamkit.OP_FASTQPP
+SBLsamkit.Operators.OP_FASTQPP
+SBLsamkit.Parser.OP_FASTQPP
+SBLsamkit.Processor.OP_FASTQPP
+SBLsamkit.Stats.OP_FASTQPP
+SBLsamkit.Stream.OP_FASTQPP" class="py-name" href="#" onclick="return doclink('link-52', 'OP_FASTQPP', 'link-52');">OP_FASTQPP</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'fastq,pp'</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt id="link-53" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_PP=SBLsamkit.MultiProcess-module.html#OP_PP,Variable SBLsamkit.OP_PP=SBLsamkit-module.html#OP_PP,Variable SBLsamkit.Operators.OP_PP=SBLsamkit.Operators-module.html#OP_PP,Variable SBLsamkit.Parser.OP_PP=SBLsamkit.Parser-module.html#OP_PP,Variable SBLsamkit.Processor.OP_PP=SBLsamkit.Processor-module.html#OP_PP,Variable SBLsamkit.Stats.OP_PP=SBLsamkit.Stats-module.html#OP_PP,Variable SBLsamkit.Stream.OP_PP=SBLsamkit.Stream-module.html#OP_PP"><a title="SBLsamkit.MultiProcess.OP_PP
+SBLsamkit.OP_PP
+SBLsamkit.Operators.OP_PP
+SBLsamkit.Parser.OP_PP
+SBLsamkit.Processor.OP_PP
+SBLsamkit.Stats.OP_PP
+SBLsamkit.Stream.OP_PP" class="py-name" href="#" onclick="return doclink('link-53', 'OP_PP', 'link-53');">OP_PP</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'pp'</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt id="link-54" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_SH=SBLsamkit.MultiProcess-module.html#OP_SH,Variable SBLsamkit.OP_SH=SBLsamkit-module.html#OP_SH,Variable SBLsamkit.Operators.OP_SH=SBLsamkit.Operators-module.html#OP_SH,Variable SBLsamkit.Parser.OP_SH=SBLsamkit.Parser-module.html#OP_SH,Variable SBLsamkit.Processor.OP_SH=SBLsamkit.Processor-module.html#OP_SH,Variable SBLsamkit.Stats.OP_SH=SBLsamkit.Stats-module.html#OP_SH,Variable SBLsamkit.Stream.OP_SH=SBLsamkit.Stream-module.html#OP_SH"><a title="SBLsamkit.MultiProcess.OP_SH
+SBLsamkit.OP_SH
+SBLsamkit.Operators.OP_SH
+SBLsamkit.Parser.OP_SH
+SBLsamkit.Processor.OP_SH
+SBLsamkit.Stats.OP_SH
+SBLsamkit.Stream.OP_SH" class="py-name" href="#" onclick="return doclink('link-54', 'OP_SH', 'link-54');">OP_SH</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'sh'</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt id="link-55" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_ORDER=SBLsamkit.MultiProcess-module.html#OP_ORDER,Variable SBLsamkit.OP_ORDER=SBLsamkit-module.html#OP_ORDER,Variable SBLsamkit.Operators.OP_ORDER=SBLsamkit.Operators-module.html#OP_ORDER,Variable SBLsamkit.Parser.OP_ORDER=SBLsamkit.Parser-module.html#OP_ORDER,Variable SBLsamkit.Processor.OP_ORDER=SBLsamkit.Processor-module.html#OP_ORDER,Variable SBLsamkit.Stats.OP_ORDER=SBLsamkit.Stats-module.html#OP_ORDER,Variable SBLsamkit.Stream.OP_ORDER=SBLsamkit.Stream-module.html#OP_ORDER"><a title="SBLsamkit.MultiProcess.OP_ORDER
+SBLsamkit.OP_ORDER
+SBLsamkit.Operators.OP_ORDER
+SBLsamkit.Parser.OP_ORDER
+SBLsamkit.Processor.OP_ORDER
+SBLsamkit.Stats.OP_ORDER
+SBLsamkit.Stream.OP_ORDER" class="py-name" href="#" onclick="return doclink('link-55', 'OP_ORDER', 'link-55');">OP_ORDER</a></tt>   <tt class="py-op">=</tt> <tt class="py-string">'order'</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt id="link-56" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_SE=SBLsamkit.MultiProcess-module.html#OP_SE,Variable SBLsamkit.OP_SE=SBLsamkit-module.html#OP_SE,Variable SBLsamkit.Operators.OP_SE=SBLsamkit.Operators-module.html#OP_SE,Variable SBLsamkit.Parser.OP_SE=SBLsamkit.Parser-module.html#OP_SE,Variable SBLsamkit.Processor.OP_SE=SBLsamkit.Processor-module.html#OP_SE,Variable SBLsamkit.Stats.OP_SE=SBLsamkit.Stats-module.html#OP_SE,Variable SBLsamkit.Stream.OP_SE=SBLsamkit.Stream-module.html#OP_SE"><a title="SBLsamkit.MultiProcess.OP_SE
+SBLsamkit.OP_SE
+SBLsamkit.Operators.OP_SE
+SBLsamkit.Parser.OP_SE
+SBLsamkit.Processor.OP_SE
+SBLsamkit.Stats.OP_SE
+SBLsamkit.Stream.OP_SE" class="py-name" href="#" onclick="return doclink('link-56', 'OP_SE', 'link-56');">OP_SE</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'se'</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt id="link-57" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_NOUT=SBLsamkit.MultiProcess-module.html#OP_NOUT,Variable SBLsamkit.OP_NOUT=SBLsamkit-module.html#OP_NOUT,Variable SBLsamkit.Operators.OP_NOUT=SBLsamkit.Operators-module.html#OP_NOUT,Variable SBLsamkit.Parser.OP_NOUT=SBLsamkit.Parser-module.html#OP_NOUT,Variable SBLsamkit.Processor.OP_NOUT=SBLsamkit.Processor-module.html#OP_NOUT,Variable SBLsamkit.Stats.OP_NOUT=SBLsamkit.Stats-module.html#OP_NOUT,Variable SBLsamkit.Stream.OP_NOUT=SBLsamkit.Stream-module.html#OP_NOUT"><a title="SBLsamkit.MultiProcess.OP_NOUT
+SBLsamkit.OP_NOUT
+SBLsamkit.Operators.OP_NOUT
+SBLsamkit.Parser.OP_NOUT
+SBLsamkit.Processor.OP_NOUT
+SBLsamkit.Stats.OP_NOUT
+SBLsamkit.Stream.OP_NOUT" class="py-name" href="#" onclick="return doclink('link-57', 'OP_NOUT', 'link-57');">OP_NOUT</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'nout'</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt id="link-58" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_INFO=SBLsamkit.MultiProcess-module.html#OP_INFO,Variable SBLsamkit.OP_INFO=SBLsamkit-module.html#OP_INFO,Variable SBLsamkit.Operators.OP_INFO=SBLsamkit.Operators-module.html#OP_INFO,Variable SBLsamkit.Parser.OP_INFO=SBLsamkit.Parser-module.html#OP_INFO,Variable SBLsamkit.Processor.OP_INFO=SBLsamkit.Processor-module.html#OP_INFO,Variable SBLsamkit.Stats.OP_INFO=SBLsamkit.Stats-module.html#OP_INFO,Variable SBLsamkit.Stream.OP_INFO=SBLsamkit.Stream-module.html#OP_INFO"><a title="SBLsamkit.MultiProcess.OP_INFO
+SBLsamkit.OP_INFO
+SBLsamkit.Operators.OP_INFO
+SBLsamkit.Parser.OP_INFO
+SBLsamkit.Processor.OP_INFO
+SBLsamkit.Stats.OP_INFO
+SBLsamkit.Stream.OP_INFO" class="py-name" href="#" onclick="return doclink('link-58', 'OP_INFO', 'link-58');">OP_INFO</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'info'</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt id="link-59" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_NOINFO=SBLsamkit.MultiProcess-module.html#OP_NOINFO,Variable SBLsamkit.OP_NOINFO=SBLsamkit-module.html#OP_NOINFO,Variable SBLsamkit.Operators.OP_NOINFO=SBLsamkit.Operators-module.html#OP_NOINFO,Variable SBLsamkit.Parser.OP_NOINFO=SBLsamkit.Parser-module.html#OP_NOINFO,Variable SBLsamkit.Processor.OP_NOINFO=SBLsamkit.Processor-module.html#OP_NOINFO,Variable SBLsamkit.Stats.OP_NOINFO=SBLsamkit.Stats-module.html#OP_NOINFO,Variable SBLsamkit.Stream.OP_NOINFO=SBLsamkit.Stream-module.html#OP_NOINFO"><a title="SBLsamkit.MultiProcess.OP_NOINFO
+SBLsamkit.OP_NOINFO
+SBLsamkit.Operators.OP_NOINFO
+SBLsamkit.Parser.OP_NOINFO
+SBLsamkit.Processor.OP_NOINFO
+SBLsamkit.Stats.OP_NOINFO
+SBLsamkit.Stream.OP_NOINFO" class="py-name" href="#" onclick="return doclink('link-59', 'OP_NOINFO', 'link-59');">OP_NOINFO</a></tt>  <tt class="py-op">=</tt> <tt class="py-string">'noinfo'</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt id="link-60" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_GZ=SBLsamkit.MultiProcess-module.html#OP_GZ,Variable SBLsamkit.OP_GZ=SBLsamkit-module.html#OP_GZ,Variable SBLsamkit.Operators.OP_GZ=SBLsamkit.Operators-module.html#OP_GZ,Variable SBLsamkit.Parser.OP_GZ=SBLsamkit.Parser-module.html#OP_GZ,Variable SBLsamkit.Processor.OP_GZ=SBLsamkit.Processor-module.html#OP_GZ,Variable SBLsamkit.Stats.OP_GZ=SBLsamkit.Stats-module.html#OP_GZ,Variable SBLsamkit.Stream.OP_GZ=SBLsamkit.Stream-module.html#OP_GZ"><a title="SBLsamkit.MultiProcess.OP_GZ
+SBLsamkit.OP_GZ
+SBLsamkit.Operators.OP_GZ
+SBLsamkit.Parser.OP_GZ
+SBLsamkit.Processor.OP_GZ
+SBLsamkit.Stats.OP_GZ
+SBLsamkit.Stream.OP_GZ" class="py-name" href="#" onclick="return doclink('link-60', 'OP_GZ', 'link-60');">OP_GZ</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'gz'</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"><tt id="link-61" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_CSV=SBLsamkit.MultiProcess-module.html#OP_CSV,Variable SBLsamkit.OP_CSV=SBLsamkit-module.html#OP_CSV,Variable SBLsamkit.Operators.OP_CSV=SBLsamkit.Operators-module.html#OP_CSV,Variable SBLsamkit.Parser.OP_CSV=SBLsamkit.Parser-module.html#OP_CSV,Variable SBLsamkit.Processor.OP_CSV=SBLsamkit.Processor-module.html#OP_CSV,Variable SBLsamkit.Stats.OP_CSV=SBLsamkit.Stats-module.html#OP_CSV,Variable SBLsamkit.Stream.OP_CSV=SBLsamkit.Stream-module.html#OP_CSV"><a title="SBLsamkit.MultiProcess.OP_CSV
+SBLsamkit.OP_CSV
+SBLsamkit.Operators.OP_CSV
+SBLsamkit.Parser.OP_CSV
+SBLsamkit.Processor.OP_CSV
+SBLsamkit.Stats.OP_CSV
+SBLsamkit.Stream.OP_CSV" class="py-name" href="#" onclick="return doclink('link-61', 'OP_CSV', 'link-61');">OP_CSV</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'csv'</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt id="link-62" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_PASS=SBLsamkit.MultiProcess-module.html#OP_PASS,Variable SBLsamkit.OP_PASS=SBLsamkit-module.html#OP_PASS,Variable SBLsamkit.Operators.OP_PASS=SBLsamkit.Operators-module.html#OP_PASS,Variable SBLsamkit.Parser.OP_PASS=SBLsamkit.Parser-module.html#OP_PASS,Variable SBLsamkit.Processor.OP_PASS=SBLsamkit.Processor-module.html#OP_PASS,Variable SBLsamkit.Stats.OP_PASS=SBLsamkit.Stats-module.html#OP_PASS,Variable SBLsamkit.Stream.OP_PASS=SBLsamkit.Stream-module.html#OP_PASS"><a title="SBLsamkit.MultiProcess.OP_PASS
+SBLsamkit.OP_PASS
+SBLsamkit.Operators.OP_PASS
+SBLsamkit.Parser.OP_PASS
+SBLsamkit.Processor.OP_PASS
+SBLsamkit.Stats.OP_PASS
+SBLsamkit.Stream.OP_PASS" class="py-name" href="#" onclick="return doclink('link-62', 'OP_PASS', 'link-62');">OP_PASS</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'pass'</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt id="link-63" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_EX=SBLsamkit.MultiProcess-module.html#OP_EX,Variable SBLsamkit.OP_EX=SBLsamkit-module.html#OP_EX,Variable SBLsamkit.Operators.OP_EX=SBLsamkit.Operators-module.html#OP_EX,Variable SBLsamkit.Parser.OP_EX=SBLsamkit.Parser-module.html#OP_EX,Variable SBLsamkit.Processor.OP_EX=SBLsamkit.Processor-module.html#OP_EX,Variable SBLsamkit.Stats.OP_EX=SBLsamkit.Stats-module.html#OP_EX,Variable SBLsamkit.Stream.OP_EX=SBLsamkit.Stream-module.html#OP_EX"><a title="SBLsamkit.MultiProcess.OP_EX
+SBLsamkit.OP_EX
+SBLsamkit.Operators.OP_EX
+SBLsamkit.Parser.OP_EX
+SBLsamkit.Processor.OP_EX
+SBLsamkit.Stats.OP_EX
+SBLsamkit.Stream.OP_EX" class="py-name" href="#" onclick="return doclink('link-63', 'OP_EX', 'link-63');">OP_EX</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'ex'</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt id="link-64" class="py-name" targets="Variable SBLsamkit.MultiProcess.OP_SAMPLE=SBLsamkit.MultiProcess-module.html#OP_SAMPLE,Variable SBLsamkit.OP_SAMPLE=SBLsamkit-module.html#OP_SAMPLE,Variable SBLsamkit.Operators.OP_SAMPLE=SBLsamkit.Operators-module.html#OP_SAMPLE,Variable SBLsamkit.Parser.OP_SAMPLE=SBLsamkit.Parser-module.html#OP_SAMPLE,Variable SBLsamkit.Processor.OP_SAMPLE=SBLsamkit.Processor-module.html#OP_SAMPLE,Variable SBLsamkit.Stats.OP_SAMPLE=SBLsamkit.Stats-module.html#OP_SAMPLE,Variable SBLsamkit.Stream.OP_SAMPLE=SBLsamkit.Stream-module.html#OP_SAMPLE"><a title="SBLsamkit.MultiProcess.OP_SAMPLE
+SBLsamkit.OP_SAMPLE
+SBLsamkit.Operators.OP_SAMPLE
+SBLsamkit.Parser.OP_SAMPLE
+SBLsamkit.Processor.OP_SAMPLE
+SBLsamkit.Stats.OP_SAMPLE
+SBLsamkit.Stream.OP_SAMPLE" class="py-name" href="#" onclick="return doclink('link-64', 'OP_SAMPLE', 'link-64');">OP_SAMPLE</a></tt>  <tt class="py-op">=</tt> <tt class="py-string">'sample'</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt class="py-comment"># Order secondary operators (order mode)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt id="link-65" class="py-name" targets="Variable SBLsamkit.MultiProcess.ORD_LL=SBLsamkit.MultiProcess-module.html#ORD_LL,Variable SBLsamkit.ORD_LL=SBLsamkit-module.html#ORD_LL,Variable SBLsamkit.Operators.ORD_LL=SBLsamkit.Operators-module.html#ORD_LL,Variable SBLsamkit.Parser.ORD_LL=SBLsamkit.Parser-module.html#ORD_LL,Variable SBLsamkit.Processor.ORD_LL=SBLsamkit.Processor-module.html#ORD_LL,Variable SBLsamkit.Stats.ORD_LL=SBLsamkit.Stats-module.html#ORD_LL,Variable SBLsamkit.Stream.ORD_LL=SBLsamkit.Stream-module.html#ORD_LL"><a title="SBLsamkit.MultiProcess.ORD_LL
+SBLsamkit.ORD_LL
+SBLsamkit.Operators.ORD_LL
+SBLsamkit.Parser.ORD_LL
+SBLsamkit.Processor.ORD_LL
+SBLsamkit.Stats.ORD_LL
+SBLsamkit.Stream.ORD_LL" class="py-name" href="#" onclick="return doclink('link-65', 'ORD_LL', 'link-65');">ORD_LL</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'LL'</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt id="link-66" class="py-name" targets="Variable SBLsamkit.MultiProcess.ORD_SS=SBLsamkit.MultiProcess-module.html#ORD_SS,Variable SBLsamkit.ORD_SS=SBLsamkit-module.html#ORD_SS,Variable SBLsamkit.Operators.ORD_SS=SBLsamkit.Operators-module.html#ORD_SS,Variable SBLsamkit.Parser.ORD_SS=SBLsamkit.Parser-module.html#ORD_SS,Variable SBLsamkit.Processor.ORD_SS=SBLsamkit.Processor-module.html#ORD_SS,Variable SBLsamkit.Stats.ORD_SS=SBLsamkit.Stats-module.html#ORD_SS,Variable SBLsamkit.Stream.ORD_SS=SBLsamkit.Stream-module.html#ORD_SS"><a title="SBLsamkit.MultiProcess.ORD_SS
+SBLsamkit.ORD_SS
+SBLsamkit.Operators.ORD_SS
+SBLsamkit.Parser.ORD_SS
+SBLsamkit.Processor.ORD_SS
+SBLsamkit.Stats.ORD_SS
+SBLsamkit.Stream.ORD_SS" class="py-name" href="#" onclick="return doclink('link-66', 'ORD_SS', 'link-66');">ORD_SS</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'ss'</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt id="link-67" class="py-name" targets="Variable SBLsamkit.MultiProcess.ORD_POS=SBLsamkit.MultiProcess-module.html#ORD_POS,Variable SBLsamkit.ORD_POS=SBLsamkit-module.html#ORD_POS,Variable SBLsamkit.Operators.ORD_POS=SBLsamkit.Operators-module.html#ORD_POS,Variable SBLsamkit.Parser.ORD_POS=SBLsamkit.Parser-module.html#ORD_POS,Variable SBLsamkit.Processor.ORD_POS=SBLsamkit.Processor-module.html#ORD_POS,Variable SBLsamkit.Stats.ORD_POS=SBLsamkit.Stats-module.html#ORD_POS,Variable SBLsamkit.Stream.ORD_POS=SBLsamkit.Stream-module.html#ORD_POS"><a title="SBLsamkit.MultiProcess.ORD_POS
+SBLsamkit.ORD_POS
+SBLsamkit.Operators.ORD_POS
+SBLsamkit.Parser.ORD_POS
+SBLsamkit.Processor.ORD_POS
+SBLsamkit.Stats.ORD_POS
+SBLsamkit.Stream.ORD_POS" class="py-name" href="#" onclick="return doclink('link-67', 'ORD_POS', 'link-67');">ORD_POS</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'pos'</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt id="link-68" class="py-name" targets="Variable SBLsamkit.MultiProcess.ORD_RNG=SBLsamkit.MultiProcess-module.html#ORD_RNG,Variable SBLsamkit.ORD_RNG=SBLsamkit-module.html#ORD_RNG,Variable SBLsamkit.Operators.ORD_RNG=SBLsamkit.Operators-module.html#ORD_RNG,Variable SBLsamkit.Parser.ORD_RNG=SBLsamkit.Parser-module.html#ORD_RNG,Variable SBLsamkit.Processor.ORD_RNG=SBLsamkit.Processor-module.html#ORD_RNG,Variable SBLsamkit.Stats.ORD_RNG=SBLsamkit.Stats-module.html#ORD_RNG,Variable SBLsamkit.Stream.ORD_RNG=SBLsamkit.Stream-module.html#ORD_RNG"><a title="SBLsamkit.MultiProcess.ORD_RNG
+SBLsamkit.ORD_RNG
+SBLsamkit.Operators.ORD_RNG
+SBLsamkit.Parser.ORD_RNG
+SBLsamkit.Processor.ORD_RNG
+SBLsamkit.Stats.ORD_RNG
+SBLsamkit.Stream.ORD_RNG" class="py-name" href="#" onclick="return doclink('link-68', 'ORD_RNG', 'link-68');">ORD_RNG</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'rng'</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt id="link-69" class="py-name" targets="Variable SBLsamkit.MultiProcess.ORD_RNGP=SBLsamkit.MultiProcess-module.html#ORD_RNGP,Variable SBLsamkit.ORD_RNGP=SBLsamkit-module.html#ORD_RNGP,Variable SBLsamkit.Operators.ORD_RNGP=SBLsamkit.Operators-module.html#ORD_RNGP,Variable SBLsamkit.Parser.ORD_RNGP=SBLsamkit.Parser-module.html#ORD_RNGP,Variable SBLsamkit.Processor.ORD_RNGP=SBLsamkit.Processor-module.html#ORD_RNGP,Variable SBLsamkit.Stats.ORD_RNGP=SBLsamkit.Stats-module.html#ORD_RNGP,Variable SBLsamkit.Stream.ORD_RNGP=SBLsamkit.Stream-module.html#ORD_RNGP"><a title="SBLsamkit.MultiProcess.ORD_RNGP
+SBLsamkit.ORD_RNGP
+SBLsamkit.Operators.ORD_RNGP
+SBLsamkit.Parser.ORD_RNGP
+SBLsamkit.Processor.ORD_RNGP
+SBLsamkit.Stats.ORD_RNGP
+SBLsamkit.Stream.ORD_RNGP" class="py-name" href="#" onclick="return doclink('link-69', 'ORD_RNGP', 'link-69');">ORD_RNGP</a></tt>   <tt class="py-op">=</tt> <tt class="py-string">'rngp'</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-comment"># Range operators and subcommands</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt id="link-70" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_RNG=SBLsamkit.MultiProcess-module.html#RNG_RNG,Variable SBLsamkit.Operators.RNG_RNG=SBLsamkit.Operators-module.html#RNG_RNG,Variable SBLsamkit.Parser.RNG_RNG=SBLsamkit.Parser-module.html#RNG_RNG,Variable SBLsamkit.Processor.RNG_RNG=SBLsamkit.Processor-module.html#RNG_RNG,Variable SBLsamkit.RNG_RNG=SBLsamkit-module.html#RNG_RNG,Variable SBLsamkit.Stats.RNG_RNG=SBLsamkit.Stats-module.html#RNG_RNG,Variable SBLsamkit.Stream.RNG_RNG=SBLsamkit.Stream-module.html#RNG_RNG"><a title="SBLsamkit.MultiProcess.RNG_RNG
+SBLsamkit.Operators.RNG_RNG
+SBLsamkit.Parser.RNG_RNG
+SBLsamkit.Processor.RNG_RNG
+SBLsamkit.RNG_RNG
+SBLsamkit.Stats.RNG_RNG
+SBLsamkit.Stream.RNG_RNG" class="py-name" href="#" onclick="return doclink('link-70', 'RNG_RNG', 'link-70');">RNG_RNG</a></tt>        <tt class="py-op">=</tt> <tt class="py-string">'rng'</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt id="link-71" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_RNGF=SBLsamkit.MultiProcess-module.html#RNG_RNGF,Variable SBLsamkit.Operators.RNG_RNGF=SBLsamkit.Operators-module.html#RNG_RNGF,Variable SBLsamkit.Parser.RNG_RNGF=SBLsamkit.Parser-module.html#RNG_RNGF,Variable SBLsamkit.Processor.RNG_RNGF=SBLsamkit.Processor-module.html#RNG_RNGF,Variable SBLsamkit.RNG_RNGF=SBLsamkit-module.html#RNG_RNGF,Variable SBLsamkit.Stats.RNG_RNGF=SBLsamkit.Stats-module.html#RNG_RNGF,Variable SBLsamkit.Stream.RNG_RNGF=SBLsamkit.Stream-module.html#RNG_RNGF"><a title="SBLsamkit.MultiProcess.RNG_RNGF
+SBLsamkit.Operators.RNG_RNGF
+SBLsamkit.Parser.RNG_RNGF
+SBLsamkit.Processor.RNG_RNGF
+SBLsamkit.RNG_RNGF
+SBLsamkit.Stats.RNG_RNGF
+SBLsamkit.Stream.RNG_RNGF" class="py-name" href="#" onclick="return doclink('link-71', 'RNG_RNGF', 'link-71');">RNG_RNGF</a></tt>       <tt class="py-op">=</tt> <tt class="py-string">'rngf'</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt id="link-72" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_RNGPAIR=SBLsamkit.MultiProcess-module.html#RNG_RNGPAIR,Variable SBLsamkit.Operators.RNG_RNGPAIR=SBLsamkit.Operators-module.html#RNG_RNGPAIR,Variable SBLsamkit.Parser.RNG_RNGPAIR=SBLsamkit.Parser-module.html#RNG_RNGPAIR,Variable SBLsamkit.Processor.RNG_RNGPAIR=SBLsamkit.Processor-module.html#RNG_RNGPAIR,Variable SBLsamkit.RNG_RNGPAIR=SBLsamkit-module.html#RNG_RNGPAIR,Variable SBLsamkit.Stats.RNG_RNGPAIR=SBLsamkit.Stats-module.html#RNG_RNGPAIR,Variable SBLsamkit.Stream.RNG_RNGPAIR=SBLsamkit.Stream-module.html#RNG_RNGPAIR"><a title="SBLsamkit.MultiProcess.RNG_RNGPAIR
+SBLsamkit.Operators.RNG_RNGPAIR
+SBLsamkit.Parser.RNG_RNGPAIR
+SBLsamkit.Processor.RNG_RNGPAIR
+SBLsamkit.RNG_RNGPAIR
+SBLsamkit.Stats.RNG_RNGPAIR
+SBLsamkit.Stream.RNG_RNGPAIR" class="py-name" href="#" onclick="return doclink('link-72', 'RNG_RNGPAIR', 'link-72');">RNG_RNGPAIR</a></tt>    <tt class="py-op">=</tt> <tt class="py-string">'rngp'</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt id="link-73" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_RNGPAIRF=SBLsamkit.MultiProcess-module.html#RNG_RNGPAIRF,Variable SBLsamkit.Operators.RNG_RNGPAIRF=SBLsamkit.Operators-module.html#RNG_RNGPAIRF,Variable SBLsamkit.Parser.RNG_RNGPAIRF=SBLsamkit.Parser-module.html#RNG_RNGPAIRF,Variable SBLsamkit.Processor.RNG_RNGPAIRF=SBLsamkit.Processor-module.html#RNG_RNGPAIRF,Variable SBLsamkit.RNG_RNGPAIRF=SBLsamkit-module.html#RNG_RNGPAIRF,Variable SBLsamkit.Stats.RNG_RNGPAIRF=SBLsamkit.Stats-module.html#RNG_RNGPAIRF,Variable SBLsamkit.Stream.RNG_RNGPAIRF=SBLsamkit.Stream-module.html#RNG_RNGPAIRF"><a title="SBLsamkit.MultiProcess.RNG_RNGPAIRF
+SBLsamkit.Operators.RNG_RNGPAIRF
+SBLsamkit.Parser.RNG_RNGPAIRF
+SBLsamkit.Processor.RNG_RNGPAIRF
+SBLsamkit.RNG_RNGPAIRF
+SBLsamkit.Stats.RNG_RNGPAIRF
+SBLsamkit.Stream.RNG_RNGPAIRF" class="py-name" href="#" onclick="return doclink('link-73', 'RNG_RNGPAIRF', 'link-73');">RNG_RNGPAIRF</a></tt>   <tt class="py-op">=</tt> <tt class="py-string">'rngpf'</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt id="link-74" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_RANGES=SBLsamkit.MultiProcess-module.html#RNG_RANGES,Variable SBLsamkit.Operators.RNG_RANGES=SBLsamkit.Operators-module.html#RNG_RANGES,Variable SBLsamkit.Parser.RNG_RANGES=SBLsamkit.Parser-module.html#RNG_RANGES,Variable SBLsamkit.Processor.RNG_RANGES=SBLsamkit.Processor-module.html#RNG_RANGES,Variable SBLsamkit.RNG_RANGES=SBLsamkit-module.html#RNG_RANGES,Variable SBLsamkit.Stats.RNG_RANGES=SBLsamkit.Stats-module.html#RNG_RANGES,Variable SBLsamkit.Stream.RNG_RANGES=SBLsamkit.Stream-module.html#RNG_RANGES"><a title="SBLsamkit.MultiProcess.RNG_RANGES
+SBLsamkit.Operators.RNG_RANGES
+SBLsamkit.Parser.RNG_RANGES
+SBLsamkit.Processor.RNG_RANGES
+SBLsamkit.RNG_RANGES
+SBLsamkit.Stats.RNG_RANGES
+SBLsamkit.Stream.RNG_RANGES" class="py-name" href="#" onclick="return doclink('link-74', 'RNG_RANGES', 'link-74');">RNG_RANGES</a></tt>     <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt id="link-75" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_RNG
+SBLsamkit.Operators.RNG_RNG
+SBLsamkit.Parser.RNG_RNG
+SBLsamkit.Processor.RNG_RNG
+SBLsamkit.RNG_RNG
+SBLsamkit.Stats.RNG_RNG
+SBLsamkit.Stream.RNG_RNG" class="py-name" href="#" onclick="return doclink('link-75', 'RNG_RNG', 'link-70');">RNG_RNG</a></tt><tt class="py-op">,</tt> <tt id="link-76" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_RNGPAIR
+SBLsamkit.Operators.RNG_RNGPAIR
+SBLsamkit.Parser.RNG_RNGPAIR
+SBLsamkit.Processor.RNG_RNGPAIR
+SBLsamkit.RNG_RNGPAIR
+SBLsamkit.Stats.RNG_RNGPAIR
+SBLsamkit.Stream.RNG_RNGPAIR" class="py-name" href="#" onclick="return doclink('link-76', 'RNG_RNGPAIR', 'link-72');">RNG_RNGPAIR</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt id="link-77" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_RANGEFILES=SBLsamkit.MultiProcess-module.html#RNG_RANGEFILES,Variable SBLsamkit.Operators.RNG_RANGEFILES=SBLsamkit.Operators-module.html#RNG_RANGEFILES,Variable SBLsamkit.Parser.RNG_RANGEFILES=SBLsamkit.Parser-module.html#RNG_RANGEFILES,Variable SBLsamkit.Processor.RNG_RANGEFILES=SBLsamkit.Processor-module.html#RNG_RANGEFILES,Variable SBLsamkit.RNG_RANGEFILES=SBLsamkit-module.html#RNG_RANGEFILES,Variable SBLsamkit.Stats.RNG_RANGEFILES=SBLsamkit.Stats-module.html#RNG_RANGEFILES,Variable SBLsamkit.Stream.RNG_RANGEFILES=SBLsamkit.Stream-module.html#RNG_RANGEFILES"><a title="SBLsamkit.MultiProcess.RNG_RANGEFILES
+SBLsamkit.Operators.RNG_RANGEFILES
+SBLsamkit.Parser.RNG_RANGEFILES
+SBLsamkit.Processor.RNG_RANGEFILES
+SBLsamkit.RNG_RANGEFILES
+SBLsamkit.Stats.RNG_RANGEFILES
+SBLsamkit.Stream.RNG_RANGEFILES" class="py-name" href="#" onclick="return doclink('link-77', 'RNG_RANGEFILES', 'link-77');">RNG_RANGEFILES</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt id="link-78" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_RNGF
+SBLsamkit.Operators.RNG_RNGF
+SBLsamkit.Parser.RNG_RNGF
+SBLsamkit.Processor.RNG_RNGF
+SBLsamkit.RNG_RNGF
+SBLsamkit.Stats.RNG_RNGF
+SBLsamkit.Stream.RNG_RNGF" class="py-name" href="#" onclick="return doclink('link-78', 'RNG_RNGF', 'link-71');">RNG_RNGF</a></tt><tt class="py-op">,</tt> <tt id="link-79" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_RNGPAIRF
+SBLsamkit.Operators.RNG_RNGPAIRF
+SBLsamkit.Parser.RNG_RNGPAIRF
+SBLsamkit.Processor.RNG_RNGPAIRF
+SBLsamkit.RNG_RNGPAIRF
+SBLsamkit.Stats.RNG_RNGPAIRF
+SBLsamkit.Stream.RNG_RNGPAIRF" class="py-name" href="#" onclick="return doclink('link-79', 'RNG_RNGPAIRF', 'link-73');">RNG_RNGPAIRF</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt id="link-80" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FLANK=SBLsamkit.MultiProcess-module.html#RNG_FLANK,Variable SBLsamkit.Operators.RNG_FLANK=SBLsamkit.Operators-module.html#RNG_FLANK,Variable SBLsamkit.Parser.RNG_FLANK=SBLsamkit.Parser-module.html#RNG_FLANK,Variable SBLsamkit.Processor.RNG_FLANK=SBLsamkit.Processor-module.html#RNG_FLANK,Variable SBLsamkit.RNG_FLANK=SBLsamkit-module.html#RNG_FLANK,Variable SBLsamkit.Stats.RNG_FLANK=SBLsamkit.Stats-module.html#RNG_FLANK,Variable SBLsamkit.Stream.RNG_FLANK=SBLsamkit.Stream-module.html#RNG_FLANK"><a title="SBLsamkit.MultiProcess.RNG_FLANK
+SBLsamkit.Operators.RNG_FLANK
+SBLsamkit.Parser.RNG_FLANK
+SBLsamkit.Processor.RNG_FLANK
+SBLsamkit.RNG_FLANK
+SBLsamkit.Stats.RNG_FLANK
+SBLsamkit.Stream.RNG_FLANK" class="py-name" href="#" onclick="return doclink('link-80', 'RNG_FLANK', 'link-80');">RNG_FLANK</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'flank'</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt id="link-81" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FOOTPRINT=SBLsamkit.MultiProcess-module.html#RNG_FOOTPRINT,Variable SBLsamkit.Operators.RNG_FOOTPRINT=SBLsamkit.Operators-module.html#RNG_FOOTPRINT,Variable SBLsamkit.Parser.RNG_FOOTPRINT=SBLsamkit.Parser-module.html#RNG_FOOTPRINT,Variable SBLsamkit.Processor.RNG_FOOTPRINT=SBLsamkit.Processor-module.html#RNG_FOOTPRINT,Variable SBLsamkit.RNG_FOOTPRINT=SBLsamkit-module.html#RNG_FOOTPRINT,Variable SBLsamkit.Stats.RNG_FOOTPRINT=SBLsamkit.Stats-module.html#RNG_FOOTPRINT,Variable SBLsamkit.Stream.RNG_FOOTPRINT=SBLsamkit.Stream-module.html#RNG_FOOTPRINT"><a title="SBLsamkit.MultiProcess.RNG_FOOTPRINT
+SBLsamkit.Operators.RNG_FOOTPRINT
+SBLsamkit.Parser.RNG_FOOTPRINT
+SBLsamkit.Processor.RNG_FOOTPRINT
+SBLsamkit.RNG_FOOTPRINT
+SBLsamkit.Stats.RNG_FOOTPRINT
+SBLsamkit.Stream.RNG_FOOTPRINT" class="py-name" href="#" onclick="return doclink('link-81', 'RNG_FOOTPRINT', 'link-81');">RNG_FOOTPRINT</a></tt>  <tt class="py-op">=</tt> <tt class="py-string">'footprint'</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt id="link-82" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_REPEAT=SBLsamkit.MultiProcess-module.html#RNG_REPEAT,Variable SBLsamkit.Operators.RNG_REPEAT=SBLsamkit.Operators-module.html#RNG_REPEAT,Variable SBLsamkit.Parser.RNG_REPEAT=SBLsamkit.Parser-module.html#RNG_REPEAT,Variable SBLsamkit.Processor.RNG_REPEAT=SBLsamkit.Processor-module.html#RNG_REPEAT,Variable SBLsamkit.RNG_REPEAT=SBLsamkit-module.html#RNG_REPEAT,Variable SBLsamkit.Stats.RNG_REPEAT=SBLsamkit.Stats-module.html#RNG_REPEAT,Variable SBLsamkit.Stream.RNG_REPEAT=SBLsamkit.Stream-module.html#RNG_REPEAT"><a title="SBLsamkit.MultiProcess.RNG_REPEAT
+SBLsamkit.Operators.RNG_REPEAT
+SBLsamkit.Parser.RNG_REPEAT
+SBLsamkit.Processor.RNG_REPEAT
+SBLsamkit.RNG_REPEAT
+SBLsamkit.Stats.RNG_REPEAT
+SBLsamkit.Stream.RNG_REPEAT" class="py-name" href="#" onclick="return doclink('link-82', 'RNG_REPEAT', 'link-82');">RNG_REPEAT</a></tt>     <tt class="py-op">=</tt> <tt class="py-string">'repeats'</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt id="link-83" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_COMMANDS=SBLsamkit.MultiProcess-module.html#RNG_COMMANDS,Variable SBLsamkit.Operators.RNG_COMMANDS=SBLsamkit.Operators-module.html#RNG_COMMANDS,Variable SBLsamkit.Parser.RNG_COMMANDS=SBLsamkit.Parser-module.html#RNG_COMMANDS,Variable SBLsamkit.Processor.RNG_COMMANDS=SBLsamkit.Processor-module.html#RNG_COMMANDS,Variable SBLsamkit.RNG_COMMANDS=SBLsamkit-module.html#RNG_COMMANDS,Variable SBLsamkit.Stats.RNG_COMMANDS=SBLsamkit.Stats-module.html#RNG_COMMANDS,Variable SBLsamkit.Stream.RNG_COMMANDS=SBLsamkit.Stream-module.html#RNG_COMMANDS"><a title="SBLsamkit.MultiProcess.RNG_COMMANDS
+SBLsamkit.Operators.RNG_COMMANDS
+SBLsamkit.Parser.RNG_COMMANDS
+SBLsamkit.Processor.RNG_COMMANDS
+SBLsamkit.RNG_COMMANDS
+SBLsamkit.Stats.RNG_COMMANDS
+SBLsamkit.Stream.RNG_COMMANDS" class="py-name" href="#" onclick="return doclink('link-83', 'RNG_COMMANDS', 'link-83');">RNG_COMMANDS</a></tt>   <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt id="link-84" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_FLANK
+SBLsamkit.Operators.RNG_FLANK
+SBLsamkit.Parser.RNG_FLANK
+SBLsamkit.Processor.RNG_FLANK
+SBLsamkit.RNG_FLANK
+SBLsamkit.Stats.RNG_FLANK
+SBLsamkit.Stream.RNG_FLANK" class="py-name" href="#" onclick="return doclink('link-84', 'RNG_FLANK', 'link-80');">RNG_FLANK</a></tt><tt class="py-op">,</tt> <tt id="link-85" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_FOOTPRINT
+SBLsamkit.Operators.RNG_FOOTPRINT
+SBLsamkit.Parser.RNG_FOOTPRINT
+SBLsamkit.Processor.RNG_FOOTPRINT
+SBLsamkit.RNG_FOOTPRINT
+SBLsamkit.Stats.RNG_FOOTPRINT
+SBLsamkit.Stream.RNG_FOOTPRINT" class="py-name" href="#" onclick="return doclink('link-85', 'RNG_FOOTPRINT', 'link-81');">RNG_FOOTPRINT</a></tt><tt class="py-op">,</tt> <tt id="link-86" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_REPEAT
+SBLsamkit.Operators.RNG_REPEAT
+SBLsamkit.Parser.RNG_REPEAT
+SBLsamkit.Processor.RNG_REPEAT
+SBLsamkit.RNG_REPEAT
+SBLsamkit.Stats.RNG_REPEAT
+SBLsamkit.Stream.RNG_REPEAT" class="py-name" href="#" onclick="return doclink('link-86', 'RNG_REPEAT', 'link-82');">RNG_REPEAT</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt id="link-87" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FP_L1=SBLsamkit.MultiProcess-module.html#RNG_FP_L1,Variable SBLsamkit.Operators.RNG_FP_L1=SBLsamkit.Operators-module.html#RNG_FP_L1,Variable SBLsamkit.Parser.RNG_FP_L1=SBLsamkit.Parser-module.html#RNG_FP_L1,Variable SBLsamkit.Processor.RNG_FP_L1=SBLsamkit.Processor-module.html#RNG_FP_L1,Variable SBLsamkit.RNG_FP_L1=SBLsamkit-module.html#RNG_FP_L1,Variable SBLsamkit.Stats.RNG_FP_L1=SBLsamkit.Stats-module.html#RNG_FP_L1,Variable SBLsamkit.Stream.RNG_FP_L1=SBLsamkit.Stream-module.html#RNG_FP_L1"><a title="SBLsamkit.MultiProcess.RNG_FP_L1
+SBLsamkit.Operators.RNG_FP_L1
+SBLsamkit.Parser.RNG_FP_L1
+SBLsamkit.Processor.RNG_FP_L1
+SBLsamkit.RNG_FP_L1
+SBLsamkit.Stats.RNG_FP_L1
+SBLsamkit.Stream.RNG_FP_L1" class="py-name" href="#" onclick="return doclink('link-87', 'RNG_FP_L1', 'link-87');">RNG_FP_L1</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'L1'</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt id="link-88" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FP_L1ANDR2=SBLsamkit.MultiProcess-module.html#RNG_FP_L1ANDR2,Variable SBLsamkit.Operators.RNG_FP_L1ANDR2=SBLsamkit.Operators-module.html#RNG_FP_L1ANDR2,Variable SBLsamkit.Parser.RNG_FP_L1ANDR2=SBLsamkit.Parser-module.html#RNG_FP_L1ANDR2,Variable SBLsamkit.Processor.RNG_FP_L1ANDR2=SBLsamkit.Processor-module.html#RNG_FP_L1ANDR2,Variable SBLsamkit.RNG_FP_L1ANDR2=SBLsamkit-module.html#RNG_FP_L1ANDR2,Variable SBLsamkit.Stats.RNG_FP_L1ANDR2=SBLsamkit.Stats-module.html#RNG_FP_L1ANDR2,Variable SBLsamkit.Stream.RNG_FP_L1ANDR2=SBLsamkit.Stream-module.html#RNG_FP_L1ANDR2"><a title="SBLsamkit.MultiProcess.RNG_FP_L1ANDR2
+SBLsamkit.Operators.RNG_FP_L1ANDR2
+SBLsamkit.Parser.RNG_FP_L1ANDR2
+SBLsamkit.Processor.RNG_FP_L1ANDR2
+SBLsamkit.RNG_FP_L1ANDR2
+SBLsamkit.Stats.RNG_FP_L1ANDR2
+SBLsamkit.Stream.RNG_FP_L1ANDR2" class="py-name" href="#" onclick="return doclink('link-88', 'RNG_FP_L1ANDR2', 'link-88');">RNG_FP_L1ANDR2</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'L1ANDR2'</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt id="link-89" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FP_L1ORR2=SBLsamkit.MultiProcess-module.html#RNG_FP_L1ORR2,Variable SBLsamkit.Operators.RNG_FP_L1ORR2=SBLsamkit.Operators-module.html#RNG_FP_L1ORR2,Variable SBLsamkit.Parser.RNG_FP_L1ORR2=SBLsamkit.Parser-module.html#RNG_FP_L1ORR2,Variable SBLsamkit.Processor.RNG_FP_L1ORR2=SBLsamkit.Processor-module.html#RNG_FP_L1ORR2,Variable SBLsamkit.RNG_FP_L1ORR2=SBLsamkit-module.html#RNG_FP_L1ORR2,Variable SBLsamkit.Stats.RNG_FP_L1ORR2=SBLsamkit.Stats-module.html#RNG_FP_L1ORR2,Variable SBLsamkit.Stream.RNG_FP_L1ORR2=SBLsamkit.Stream-module.html#RNG_FP_L1ORR2"><a title="SBLsamkit.MultiProcess.RNG_FP_L1ORR2
+SBLsamkit.Operators.RNG_FP_L1ORR2
+SBLsamkit.Parser.RNG_FP_L1ORR2
+SBLsamkit.Processor.RNG_FP_L1ORR2
+SBLsamkit.RNG_FP_L1ORR2
+SBLsamkit.Stats.RNG_FP_L1ORR2
+SBLsamkit.Stream.RNG_FP_L1ORR2" class="py-name" href="#" onclick="return doclink('link-89', 'RNG_FP_L1ORR2', 'link-89');">RNG_FP_L1ORR2</a></tt>  <tt class="py-op">=</tt> <tt class="py-string">'L1ORR2'</tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt id="link-90" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FP_R2=SBLsamkit.MultiProcess-module.html#RNG_FP_R2,Variable SBLsamkit.Operators.RNG_FP_R2=SBLsamkit.Operators-module.html#RNG_FP_R2,Variable SBLsamkit.Parser.RNG_FP_R2=SBLsamkit.Parser-module.html#RNG_FP_R2,Variable SBLsamkit.Processor.RNG_FP_R2=SBLsamkit.Processor-module.html#RNG_FP_R2,Variable SBLsamkit.RNG_FP_R2=SBLsamkit-module.html#RNG_FP_R2,Variable SBLsamkit.Stats.RNG_FP_R2=SBLsamkit.Stats-module.html#RNG_FP_R2,Variable SBLsamkit.Stream.RNG_FP_R2=SBLsamkit.Stream-module.html#RNG_FP_R2"><a title="SBLsamkit.MultiProcess.RNG_FP_R2
+SBLsamkit.Operators.RNG_FP_R2
+SBLsamkit.Parser.RNG_FP_R2
+SBLsamkit.Processor.RNG_FP_R2
+SBLsamkit.RNG_FP_R2
+SBLsamkit.Stats.RNG_FP_R2
+SBLsamkit.Stream.RNG_FP_R2" class="py-name" href="#" onclick="return doclink('link-90', 'RNG_FP_R2', 'link-90');">RNG_FP_R2</a></tt>      <tt class="py-op">=</tt> <tt class="py-string">'R2'</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt id="link-91" class="py-name" targets="Variable SBLsamkit.MultiProcess.RNG_FOOTPRINTS=SBLsamkit.MultiProcess-module.html#RNG_FOOTPRINTS,Variable SBLsamkit.Operators.RNG_FOOTPRINTS=SBLsamkit.Operators-module.html#RNG_FOOTPRINTS,Variable SBLsamkit.Parser.RNG_FOOTPRINTS=SBLsamkit.Parser-module.html#RNG_FOOTPRINTS,Variable SBLsamkit.Processor.RNG_FOOTPRINTS=SBLsamkit.Processor-module.html#RNG_FOOTPRINTS,Variable SBLsamkit.RNG_FOOTPRINTS=SBLsamkit-module.html#RNG_FOOTPRINTS,Variable SBLsamkit.Stats.RNG_FOOTPRINTS=SBLsamkit.Stats-module.html#RNG_FOOTPRINTS,Variable SBLsamkit.Stream.RNG_FOOTPRINTS=SBLsamkit.Stream-module.html#RNG_FOOTPRINTS"><a title="SBLsamkit.MultiProcess.RNG_FOOTPRINTS
+SBLsamkit.Operators.RNG_FOOTPRINTS
+SBLsamkit.Parser.RNG_FOOTPRINTS
+SBLsamkit.Processor.RNG_FOOTPRINTS
+SBLsamkit.RNG_FOOTPRINTS
+SBLsamkit.Stats.RNG_FOOTPRINTS
+SBLsamkit.Stream.RNG_FOOTPRINTS" class="py-name" href="#" onclick="return doclink('link-91', 'RNG_FOOTPRINTS', 'link-91');">RNG_FOOTPRINTS</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt id="link-92" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_FP_L1
+SBLsamkit.Operators.RNG_FP_L1
+SBLsamkit.Parser.RNG_FP_L1
+SBLsamkit.Processor.RNG_FP_L1
+SBLsamkit.RNG_FP_L1
+SBLsamkit.Stats.RNG_FP_L1
+SBLsamkit.Stream.RNG_FP_L1" class="py-name" href="#" onclick="return doclink('link-92', 'RNG_FP_L1', 'link-87');">RNG_FP_L1</a></tt><tt class="py-op">,</tt> <tt id="link-93" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_FP_L1ANDR2
+SBLsamkit.Operators.RNG_FP_L1ANDR2
+SBLsamkit.Parser.RNG_FP_L1ANDR2
+SBLsamkit.Processor.RNG_FP_L1ANDR2
+SBLsamkit.RNG_FP_L1ANDR2
+SBLsamkit.Stats.RNG_FP_L1ANDR2
+SBLsamkit.Stream.RNG_FP_L1ANDR2" class="py-name" href="#" onclick="return doclink('link-93', 'RNG_FP_L1ANDR2', 'link-88');">RNG_FP_L1ANDR2</a></tt><tt class="py-op">,</tt> <tt id="link-94" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_FP_L1ORR2
+SBLsamkit.Operators.RNG_FP_L1ORR2
+SBLsamkit.Parser.RNG_FP_L1ORR2
+SBLsamkit.Processor.RNG_FP_L1ORR2
+SBLsamkit.RNG_FP_L1ORR2
+SBLsamkit.Stats.RNG_FP_L1ORR2
+SBLsamkit.Stream.RNG_FP_L1ORR2" class="py-name" href="#" onclick="return doclink('link-94', 'RNG_FP_L1ORR2', 'link-89');">RNG_FP_L1ORR2</a></tt><tt class="py-op">,</tt> <tt id="link-95" class="py-name"><a title="SBLsamkit.MultiProcess.RNG_FP_R2
+SBLsamkit.Operators.RNG_FP_R2
+SBLsamkit.Parser.RNG_FP_R2
+SBLsamkit.Processor.RNG_FP_R2
+SBLsamkit.RNG_FP_R2
+SBLsamkit.Stats.RNG_FP_R2
+SBLsamkit.Stream.RNG_FP_R2" class="py-name" href="#" onclick="return doclink('link-95', 'RNG_FP_R2', 'link-90');">RNG_FP_R2</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-comment"># Recognized streams</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt id="link-96" class="py-name" targets="Variable SBLsamkit.MultiProcess.STREAMS=SBLsamkit.MultiProcess-module.html#STREAMS,Variable SBLsamkit.Operators.STREAMS=SBLsamkit.Operators-module.html#STREAMS,Variable SBLsamkit.Parser.STREAMS=SBLsamkit.Parser-module.html#STREAMS,Variable SBLsamkit.Processor.STREAMS=SBLsamkit.Processor-module.html#STREAMS,Variable SBLsamkit.STREAMS=SBLsamkit-module.html#STREAMS,Variable SBLsamkit.Stats.STREAMS=SBLsamkit.Stats-module.html#STREAMS,Variable SBLsamkit.Stream.STREAMS=SBLsamkit.Stream-module.html#STREAMS"><a title="SBLsamkit.MultiProcess.STREAMS
+SBLsamkit.Operators.STREAMS
+SBLsamkit.Parser.STREAMS
+SBLsamkit.Processor.STREAMS
+SBLsamkit.STREAMS
+SBLsamkit.Stats.STREAMS
+SBLsamkit.Stream.STREAMS" class="py-name" href="#" onclick="return doclink('link-96', 'STREAMS', 'link-96');">STREAMS</a></tt>    <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-string">'st'</tt><tt class="py-op">,</tt>  </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">             <tt class="py-string">'suffix,[LL,][ss,][NMf,min,max,][RPf,min,max,][phredf,min,max,][iL,min,max,][[rng (rangelist),|rngp (range pair list),|rngf,rangefilename,|rngpf,rangepairfilename,[flank,value,][footprint,value,][repeats]][,operator1[,operator2...]]'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">             <tt class="py-op">)</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-comment"># Generates a list of Location mapping names from LL_*</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt id="link-97" class="py-name" targets="Variable SBLsamkit.LLnames=SBLsamkit-module.html#LLnames,Variable SBLsamkit.MultiProcess.LLnames=SBLsamkit.MultiProcess-module.html#LLnames,Variable SBLsamkit.Operators.LLnames=SBLsamkit.Operators-module.html#LLnames,Variable SBLsamkit.Parser.LLnames=SBLsamkit.Parser-module.html#LLnames,Variable SBLsamkit.Processor.LLnames=SBLsamkit.Processor-module.html#LLnames,Variable SBLsamkit.Stats.LLnames=SBLsamkit.Stats-module.html#LLnames,Variable SBLsamkit.Stream.LLnames=SBLsamkit.Stream-module.html#LLnames"><a title="SBLsamkit.LLnames
+SBLsamkit.MultiProcess.LLnames
+SBLsamkit.Operators.LLnames
+SBLsamkit.Parser.LLnames
+SBLsamkit.Processor.LLnames
+SBLsamkit.Stats.LLnames
+SBLsamkit.Stream.LLnames" class="py-name" href="#" onclick="return doclink('link-97', 'LLnames', 'link-97');">LLnames</a></tt>    <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt id="link-98" class="py-name"><a title="SBLsamkit.LL_UX
+SBLsamkit.MultiProcess.LL_UX
+SBLsamkit.Operators.LL_UX
+SBLsamkit.Parser.LL_UX
+SBLsamkit.Processor.LL_UX
+SBLsamkit.Stats.LL_UX
+SBLsamkit.Stream.LL_UX" class="py-name" href="#" onclick="return doclink('link-98', 'LL_UX', 'link-0');">LL_UX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">               <tt id="link-99" class="py-name"><a title="SBLsamkit.LL_UNM
+SBLsamkit.MultiProcess.LL_UNM
+SBLsamkit.Operators.LL_UNM
+SBLsamkit.Parser.LL_UNM
+SBLsamkit.Processor.LL_UNM
+SBLsamkit.Stats.LL_UNM
+SBLsamkit.Stream.LL_UNM" class="py-name" href="#" onclick="return doclink('link-99', 'LL_UNM', 'link-1');">LL_UNM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">               <tt id="link-100" class="py-name"><a title="SBLsamkit.LL_URM
+SBLsamkit.MultiProcess.LL_URM
+SBLsamkit.Operators.LL_URM
+SBLsamkit.Parser.LL_URM
+SBLsamkit.Processor.LL_URM
+SBLsamkit.Stats.LL_URM
+SBLsamkit.Stream.LL_URM" class="py-name" href="#" onclick="return doclink('link-100', 'LL_URM', 'link-2');">LL_URM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">               <tt id="link-101" class="py-name"><a title="SBLsamkit.LL_URN
+SBLsamkit.MultiProcess.LL_URN
+SBLsamkit.Operators.LL_URN
+SBLsamkit.Parser.LL_URN
+SBLsamkit.Processor.LL_URN
+SBLsamkit.Stats.LL_URN
+SBLsamkit.Stream.LL_URN" class="py-name" href="#" onclick="return doclink('link-101', 'LL_URN', 'link-3');">LL_URN</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line">               <tt id="link-102" class="py-name"><a title="SBLsamkit.LL_URS
+SBLsamkit.MultiProcess.LL_URS
+SBLsamkit.Operators.LL_URS
+SBLsamkit.Parser.LL_URS
+SBLsamkit.Processor.LL_URS
+SBLsamkit.Stats.LL_URS
+SBLsamkit.Stream.LL_URS" class="py-name" href="#" onclick="return doclink('link-102', 'LL_URS', 'link-4');">LL_URS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line">               <tt id="link-103" class="py-name"><a title="SBLsamkit.LL_UU
+SBLsamkit.MultiProcess.LL_UU
+SBLsamkit.Operators.LL_UU
+SBLsamkit.Parser.LL_UU
+SBLsamkit.Processor.LL_UU
+SBLsamkit.Stats.LL_UU
+SBLsamkit.Stream.LL_UU" class="py-name" href="#" onclick="return doclink('link-103', 'LL_UU', 'link-5');">LL_UU</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">               <tt id="link-104" class="py-name"><a title="SBLsamkit.LL_UUE
+SBLsamkit.MultiProcess.LL_UUE
+SBLsamkit.Operators.LL_UUE
+SBLsamkit.Parser.LL_UUE
+SBLsamkit.Processor.LL_UUE
+SBLsamkit.Stats.LL_UUE
+SBLsamkit.Stream.LL_UUE" class="py-name" href="#" onclick="return doclink('link-104', 'LL_UUE', 'link-6');">LL_UUE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">               <tt id="link-105" class="py-name"><a title="SBLsamkit.LL_UUD
+SBLsamkit.MultiProcess.LL_UUD
+SBLsamkit.Operators.LL_UUD
+SBLsamkit.Parser.LL_UUD
+SBLsamkit.Processor.LL_UUD
+SBLsamkit.Stats.LL_UUD
+SBLsamkit.Stream.LL_UUD" class="py-name" href="#" onclick="return doclink('link-105', 'LL_UUD', 'link-7');">LL_UUD</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">               <tt id="link-106" class="py-name"><a title="SBLsamkit.LL_UA
+SBLsamkit.MultiProcess.LL_UA
+SBLsamkit.Operators.LL_UA
+SBLsamkit.Parser.LL_UA
+SBLsamkit.Processor.LL_UA
+SBLsamkit.Stats.LL_UA
+SBLsamkit.Stream.LL_UA" class="py-name" href="#" onclick="return doclink('link-106', 'LL_UA', 'link-8');">LL_UA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">               <tt id="link-107" class="py-name"><a title="SBLsamkit.LL_XX
+SBLsamkit.MultiProcess.LL_XX
+SBLsamkit.Operators.LL_XX
+SBLsamkit.Parser.LL_XX
+SBLsamkit.Processor.LL_XX
+SBLsamkit.Stats.LL_XX
+SBLsamkit.Stream.LL_XX" class="py-name" href="#" onclick="return doclink('link-107', 'LL_XX', 'link-9');">LL_XX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">               <tt id="link-108" class="py-name"><a title="SBLsamkit.LL_XA
+SBLsamkit.MultiProcess.LL_XA
+SBLsamkit.Operators.LL_XA
+SBLsamkit.Parser.LL_XA
+SBLsamkit.Processor.LL_XA
+SBLsamkit.Stats.LL_XA
+SBLsamkit.Stream.LL_XA" class="py-name" href="#" onclick="return doclink('link-108', 'LL_XA', 'link-10');">LL_XA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">               <tt id="link-109" class="py-name"><a title="SBLsamkit.LL_MX
+SBLsamkit.MultiProcess.LL_MX
+SBLsamkit.Operators.LL_MX
+SBLsamkit.Parser.LL_MX
+SBLsamkit.Processor.LL_MX
+SBLsamkit.Stats.LL_MX
+SBLsamkit.Stream.LL_MX" class="py-name" href="#" onclick="return doclink('link-109', 'LL_MX', 'link-11');">LL_MX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">               <tt id="link-110" class="py-name"><a title="SBLsamkit.LL_MM
+SBLsamkit.MultiProcess.LL_MM
+SBLsamkit.Operators.LL_MM
+SBLsamkit.Parser.LL_MM
+SBLsamkit.Processor.LL_MM
+SBLsamkit.Stats.LL_MM
+SBLsamkit.Stream.LL_MM" class="py-name" href="#" onclick="return doclink('link-110', 'LL_MM', 'link-12');">LL_MM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">               <tt id="link-111" class="py-name"><a title="SBLsamkit.LL_MNM
+SBLsamkit.MultiProcess.LL_MNM
+SBLsamkit.Operators.LL_MNM
+SBLsamkit.Parser.LL_MNM
+SBLsamkit.Processor.LL_MNM
+SBLsamkit.Stats.LL_MNM
+SBLsamkit.Stream.LL_MNM" class="py-name" href="#" onclick="return doclink('link-111', 'LL_MNM', 'link-13');">LL_MNM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">               <tt id="link-112" class="py-name"><a title="SBLsamkit.LL_MRM
+SBLsamkit.MultiProcess.LL_MRM
+SBLsamkit.Operators.LL_MRM
+SBLsamkit.Parser.LL_MRM
+SBLsamkit.Processor.LL_MRM
+SBLsamkit.Stats.LL_MRM
+SBLsamkit.Stream.LL_MRM" class="py-name" href="#" onclick="return doclink('link-112', 'LL_MRM', 'link-14');">LL_MRM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">               <tt id="link-113" class="py-name"><a title="SBLsamkit.LL_MRN
+SBLsamkit.MultiProcess.LL_MRN
+SBLsamkit.Operators.LL_MRN
+SBLsamkit.Parser.LL_MRN
+SBLsamkit.Processor.LL_MRN
+SBLsamkit.Stats.LL_MRN
+SBLsamkit.Stream.LL_MRN" class="py-name" href="#" onclick="return doclink('link-113', 'LL_MRN', 'link-15');">LL_MRN</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">               <tt id="link-114" class="py-name"><a title="SBLsamkit.LL_MRS
+SBLsamkit.MultiProcess.LL_MRS
+SBLsamkit.Operators.LL_MRS
+SBLsamkit.Parser.LL_MRS
+SBLsamkit.Processor.LL_MRS
+SBLsamkit.Stats.LL_MRS
+SBLsamkit.Stream.LL_MRS" class="py-name" href="#" onclick="return doclink('link-114', 'LL_MRS', 'link-16');">LL_MRS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">               <tt id="link-115" class="py-name"><a title="SBLsamkit.LL_MME
+SBLsamkit.MultiProcess.LL_MME
+SBLsamkit.Operators.LL_MME
+SBLsamkit.Parser.LL_MME
+SBLsamkit.Processor.LL_MME
+SBLsamkit.Stats.LL_MME
+SBLsamkit.Stream.LL_MME" class="py-name" href="#" onclick="return doclink('link-115', 'LL_MME', 'link-17');">LL_MME</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">               <tt id="link-116" class="py-name"><a title="SBLsamkit.LL_MMD
+SBLsamkit.MultiProcess.LL_MMD
+SBLsamkit.Operators.LL_MMD
+SBLsamkit.Parser.LL_MMD
+SBLsamkit.Processor.LL_MMD
+SBLsamkit.Stats.LL_MMD
+SBLsamkit.Stream.LL_MMD" class="py-name" href="#" onclick="return doclink('link-116', 'LL_MMD', 'link-18');">LL_MMD</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">               <tt id="link-117" class="py-name"><a title="SBLsamkit.LL_MA
+SBLsamkit.MultiProcess.LL_MA
+SBLsamkit.Operators.LL_MA
+SBLsamkit.Parser.LL_MA
+SBLsamkit.Processor.LL_MA
+SBLsamkit.Stats.LL_MA
+SBLsamkit.Stream.LL_MA" class="py-name" href="#" onclick="return doclink('link-117', 'LL_MA', 'link-19');">LL_MA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">               <tt id="link-118" class="py-name"><a title="SBLsamkit.LL_NMNM
+SBLsamkit.MultiProcess.LL_NMNM
+SBLsamkit.Operators.LL_NMNM
+SBLsamkit.Parser.LL_NMNM
+SBLsamkit.Processor.LL_NMNM
+SBLsamkit.Stats.LL_NMNM
+SBLsamkit.Stream.LL_NMNM" class="py-name" href="#" onclick="return doclink('link-118', 'LL_NMNM', 'link-20');">LL_NMNM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">               <tt id="link-119" class="py-name"><a title="SBLsamkit.LL_RMRM
+SBLsamkit.MultiProcess.LL_RMRM
+SBLsamkit.Operators.LL_RMRM
+SBLsamkit.Parser.LL_RMRM
+SBLsamkit.Processor.LL_RMRM
+SBLsamkit.Stats.LL_RMRM
+SBLsamkit.Stream.LL_RMRM" class="py-name" href="#" onclick="return doclink('link-119', 'LL_RMRM', 'link-21');">LL_RMRM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">               <tt id="link-120" class="py-name"><a title="SBLsamkit.LL_RNRN
+SBLsamkit.MultiProcess.LL_RNRN
+SBLsamkit.Operators.LL_RNRN
+SBLsamkit.Parser.LL_RNRN
+SBLsamkit.Processor.LL_RNRN
+SBLsamkit.Stats.LL_RNRN
+SBLsamkit.Stream.LL_RNRN" class="py-name" href="#" onclick="return doclink('link-120', 'LL_RNRN', 'link-22');">LL_RNRN</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">               <tt id="link-121" class="py-name"><a title="SBLsamkit.LL_RSRS
+SBLsamkit.MultiProcess.LL_RSRS
+SBLsamkit.Operators.LL_RSRS
+SBLsamkit.Parser.LL_RSRS
+SBLsamkit.Processor.LL_RSRS
+SBLsamkit.Stats.LL_RSRS
+SBLsamkit.Stream.LL_RSRS" class="py-name" href="#" onclick="return doclink('link-121', 'LL_RSRS', 'link-23');">LL_RSRS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">               <tt id="link-122" class="py-name"><a title="SBLsamkit.LL_NMRM
+SBLsamkit.MultiProcess.LL_NMRM
+SBLsamkit.Operators.LL_NMRM
+SBLsamkit.Parser.LL_NMRM
+SBLsamkit.Processor.LL_NMRM
+SBLsamkit.Stats.LL_NMRM
+SBLsamkit.Stream.LL_NMRM" class="py-name" href="#" onclick="return doclink('link-122', 'LL_NMRM', 'link-24');">LL_NMRM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">               <tt id="link-123" class="py-name"><a title="SBLsamkit.LL_NMRN
+SBLsamkit.MultiProcess.LL_NMRN
+SBLsamkit.Operators.LL_NMRN
+SBLsamkit.Parser.LL_NMRN
+SBLsamkit.Processor.LL_NMRN
+SBLsamkit.Stats.LL_NMRN
+SBLsamkit.Stream.LL_NMRN" class="py-name" href="#" onclick="return doclink('link-123', 'LL_NMRN', 'link-25');">LL_NMRN</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">               <tt id="link-124" class="py-name"><a title="SBLsamkit.LL_NMRS
+SBLsamkit.MultiProcess.LL_NMRS
+SBLsamkit.Operators.LL_NMRS
+SBLsamkit.Parser.LL_NMRS
+SBLsamkit.Processor.LL_NMRS
+SBLsamkit.Stats.LL_NMRS
+SBLsamkit.Stream.LL_NMRS" class="py-name" href="#" onclick="return doclink('link-124', 'LL_NMRS', 'link-26');">LL_NMRS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">               <tt id="link-125" class="py-name"><a title="SBLsamkit.LL_NMA
+SBLsamkit.MultiProcess.LL_NMA
+SBLsamkit.Operators.LL_NMA
+SBLsamkit.Parser.LL_NMA
+SBLsamkit.Processor.LL_NMA
+SBLsamkit.Stats.LL_NMA
+SBLsamkit.Stream.LL_NMA" class="py-name" href="#" onclick="return doclink('link-125', 'LL_NMA', 'link-27');">LL_NMA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">               <tt id="link-126" class="py-name"><a title="SBLsamkit.LL_RMA
+SBLsamkit.MultiProcess.LL_RMA
+SBLsamkit.Operators.LL_RMA
+SBLsamkit.Parser.LL_RMA
+SBLsamkit.Processor.LL_RMA
+SBLsamkit.Stats.LL_RMA
+SBLsamkit.Stream.LL_RMA" class="py-name" href="#" onclick="return doclink('link-126', 'LL_RMA', 'link-28');">LL_RMA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">               <tt id="link-127" class="py-name"><a title="SBLsamkit.LL_RNA
+SBLsamkit.MultiProcess.LL_RNA
+SBLsamkit.Operators.LL_RNA
+SBLsamkit.Parser.LL_RNA
+SBLsamkit.Processor.LL_RNA
+SBLsamkit.Stats.LL_RNA
+SBLsamkit.Stream.LL_RNA" class="py-name" href="#" onclick="return doclink('link-127', 'LL_RNA', 'link-29');">LL_RNA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">               <tt id="link-128" class="py-name"><a title="SBLsamkit.LL_RSA
+SBLsamkit.MultiProcess.LL_RSA
+SBLsamkit.Operators.LL_RSA
+SBLsamkit.Parser.LL_RSA
+SBLsamkit.Processor.LL_RSA
+SBLsamkit.Stats.LL_RSA
+SBLsamkit.Stream.LL_RSA" class="py-name" href="#" onclick="return doclink('link-128', 'LL_RSA', 'link-30');">LL_RSA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">               <tt id="link-129" class="py-name"><a title="SBLsamkit.LL_QC
+SBLsamkit.MultiProcess.LL_QC
+SBLsamkit.Operators.LL_QC
+SBLsamkit.Parser.LL_QC
+SBLsamkit.Processor.LL_QC
+SBLsamkit.Stats.LL_QC
+SBLsamkit.Stream.LL_QC" class="py-name" href="#" onclick="return doclink('link-129', 'LL_QC', 'link-31');">LL_QC</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">               <tt id="link-130" class="py-name"><a title="SBLsamkit.LL_CLC1
+SBLsamkit.MultiProcess.LL_CLC1
+SBLsamkit.Operators.LL_CLC1
+SBLsamkit.Parser.LL_CLC1
+SBLsamkit.Processor.LL_CLC1
+SBLsamkit.Stats.LL_CLC1
+SBLsamkit.Stream.LL_CLC1" class="py-name" href="#" onclick="return doclink('link-130', 'LL_CLC1', 'link-32');">LL_CLC1</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">               <tt id="link-131" class="py-name"><a title="SBLsamkit.LL_AA
+SBLsamkit.MultiProcess.LL_AA
+SBLsamkit.Operators.LL_AA
+SBLsamkit.Parser.LL_AA
+SBLsamkit.Processor.LL_AA
+SBLsamkit.Stats.LL_AA
+SBLsamkit.Stream.LL_AA" class="py-name" href="#" onclick="return doclink('link-131', 'LL_AA', 'link-33');">LL_AA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line">             <tt class="py-op">]</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-comment"># Generates a list of strand mapping names from SS_*</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt id="link-132" class="py-name" targets="Variable SBLsamkit.MultiProcess.SSnames=SBLsamkit.MultiProcess-module.html#SSnames,Variable SBLsamkit.Operators.SSnames=SBLsamkit.Operators-module.html#SSnames,Variable SBLsamkit.Parser.SSnames=SBLsamkit.Parser-module.html#SSnames,Variable SBLsamkit.Processor.SSnames=SBLsamkit.Processor-module.html#SSnames,Variable SBLsamkit.SSnames=SBLsamkit-module.html#SSnames,Variable SBLsamkit.Stats.SSnames=SBLsamkit.Stats-module.html#SSnames,Variable SBLsamkit.Stream.SSnames=SBLsamkit.Stream-module.html#SSnames"><a title="SBLsamkit.MultiProcess.SSnames
+SBLsamkit.Operators.SSnames
+SBLsamkit.Parser.SSnames
+SBLsamkit.Processor.SSnames
+SBLsamkit.SSnames
+SBLsamkit.Stats.SSnames
+SBLsamkit.Stream.SSnames" class="py-name" href="#" onclick="return doclink('link-132', 'SSnames', 'link-132');">SSnames</a></tt>    <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt id="link-133" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FR
+SBLsamkit.Operators.SS_FR
+SBLsamkit.Parser.SS_FR
+SBLsamkit.Processor.SS_FR
+SBLsamkit.SS_FR
+SBLsamkit.Stats.SS_FR
+SBLsamkit.Stream.SS_FR" class="py-name" href="#" onclick="return doclink('link-133', 'SS_FR', 'link-34');">SS_FR</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">               <tt id="link-134" class="py-name"><a title="SBLsamkit.MultiProcess.SS_RF
+SBLsamkit.Operators.SS_RF
+SBLsamkit.Parser.SS_RF
+SBLsamkit.Processor.SS_RF
+SBLsamkit.SS_RF
+SBLsamkit.Stats.SS_RF
+SBLsamkit.Stream.SS_RF" class="py-name" href="#" onclick="return doclink('link-134', 'SS_RF', 'link-35');">SS_RF</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">               <tt id="link-135" class="py-name"><a title="SBLsamkit.MultiProcess.SS_SSD
+SBLsamkit.Operators.SS_SSD
+SBLsamkit.Parser.SS_SSD
+SBLsamkit.Processor.SS_SSD
+SBLsamkit.SS_SSD
+SBLsamkit.Stats.SS_SSD
+SBLsamkit.Stream.SS_SSD" class="py-name" href="#" onclick="return doclink('link-135', 'SS_SSD', 'link-36');">SS_SSD</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">               <tt id="link-136" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FX
+SBLsamkit.Operators.SS_FX
+SBLsamkit.Parser.SS_FX
+SBLsamkit.Processor.SS_FX
+SBLsamkit.SS_FX
+SBLsamkit.Stats.SS_FX
+SBLsamkit.Stream.SS_FX" class="py-name" href="#" onclick="return doclink('link-136', 'SS_FX', 'link-37');">SS_FX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">               <tt id="link-137" class="py-name"><a title="SBLsamkit.MultiProcess.SS_RX
+SBLsamkit.Operators.SS_RX
+SBLsamkit.Parser.SS_RX
+SBLsamkit.Processor.SS_RX
+SBLsamkit.SS_RX
+SBLsamkit.Stats.SS_RX
+SBLsamkit.Stream.SS_RX" class="py-name" href="#" onclick="return doclink('link-137', 'SS_RX', 'link-38');">SS_RX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line">               <tt id="link-138" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FF
+SBLsamkit.Operators.SS_FF
+SBLsamkit.Parser.SS_FF
+SBLsamkit.Processor.SS_FF
+SBLsamkit.SS_FF
+SBLsamkit.Stats.SS_FF
+SBLsamkit.Stream.SS_FF" class="py-name" href="#" onclick="return doclink('link-138', 'SS_FF', 'link-39');">SS_FF</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line">               <tt id="link-139" class="py-name"><a title="SBLsamkit.MultiProcess.SS_RR
+SBLsamkit.Operators.SS_RR
+SBLsamkit.Parser.SS_RR
+SBLsamkit.Processor.SS_RR
+SBLsamkit.SS_RR
+SBLsamkit.Stats.SS_RR
+SBLsamkit.Stream.SS_RR" class="py-name" href="#" onclick="return doclink('link-139', 'SS_RR', 'link-40');">SS_RR</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line">               <tt id="link-140" class="py-name"><a title="SBLsamkit.MultiProcess.SS_SSE
+SBLsamkit.Operators.SS_SSE
+SBLsamkit.Parser.SS_SSE
+SBLsamkit.Processor.SS_SSE
+SBLsamkit.SS_SSE
+SBLsamkit.Stats.SS_SSE
+SBLsamkit.Stream.SS_SSE" class="py-name" href="#" onclick="return doclink('link-140', 'SS_SSE', 'link-41');">SS_SSE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line">               <tt id="link-141" class="py-name"><a title="SBLsamkit.MultiProcess.SS_AA
+SBLsamkit.Operators.SS_AA
+SBLsamkit.Parser.SS_AA
+SBLsamkit.Processor.SS_AA
+SBLsamkit.SS_AA
+SBLsamkit.Stats.SS_AA
+SBLsamkit.Stream.SS_AA" class="py-name" href="#" onclick="return doclink('link-141', 'SS_AA', 'link-42');">SS_AA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line">             <tt class="py-op">]</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-comment"># Generates a list of filter names from FP_*</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt id="link-142" class="py-name" targets="Variable SBLsamkit.FPnames=SBLsamkit-module.html#FPnames,Variable SBLsamkit.MultiProcess.FPnames=SBLsamkit.MultiProcess-module.html#FPnames,Variable SBLsamkit.Operators.FPnames=SBLsamkit.Operators-module.html#FPnames,Variable SBLsamkit.Parser.FPnames=SBLsamkit.Parser-module.html#FPnames,Variable SBLsamkit.Processor.FPnames=SBLsamkit.Processor-module.html#FPnames,Variable SBLsamkit.Stats.FPnames=SBLsamkit.Stats-module.html#FPnames,Variable SBLsamkit.Stream.FPnames=SBLsamkit.Stream-module.html#FPnames"><a title="SBLsamkit.FPnames
+SBLsamkit.MultiProcess.FPnames
+SBLsamkit.Operators.FPnames
+SBLsamkit.Parser.FPnames
+SBLsamkit.Processor.FPnames
+SBLsamkit.Stats.FPnames
+SBLsamkit.Stream.FPnames" class="py-name" href="#" onclick="return doclink('link-142', 'FPnames', 'link-142');">FPnames</a></tt>    <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt id="link-143" class="py-name"><a title="SBLsamkit.FP_NMF
+SBLsamkit.MultiProcess.FP_NMF
+SBLsamkit.Operators.FP_NMF
+SBLsamkit.Parser.FP_NMF
+SBLsamkit.Processor.FP_NMF
+SBLsamkit.Stats.FP_NMF
+SBLsamkit.Stream.FP_NMF" class="py-name" href="#" onclick="return doclink('link-143', 'FP_NMF', 'link-43');">FP_NMF</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">               <tt id="link-144" class="py-name"><a title="SBLsamkit.FP_NMFA
+SBLsamkit.MultiProcess.FP_NMFA
+SBLsamkit.Operators.FP_NMFA
+SBLsamkit.Parser.FP_NMFA
+SBLsamkit.Processor.FP_NMFA
+SBLsamkit.Stats.FP_NMFA
+SBLsamkit.Stream.FP_NMFA" class="py-name" href="#" onclick="return doclink('link-144', 'FP_NMFA', 'link-44');">FP_NMFA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">               <tt id="link-145" class="py-name"><a title="SBLsamkit.FP_RPF
+SBLsamkit.MultiProcess.FP_RPF
+SBLsamkit.Operators.FP_RPF
+SBLsamkit.Parser.FP_RPF
+SBLsamkit.Processor.FP_RPF
+SBLsamkit.Stats.FP_RPF
+SBLsamkit.Stream.FP_RPF" class="py-name" href="#" onclick="return doclink('link-145', 'FP_RPF', 'link-45');">FP_RPF</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">               <tt id="link-146" class="py-name"><a title="SBLsamkit.FP_RPFA
+SBLsamkit.MultiProcess.FP_RPFA
+SBLsamkit.Operators.FP_RPFA
+SBLsamkit.Parser.FP_RPFA
+SBLsamkit.Processor.FP_RPFA
+SBLsamkit.Stats.FP_RPFA
+SBLsamkit.Stream.FP_RPFA" class="py-name" href="#" onclick="return doclink('link-146', 'FP_RPFA', 'link-46');">FP_RPFA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line">               <tt id="link-147" class="py-name"><a title="SBLsamkit.FP_PHREDF
+SBLsamkit.MultiProcess.FP_PHREDF
+SBLsamkit.Operators.FP_PHREDF
+SBLsamkit.Parser.FP_PHREDF
+SBLsamkit.Processor.FP_PHREDF
+SBLsamkit.Stats.FP_PHREDF
+SBLsamkit.Stream.FP_PHREDF" class="py-name" href="#" onclick="return doclink('link-147', 'FP_PHREDF', 'link-47');">FP_PHREDF</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line">               <tt id="link-148" class="py-name"><a title="SBLsamkit.FP_PHREDFA
+SBLsamkit.MultiProcess.FP_PHREDFA
+SBLsamkit.Operators.FP_PHREDFA
+SBLsamkit.Parser.FP_PHREDFA
+SBLsamkit.Processor.FP_PHREDFA
+SBLsamkit.Stats.FP_PHREDFA
+SBLsamkit.Stream.FP_PHREDFA" class="py-name" href="#" onclick="return doclink('link-148', 'FP_PHREDFA', 'link-48');">FP_PHREDFA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line">             <tt class="py-op">]</tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-comment"># Generates a list of operator names from OP_*</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt id="link-149" class="py-name" targets="Variable SBLsamkit.MultiProcess.OPnames=SBLsamkit.MultiProcess-module.html#OPnames,Variable SBLsamkit.OPnames=SBLsamkit-module.html#OPnames,Variable SBLsamkit.Operators.OPnames=SBLsamkit.Operators-module.html#OPnames,Variable SBLsamkit.Parser.OPnames=SBLsamkit.Parser-module.html#OPnames,Variable SBLsamkit.Processor.OPnames=SBLsamkit.Processor-module.html#OPnames,Variable SBLsamkit.Stats.OPnames=SBLsamkit.Stats-module.html#OPnames,Variable SBLsamkit.Stream.OPnames=SBLsamkit.Stream-module.html#OPnames"><a title="SBLsamkit.MultiProcess.OPnames
+SBLsamkit.OPnames
+SBLsamkit.Operators.OPnames
+SBLsamkit.Parser.OPnames
+SBLsamkit.Processor.OPnames
+SBLsamkit.Stats.OPnames
+SBLsamkit.Stream.OPnames" class="py-name" href="#" onclick="return doclink('link-149', 'OPnames', 'link-149');">OPnames</a></tt>    <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt id="link-150" class="py-name"><a title="SBLsamkit.MultiProcess.OP_FASTQ
+SBLsamkit.OP_FASTQ
+SBLsamkit.Operators.OP_FASTQ
+SBLsamkit.Parser.OP_FASTQ
+SBLsamkit.Processor.OP_FASTQ
+SBLsamkit.Stats.OP_FASTQ
+SBLsamkit.Stream.OP_FASTQ" class="py-name" href="#" onclick="return doclink('link-150', 'OP_FASTQ', 'link-49');">OP_FASTQ</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">               <tt id="link-151" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SAM
+SBLsamkit.OP_SAM
+SBLsamkit.Operators.OP_SAM
+SBLsamkit.Parser.OP_SAM
+SBLsamkit.Processor.OP_SAM
+SBLsamkit.Stats.OP_SAM
+SBLsamkit.Stream.OP_SAM" class="py-name" href="#" onclick="return doclink('link-151', 'OP_SAM', 'link-50');">OP_SAM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line">               <tt id="link-152" class="py-name"><a title="SBLsamkit.MultiProcess.OP_FASTQPP
+SBLsamkit.OP_FASTQPP
+SBLsamkit.Operators.OP_FASTQPP
+SBLsamkit.Parser.OP_FASTQPP
+SBLsamkit.Processor.OP_FASTQPP
+SBLsamkit.Stats.OP_FASTQPP
+SBLsamkit.Stream.OP_FASTQPP" class="py-name" href="#" onclick="return doclink('link-152', 'OP_FASTQPP', 'link-52');">OP_FASTQPP</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">               <tt id="link-153" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SAMPP
+SBLsamkit.OP_SAMPP
+SBLsamkit.Operators.OP_SAMPP
+SBLsamkit.Parser.OP_SAMPP
+SBLsamkit.Processor.OP_SAMPP
+SBLsamkit.Stats.OP_SAMPP
+SBLsamkit.Stream.OP_SAMPP" class="py-name" href="#" onclick="return doclink('link-153', 'OP_SAMPP', 'link-51');">OP_SAMPP</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">               <tt id="link-154" class="py-name"><a title="SBLsamkit.MultiProcess.OP_PP
+SBLsamkit.OP_PP
+SBLsamkit.Operators.OP_PP
+SBLsamkit.Parser.OP_PP
+SBLsamkit.Processor.OP_PP
+SBLsamkit.Stats.OP_PP
+SBLsamkit.Stream.OP_PP" class="py-name" href="#" onclick="return doclink('link-154', 'OP_PP', 'link-53');">OP_PP</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">               <tt id="link-155" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SH
+SBLsamkit.OP_SH
+SBLsamkit.Operators.OP_SH
+SBLsamkit.Parser.OP_SH
+SBLsamkit.Processor.OP_SH
+SBLsamkit.Stats.OP_SH
+SBLsamkit.Stream.OP_SH" class="py-name" href="#" onclick="return doclink('link-155', 'OP_SH', 'link-54');">OP_SH</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line">               <tt id="link-156" class="py-name"><a title="SBLsamkit.MultiProcess.OP_ORDER
+SBLsamkit.OP_ORDER
+SBLsamkit.Operators.OP_ORDER
+SBLsamkit.Parser.OP_ORDER
+SBLsamkit.Processor.OP_ORDER
+SBLsamkit.Stats.OP_ORDER
+SBLsamkit.Stream.OP_ORDER" class="py-name" href="#" onclick="return doclink('link-156', 'OP_ORDER', 'link-55');">OP_ORDER</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line">               <tt id="link-157" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SE
+SBLsamkit.OP_SE
+SBLsamkit.Operators.OP_SE
+SBLsamkit.Parser.OP_SE
+SBLsamkit.Processor.OP_SE
+SBLsamkit.Stats.OP_SE
+SBLsamkit.Stream.OP_SE" class="py-name" href="#" onclick="return doclink('link-157', 'OP_SE', 'link-56');">OP_SE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line">               <tt id="link-158" class="py-name"><a title="SBLsamkit.MultiProcess.OP_NOUT
+SBLsamkit.OP_NOUT
+SBLsamkit.Operators.OP_NOUT
+SBLsamkit.Parser.OP_NOUT
+SBLsamkit.Processor.OP_NOUT
+SBLsamkit.Stats.OP_NOUT
+SBLsamkit.Stream.OP_NOUT" class="py-name" href="#" onclick="return doclink('link-158', 'OP_NOUT', 'link-57');">OP_NOUT</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">               <tt id="link-159" class="py-name"><a title="SBLsamkit.MultiProcess.OP_INFO
+SBLsamkit.OP_INFO
+SBLsamkit.Operators.OP_INFO
+SBLsamkit.Parser.OP_INFO
+SBLsamkit.Processor.OP_INFO
+SBLsamkit.Stats.OP_INFO
+SBLsamkit.Stream.OP_INFO" class="py-name" href="#" onclick="return doclink('link-159', 'OP_INFO', 'link-58');">OP_INFO</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line">               <tt id="link-160" class="py-name"><a title="SBLsamkit.MultiProcess.OP_NOINFO
+SBLsamkit.OP_NOINFO
+SBLsamkit.Operators.OP_NOINFO
+SBLsamkit.Parser.OP_NOINFO
+SBLsamkit.Processor.OP_NOINFO
+SBLsamkit.Stats.OP_NOINFO
+SBLsamkit.Stream.OP_NOINFO" class="py-name" href="#" onclick="return doclink('link-160', 'OP_NOINFO', 'link-59');">OP_NOINFO</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">               <tt id="link-161" class="py-name"><a title="SBLsamkit.MultiProcess.OP_GZ
+SBLsamkit.OP_GZ
+SBLsamkit.Operators.OP_GZ
+SBLsamkit.Parser.OP_GZ
+SBLsamkit.Processor.OP_GZ
+SBLsamkit.Stats.OP_GZ
+SBLsamkit.Stream.OP_GZ" class="py-name" href="#" onclick="return doclink('link-161', 'OP_GZ', 'link-60');">OP_GZ</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">               <tt id="link-162" class="py-name"><a title="SBLsamkit.MultiProcess.OP_CSV
+SBLsamkit.OP_CSV
+SBLsamkit.Operators.OP_CSV
+SBLsamkit.Parser.OP_CSV
+SBLsamkit.Processor.OP_CSV
+SBLsamkit.Stats.OP_CSV
+SBLsamkit.Stream.OP_CSV" class="py-name" href="#" onclick="return doclink('link-162', 'OP_CSV', 'link-61');">OP_CSV</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line">               <tt id="link-163" class="py-name"><a title="SBLsamkit.MultiProcess.OP_PASS
+SBLsamkit.OP_PASS
+SBLsamkit.Operators.OP_PASS
+SBLsamkit.Parser.OP_PASS
+SBLsamkit.Processor.OP_PASS
+SBLsamkit.Stats.OP_PASS
+SBLsamkit.Stream.OP_PASS" class="py-name" href="#" onclick="return doclink('link-163', 'OP_PASS', 'link-62');">OP_PASS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line">               <tt id="link-164" class="py-name"><a title="SBLsamkit.MultiProcess.OP_EX
+SBLsamkit.OP_EX
+SBLsamkit.Operators.OP_EX
+SBLsamkit.Parser.OP_EX
+SBLsamkit.Processor.OP_EX
+SBLsamkit.Stats.OP_EX
+SBLsamkit.Stream.OP_EX" class="py-name" href="#" onclick="return doclink('link-164', 'OP_EX', 'link-63');">OP_EX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line">               <tt id="link-165" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SAMPLE
+SBLsamkit.OP_SAMPLE
+SBLsamkit.Operators.OP_SAMPLE
+SBLsamkit.Parser.OP_SAMPLE
+SBLsamkit.Processor.OP_SAMPLE
+SBLsamkit.Stats.OP_SAMPLE
+SBLsamkit.Stream.OP_SAMPLE" class="py-name" href="#" onclick="return doclink('link-165', 'OP_SAMPLE', 'link-64');">OP_SAMPLE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line">             <tt class="py-op">]</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line"><tt class="py-comment"># Generates a list of order operator modes from ORD_*</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"><tt id="link-166" class="py-name" targets="Variable SBLsamkit.MultiProcess.ORDnames=SBLsamkit.MultiProcess-module.html#ORDnames,Variable SBLsamkit.ORDnames=SBLsamkit-module.html#ORDnames,Variable SBLsamkit.Operators.ORDnames=SBLsamkit.Operators-module.html#ORDnames,Variable SBLsamkit.Parser.ORDnames=SBLsamkit.Parser-module.html#ORDnames,Variable SBLsamkit.Processor.ORDnames=SBLsamkit.Processor-module.html#ORDnames,Variable SBLsamkit.Stats.ORDnames=SBLsamkit.Stats-module.html#ORDnames,Variable SBLsamkit.Stream.ORDnames=SBLsamkit.Stream-module.html#ORDnames"><a title="SBLsamkit.MultiProcess.ORDnames
+SBLsamkit.ORDnames
+SBLsamkit.Operators.ORDnames
+SBLsamkit.Parser.ORDnames
+SBLsamkit.Processor.ORDnames
+SBLsamkit.Stats.ORDnames
+SBLsamkit.Stream.ORDnames" class="py-name" href="#" onclick="return doclink('link-166', 'ORDnames', 'link-166');">ORDnames</a></tt>   <tt class="py-op">=</tt> <tt class="py-op">[</tt> <tt id="link-167" class="py-name"><a title="SBLsamkit.MultiProcess.ORD_LL
+SBLsamkit.ORD_LL
+SBLsamkit.Operators.ORD_LL
+SBLsamkit.Parser.ORD_LL
+SBLsamkit.Processor.ORD_LL
+SBLsamkit.Stats.ORD_LL
+SBLsamkit.Stream.ORD_LL" class="py-name" href="#" onclick="return doclink('link-167', 'ORD_LL', 'link-65');">ORD_LL</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">               <tt id="link-168" class="py-name"><a title="SBLsamkit.MultiProcess.ORD_SS
+SBLsamkit.ORD_SS
+SBLsamkit.Operators.ORD_SS
+SBLsamkit.Parser.ORD_SS
+SBLsamkit.Processor.ORD_SS
+SBLsamkit.Stats.ORD_SS
+SBLsamkit.Stream.ORD_SS" class="py-name" href="#" onclick="return doclink('link-168', 'ORD_SS', 'link-66');">ORD_SS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">               <tt id="link-169" class="py-name"><a title="SBLsamkit.MultiProcess.ORD_POS
+SBLsamkit.ORD_POS
+SBLsamkit.Operators.ORD_POS
+SBLsamkit.Parser.ORD_POS
+SBLsamkit.Processor.ORD_POS
+SBLsamkit.Stats.ORD_POS
+SBLsamkit.Stream.ORD_POS" class="py-name" href="#" onclick="return doclink('link-169', 'ORD_POS', 'link-67');">ORD_POS</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">               <tt id="link-170" class="py-name"><a title="SBLsamkit.MultiProcess.ORD_RNG
+SBLsamkit.ORD_RNG
+SBLsamkit.Operators.ORD_RNG
+SBLsamkit.Parser.ORD_RNG
+SBLsamkit.Processor.ORD_RNG
+SBLsamkit.Stats.ORD_RNG
+SBLsamkit.Stream.ORD_RNG" class="py-name" href="#" onclick="return doclink('link-170', 'ORD_RNG', 'link-68');">ORD_RNG</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">               <tt id="link-171" class="py-name"><a title="SBLsamkit.MultiProcess.ORD_RNGP
+SBLsamkit.ORD_RNGP
+SBLsamkit.Operators.ORD_RNGP
+SBLsamkit.Parser.ORD_RNGP
+SBLsamkit.Processor.ORD_RNGP
+SBLsamkit.Stats.ORD_RNGP
+SBLsamkit.Stream.ORD_RNGP" class="py-name" href="#" onclick="return doclink('link-171', 'ORD_RNGP', 'link-69');">ORD_RNGP</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">             <tt class="py-op">]</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line"> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"><tt class="py-comment"># Operator help text</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line"><tt id="link-172" class="py-name" targets="Variable SBLsamkit.MultiProcess.OPERATORHELP=SBLsamkit.MultiProcess-module.html#OPERATORHELP,Variable SBLsamkit.OPERATORHELP=SBLsamkit-module.html#OPERATORHELP,Variable SBLsamkit.Operators.OPERATORHELP=SBLsamkit.Operators-module.html#OPERATORHELP,Variable SBLsamkit.Parser.OPERATORHELP=SBLsamkit.Parser-module.html#OPERATORHELP,Variable SBLsamkit.Processor.OPERATORHELP=SBLsamkit.Processor-module.html#OPERATORHELP,Variable SBLsamkit.Stats.OPERATORHELP=SBLsamkit.Stats-module.html#OPERATORHELP,Variable SBLsamkit.Stream.OPERATORHELP=SBLsamkit.Stream-module.html#OPERATORHELP"><a title="SBLsamkit.MultiProcess.OPERATORHELP
+SBLsamkit.OPERATORHELP
+SBLsamkit.Operators.OPERATORHELP
+SBLsamkit.Parser.OPERATORHELP
+SBLsamkit.Processor.OPERATORHELP
+SBLsamkit.Stats.OPERATORHELP
+SBLsamkit.Stream.OPERATORHELP" class="py-name" href="#" onclick="return doclink('link-172', 'OPERATORHELP', 'link-172');">OPERATORHELP</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt>  </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">  <tt class="py-string">'Sub-stream specifiers:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-173" class="py-name"><a title="SBLsamkit.MultiProcess.OP_FASTQ
+SBLsamkit.OP_FASTQ
+SBLsamkit.Operators.OP_FASTQ
+SBLsamkit.Parser.OP_FASTQ
+SBLsamkit.Processor.OP_FASTQ
+SBLsamkit.Stats.OP_FASTQ
+SBLsamkit.Stream.OP_FASTQ" class="py-name" href="#" onclick="return doclink('link-173', 'OP_FASTQ', 'link-49');">OP_FASTQ</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-174" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SAM
+SBLsamkit.OP_SAM
+SBLsamkit.Operators.OP_SAM
+SBLsamkit.Parser.OP_SAM
+SBLsamkit.Processor.OP_SAM
+SBLsamkit.Stats.OP_SAM
+SBLsamkit.Stream.OP_SAM" class="py-name" href="#" onclick="return doclink('link-174', 'OP_SAM', 'link-50');">OP_SAM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line">  <tt class="py-string">'Operators - these act on the stream to their left:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-175" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SH
+SBLsamkit.OP_SH
+SBLsamkit.Operators.OP_SH
+SBLsamkit.Parser.OP_SH
+SBLsamkit.Processor.OP_SH
+SBLsamkit.Stats.OP_SH
+SBLsamkit.Stream.OP_SH" class="py-name" href="#" onclick="return doclink('link-175', 'OP_SH', 'link-54');">OP_SH</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-176" class="py-name"><a title="SBLsamkit.MultiProcess.OP_ORDER
+SBLsamkit.OP_ORDER
+SBLsamkit.Operators.OP_ORDER
+SBLsamkit.Parser.OP_ORDER
+SBLsamkit.Processor.OP_ORDER
+SBLsamkit.Stats.OP_ORDER
+SBLsamkit.Stream.OP_ORDER" class="py-name" href="#" onclick="return doclink('link-176', 'OP_ORDER', 'link-55');">OP_ORDER</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-177" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SE
+SBLsamkit.OP_SE
+SBLsamkit.Operators.OP_SE
+SBLsamkit.Parser.OP_SE
+SBLsamkit.Processor.OP_SE
+SBLsamkit.Stats.OP_SE
+SBLsamkit.Stream.OP_SE" class="py-name" href="#" onclick="return doclink('link-177', 'OP_SE', 'link-56');">OP_SE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line">  <tt class="py-string">'  %-12s %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-178" class="py-name"><a title="SBLsamkit.MultiProcess.OP_NOUT
+SBLsamkit.OP_NOUT
+SBLsamkit.Operators.OP_NOUT
+SBLsamkit.Parser.OP_NOUT
+SBLsamkit.Processor.OP_NOUT
+SBLsamkit.Stats.OP_NOUT
+SBLsamkit.Stream.OP_NOUT" class="py-name" href="#" onclick="return doclink('link-178', 'OP_NOUT', 'link-57');">OP_NOUT</a></tt><tt class="py-op">,</tt>  <tt class="py-string">'no file(s) output'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line">  <tt class="py-string">'  %-12s %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-179" class="py-name"><a title="SBLsamkit.MultiProcess.OP_INFO
+SBLsamkit.OP_INFO
+SBLsamkit.Operators.OP_INFO
+SBLsamkit.Parser.OP_INFO
+SBLsamkit.Processor.OP_INFO
+SBLsamkit.Stats.OP_INFO
+SBLsamkit.Stream.OP_INFO" class="py-name" href="#" onclick="return doclink('link-179', 'OP_INFO', 'link-58');">OP_INFO</a></tt><tt class="py-op">,</tt>  <tt class="py-string">'like nout, but info file(s) are still written'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line">  <tt class="py-string">'  %-12s %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-180" class="py-name"><a title="SBLsamkit.MultiProcess.OP_NOINFO
+SBLsamkit.OP_NOINFO
+SBLsamkit.Operators.OP_NOINFO
+SBLsamkit.Parser.OP_NOINFO
+SBLsamkit.Processor.OP_NOINFO
+SBLsamkit.Stats.OP_NOINFO
+SBLsamkit.Stream.OP_NOINFO" class="py-name" href="#" onclick="return doclink('link-180', 'OP_NOINFO', 'link-59');">OP_NOINFO</a></tt><tt class="py-op">,</tt><tt class="py-string">'no info file(s)'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line">  <tt class="py-string">'  %-12s %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-181" class="py-name"><a title="SBLsamkit.MultiProcess.OP_GZ
+SBLsamkit.OP_GZ
+SBLsamkit.Operators.OP_GZ
+SBLsamkit.Parser.OP_GZ
+SBLsamkit.Processor.OP_GZ
+SBLsamkit.Stats.OP_GZ
+SBLsamkit.Stream.OP_GZ" class="py-name" href="#" onclick="return doclink('link-181', 'OP_GZ', 'link-60');">OP_GZ</a></tt> <tt class="py-op">,</tt>   <tt class="py-string">'file(s) output as compressed file(s)'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line">  <tt class="py-string">'  %-12s %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-string">'%s,N,M'</tt> <tt class="py-op">%</tt> <tt id="link-182" class="py-name"><a title="SBLsamkit.MultiProcess.OP_SAMPLE
+SBLsamkit.OP_SAMPLE
+SBLsamkit.Operators.OP_SAMPLE
+SBLsamkit.Parser.OP_SAMPLE
+SBLsamkit.Processor.OP_SAMPLE
+SBLsamkit.Stats.OP_SAMPLE
+SBLsamkit.Stream.OP_SAMPLE" class="py-name" href="#" onclick="return doclink('link-182', 'OP_SAMPLE', 'link-64');">OP_SAMPLE</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line">                            <tt class="py-string">'only accept first N of each M matches'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line">  <tt class="py-string">'  %-12s %s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt class="py-string">'%s,N'</tt> <tt class="py-op">%</tt> <tt id="link-183" class="py-name"><a title="SBLsamkit.MultiProcess.OP_CSV
+SBLsamkit.OP_CSV
+SBLsamkit.Operators.OP_CSV
+SBLsamkit.Parser.OP_CSV
+SBLsamkit.Processor.OP_CSV
+SBLsamkit.Stats.OP_CSV
+SBLsamkit.Stream.OP_CSV" class="py-name" href="#" onclick="return doclink('link-183', 'OP_CSV', 'link-61');">OP_CSV</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line">                            <tt class="py-string">'create or add range qualifying records to .N.csv'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line">  <tt class="py-string">'Modifiers:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-184" class="py-name"><a title="SBLsamkit.MultiProcess.OP_PASS
+SBLsamkit.OP_PASS
+SBLsamkit.Operators.OP_PASS
+SBLsamkit.Parser.OP_PASS
+SBLsamkit.Processor.OP_PASS
+SBLsamkit.Stats.OP_PASS
+SBLsamkit.Stream.OP_PASS" class="py-name" href="#" onclick="return doclink('link-184', 'OP_PASS', 'link-62');">OP_PASS</a></tt><tt class="py-op">,</tt><tt class="py-string">'causes all records to be passed onto the next stage'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-185" class="py-name"><a title="SBLsamkit.MultiProcess.OP_EX
+SBLsamkit.OP_EX
+SBLsamkit.Operators.OP_EX
+SBLsamkit.Parser.OP_EX
+SBLsamkit.Processor.OP_EX
+SBLsamkit.Stats.OP_EX
+SBLsamkit.Stream.OP_EX" class="py-name" href="#" onclick="return doclink('link-185', 'OP_EX', 'link-63');">OP_EX</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line">            <tt class="py-string">'parsed records are passed to the next stage, others are streamed'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line">  <tt class="py-string">'L = record location type:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line">  <tt class="py-string">'  M     :mapped - has an RNAME and a pos'</tt><tt class="py-op">,</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line">  <tt class="py-string">'  U     :uniquely mapped - RNAME and pos present, no ZS:Z:R field'</tt><tt class="py-op">,</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line">  <tt class="py-string">'  nM    :not mapped - no RNAME and pos, no  ZS:Z:R field'</tt><tt class="py-op">,</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line">  <tt class="py-string">'  rM    :repeat mapped. All records with ZS:Z:R, even if no RNAME &amp; pos'</tt><tt class="py-op">,</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line">  <tt class="py-string">'  X     :not U'</tt><tt class="py-op">,</tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line">  <tt class="py-string">'  A     :any'</tt><tt class="py-op">,</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line">  <tt class="py-string">'LL = record location type of a PE read. note that some values are supersets'</tt><tt class="py-op">,</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line">  <tt class="py-string">'     of the others.'</tt><tt class="py-op">,</tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-186" class="py-name"><a title="SBLsamkit.LL_UX
+SBLsamkit.MultiProcess.LL_UX
+SBLsamkit.Operators.LL_UX
+SBLsamkit.Parser.LL_UX
+SBLsamkit.Processor.LL_UX
+SBLsamkit.Stats.LL_UX
+SBLsamkit.Stream.LL_UX" class="py-name" href="#" onclick="return doclink('link-186', 'LL_UX', 'link-0');">LL_UX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-187" class="py-name"><a title="SBLsamkit.LL_UNM
+SBLsamkit.MultiProcess.LL_UNM
+SBLsamkit.Operators.LL_UNM
+SBLsamkit.Parser.LL_UNM
+SBLsamkit.Processor.LL_UNM
+SBLsamkit.Stats.LL_UNM
+SBLsamkit.Stream.LL_UNM" class="py-name" href="#" onclick="return doclink('link-187', 'LL_UNM', 'link-1');">LL_UNM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-188" class="py-name"><a title="SBLsamkit.LL_URM
+SBLsamkit.MultiProcess.LL_URM
+SBLsamkit.Operators.LL_URM
+SBLsamkit.Parser.LL_URM
+SBLsamkit.Processor.LL_URM
+SBLsamkit.Stats.LL_URM
+SBLsamkit.Stream.LL_URM" class="py-name" href="#" onclick="return doclink('link-188', 'LL_URM', 'link-2');">LL_URM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-189" class="py-name"><a title="SBLsamkit.LL_UU
+SBLsamkit.MultiProcess.LL_UU
+SBLsamkit.Operators.LL_UU
+SBLsamkit.Parser.LL_UU
+SBLsamkit.Processor.LL_UU
+SBLsamkit.Stats.LL_UU
+SBLsamkit.Stream.LL_UU" class="py-name" href="#" onclick="return doclink('link-189', 'LL_UU', 'link-5');">LL_UU</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-190" class="py-name"><a title="SBLsamkit.LL_UUE
+SBLsamkit.MultiProcess.LL_UUE
+SBLsamkit.Operators.LL_UUE
+SBLsamkit.Parser.LL_UUE
+SBLsamkit.Processor.LL_UUE
+SBLsamkit.Stats.LL_UUE
+SBLsamkit.Stream.LL_UUE" class="py-name" href="#" onclick="return doclink('link-190', 'LL_UUE', 'link-6');">LL_UUE</a></tt><tt class="py-op">,</tt> <tt class="py-string">':both U, mapping to the same RNAME'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line">  <tt class="py-string">' ^%s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-191" class="py-name"><a title="SBLsamkit.LL_UUE
+SBLsamkit.MultiProcess.LL_UUE
+SBLsamkit.Operators.LL_UUE
+SBLsamkit.Parser.LL_UUE
+SBLsamkit.Processor.LL_UUE
+SBLsamkit.Stats.LL_UUE
+SBLsamkit.Stream.LL_UUE" class="py-name" href="#" onclick="return doclink('link-191', 'LL_UUE', 'link-6');">LL_UUE</a></tt><tt class="py-op">,</tt> <tt class="py-string">':not UUE'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-192" class="py-name"><a title="SBLsamkit.LL_UUD
+SBLsamkit.MultiProcess.LL_UUD
+SBLsamkit.Operators.LL_UUD
+SBLsamkit.Parser.LL_UUD
+SBLsamkit.Processor.LL_UUD
+SBLsamkit.Stats.LL_UUD
+SBLsamkit.Stream.LL_UUD" class="py-name" href="#" onclick="return doclink('link-192', 'LL_UUD', 'link-7');">LL_UUD</a></tt><tt class="py-op">,</tt> <tt class="py-string">':both U, mapping to different RNAMEs'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-193" class="py-name"><a title="SBLsamkit.LL_UA
+SBLsamkit.MultiProcess.LL_UA
+SBLsamkit.Operators.LL_UA
+SBLsamkit.Parser.LL_UA
+SBLsamkit.Processor.LL_UA
+SBLsamkit.Stats.LL_UA
+SBLsamkit.Stream.LL_UA" class="py-name" href="#" onclick="return doclink('link-193', 'LL_UA', 'link-8');">LL_UA</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':at least one U'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-194" class="py-name"><a title="SBLsamkit.LL_MX
+SBLsamkit.MultiProcess.LL_MX
+SBLsamkit.Operators.LL_MX
+SBLsamkit.Parser.LL_MX
+SBLsamkit.Processor.LL_MX
+SBLsamkit.Stats.LL_MX
+SBLsamkit.Stream.LL_MX" class="py-name" href="#" onclick="return doclink('link-194', 'LL_MX', 'link-11');">LL_MX</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-195" class="py-name"><a title="SBLsamkit.LL_MNM
+SBLsamkit.MultiProcess.LL_MNM
+SBLsamkit.Operators.LL_MNM
+SBLsamkit.Parser.LL_MNM
+SBLsamkit.Processor.LL_MNM
+SBLsamkit.Stats.LL_MNM
+SBLsamkit.Stream.LL_MNM" class="py-name" href="#" onclick="return doclink('link-195', 'LL_MNM', 'link-13');">LL_MNM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-196" class="py-name"><a title="SBLsamkit.LL_MRM
+SBLsamkit.MultiProcess.LL_MRM
+SBLsamkit.Operators.LL_MRM
+SBLsamkit.Parser.LL_MRM
+SBLsamkit.Processor.LL_MRM
+SBLsamkit.Stats.LL_MRM
+SBLsamkit.Stream.LL_MRM" class="py-name" href="#" onclick="return doclink('link-196', 'LL_MRM', 'link-14');">LL_MRM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-197" class="py-name"><a title="SBLsamkit.LL_MM
+SBLsamkit.MultiProcess.LL_MM
+SBLsamkit.Operators.LL_MM
+SBLsamkit.Parser.LL_MM
+SBLsamkit.Processor.LL_MM
+SBLsamkit.Stats.LL_MM
+SBLsamkit.Stream.LL_MM" class="py-name" href="#" onclick="return doclink('link-197', 'LL_MM', 'link-12');">LL_MM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-198" class="py-name"><a title="SBLsamkit.LL_MME
+SBLsamkit.MultiProcess.LL_MME
+SBLsamkit.Operators.LL_MME
+SBLsamkit.Parser.LL_MME
+SBLsamkit.Processor.LL_MME
+SBLsamkit.Stats.LL_MME
+SBLsamkit.Stream.LL_MME" class="py-name" href="#" onclick="return doclink('link-198', 'LL_MME', 'link-17');">LL_MME</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line">  <tt class="py-string">' ^%s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-199" class="py-name"><a title="SBLsamkit.LL_MME
+SBLsamkit.MultiProcess.LL_MME
+SBLsamkit.Operators.LL_MME
+SBLsamkit.Parser.LL_MME
+SBLsamkit.Processor.LL_MME
+SBLsamkit.Stats.LL_MME
+SBLsamkit.Stream.LL_MME" class="py-name" href="#" onclick="return doclink('link-199', 'LL_MME', 'link-17');">LL_MME</a></tt><tt class="py-op">,</tt> <tt class="py-string">':not MME'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-200" class="py-name"><a title="SBLsamkit.LL_MMD
+SBLsamkit.MultiProcess.LL_MMD
+SBLsamkit.Operators.LL_MMD
+SBLsamkit.Parser.LL_MMD
+SBLsamkit.Processor.LL_MMD
+SBLsamkit.Stats.LL_MMD
+SBLsamkit.Stream.LL_MMD" class="py-name" href="#" onclick="return doclink('link-200', 'LL_MMD', 'link-18');">LL_MMD</a></tt><tt class="py-op">,</tt> <tt class="py-string">':both M, mapping to different RNAMEs'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-201" class="py-name"><a title="SBLsamkit.LL_MA
+SBLsamkit.MultiProcess.LL_MA
+SBLsamkit.Operators.LL_MA
+SBLsamkit.Parser.LL_MA
+SBLsamkit.Processor.LL_MA
+SBLsamkit.Stats.LL_MA
+SBLsamkit.Stream.LL_MA" class="py-name" href="#" onclick="return doclink('link-201', 'LL_MA', 'link-19');">LL_MA</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':at least one record M'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-202" class="py-name"><a title="SBLsamkit.LL_NMNM
+SBLsamkit.MultiProcess.LL_NMNM
+SBLsamkit.Operators.LL_NMNM
+SBLsamkit.Parser.LL_NMNM
+SBLsamkit.Processor.LL_NMNM
+SBLsamkit.Stats.LL_NMNM
+SBLsamkit.Stream.LL_NMNM" class="py-name" href="#" onclick="return doclink('link-202', 'LL_NMNM', 'link-20');">LL_NMNM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-203" class="py-name"><a title="SBLsamkit.LL_RMRM
+SBLsamkit.MultiProcess.LL_RMRM
+SBLsamkit.Operators.LL_RMRM
+SBLsamkit.Parser.LL_RMRM
+SBLsamkit.Processor.LL_RMRM
+SBLsamkit.Stats.LL_RMRM
+SBLsamkit.Stream.LL_RMRM" class="py-name" href="#" onclick="return doclink('link-203', 'LL_RMRM', 'link-21');">LL_RMRM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-204" class="py-name"><a title="SBLsamkit.LL_NMRM
+SBLsamkit.MultiProcess.LL_NMRM
+SBLsamkit.Operators.LL_NMRM
+SBLsamkit.Parser.LL_NMRM
+SBLsamkit.Processor.LL_NMRM
+SBLsamkit.Stats.LL_NMRM
+SBLsamkit.Stream.LL_NMRM" class="py-name" href="#" onclick="return doclink('link-204', 'LL_NMRM', 'link-24');">LL_NMRM</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-205" class="py-name"><a title="SBLsamkit.LL_NMA
+SBLsamkit.MultiProcess.LL_NMA
+SBLsamkit.Operators.LL_NMA
+SBLsamkit.Parser.LL_NMA
+SBLsamkit.Processor.LL_NMA
+SBLsamkit.Stats.LL_NMA
+SBLsamkit.Stream.LL_NMA" class="py-name" href="#" onclick="return doclink('link-205', 'LL_NMA', 'link-27');">LL_NMA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line">  <tt class="py-string">'  %s'</tt> <tt class="py-op">%</tt> <tt id="link-206" class="py-name"><a title="SBLsamkit.LL_RMA
+SBLsamkit.MultiProcess.LL_RMA
+SBLsamkit.Operators.LL_RMA
+SBLsamkit.Parser.LL_RMA
+SBLsamkit.Processor.LL_RMA
+SBLsamkit.Stats.LL_RMA
+SBLsamkit.Stream.LL_RMA" class="py-name" href="#" onclick="return doclink('link-206', 'LL_RMA', 'link-28');">LL_RMA</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-207" class="py-name"><a title="SBLsamkit.LL_XX
+SBLsamkit.MultiProcess.LL_XX
+SBLsamkit.Operators.LL_XX
+SBLsamkit.Parser.LL_XX
+SBLsamkit.Processor.LL_XX
+SBLsamkit.Stats.LL_XX
+SBLsamkit.Stream.LL_XX" class="py-name" href="#" onclick="return doclink('link-207', 'LL_XX', 'link-9');">LL_XX</a></tt><tt class="py-op">,</tt> <tt class="py-string">':at least on record is X'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-208" class="py-name"><a title="SBLsamkit.LL_AA
+SBLsamkit.MultiProcess.LL_AA
+SBLsamkit.Operators.LL_AA
+SBLsamkit.Parser.LL_AA
+SBLsamkit.Processor.LL_AA
+SBLsamkit.Stats.LL_AA
+SBLsamkit.Stream.LL_AA" class="py-name" href="#" onclick="return doclink('link-208', 'LL_AA', 'link-33');">LL_AA</a></tt><tt class="py-op">,</tt> <tt class="py-string">':all records'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-209" class="py-name"><a title="SBLsamkit.LL_QC
+SBLsamkit.MultiProcess.LL_QC
+SBLsamkit.Operators.LL_QC
+SBLsamkit.Parser.LL_QC
+SBLsamkit.Processor.LL_QC
+SBLsamkit.Stats.LL_QC
+SBLsamkit.Stream.LL_QC" class="py-name" href="#" onclick="return doclink('link-209', 'LL_QC', 'link-31');">LL_QC</a></tt><tt class="py-op">,</tt>  </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line">          <tt class="py-string">':a record pair which has failed any QC test (not yet implemented)'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-210" class="py-name"><a title="SBLsamkit.LL_CLC1
+SBLsamkit.MultiProcess.LL_CLC1
+SBLsamkit.Operators.LL_CLC1
+SBLsamkit.Parser.LL_CLC1
+SBLsamkit.Processor.LL_CLC1
+SBLsamkit.Stats.LL_CLC1
+SBLsamkit.Stream.LL_CLC1" class="py-name" href="#" onclick="return doclink('link-210', 'LL_CLC1', 'link-32');">LL_CLC1</a></tt><tt class="py-op">,</tt> </tt>
+<a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line">          <tt class="py-string">': a record pair which is incompatible with SAM input into CLC Bio.'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line">  <tt class="py-string">'ss = strand mapping type of a PE read:  second column below is default LL'</tt><tt class="py-op">,</tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line">  <tt class="py-string">'     field where applicable:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line">  <tt class="py-string">'  s types:'</tt><tt class="py-op">,</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line">  <tt class="py-string">'  f  :record maps to forward strand'</tt><tt class="py-op">,</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line">  <tt class="py-string">'  r  :record maps to reverse strand'</tt><tt class="py-op">,</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line">  <tt class="py-string">'  x  :record not uniquely mapped'</tt><tt class="py-op">,</tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line">  <tt class="py-string">'  s  :record is either f or r'</tt><tt class="py-op">,</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">,</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line">  <tt class="py-string">'  ss:\tdefault LL'</tt><tt class="py-op">,</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-211" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FR
+SBLsamkit.Operators.SS_FR
+SBLsamkit.Parser.SS_FR
+SBLsamkit.Processor.SS_FR
+SBLsamkit.SS_FR
+SBLsamkit.Stats.SS_FR
+SBLsamkit.Stream.SS_FR" class="py-name" href="#" onclick="return doclink('link-211', 'SS_FR', 'link-34');">SS_FR</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':MME'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line">  <tt class="py-string">' ^%s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-212" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FR
+SBLsamkit.Operators.SS_FR
+SBLsamkit.Parser.SS_FR
+SBLsamkit.Processor.SS_FR
+SBLsamkit.SS_FR
+SBLsamkit.Stats.SS_FR
+SBLsamkit.Stream.SS_FR" class="py-name" href="#" onclick="return doclink('link-212', 'SS_FR', 'link-34');">SS_FR</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':AA      :not fr'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-213" class="py-name"><a title="SBLsamkit.MultiProcess.SS_RF
+SBLsamkit.Operators.SS_RF
+SBLsamkit.Parser.SS_RF
+SBLsamkit.Processor.SS_RF
+SBLsamkit.SS_RF
+SBLsamkit.Stats.SS_RF
+SBLsamkit.Stream.SS_RF" class="py-name" href="#" onclick="return doclink('link-213', 'SS_RF', 'link-35');">SS_RF</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':MME'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-214" class="py-name"><a title="SBLsamkit.MultiProcess.SS_SSD
+SBLsamkit.Operators.SS_SSD
+SBLsamkit.Parser.SS_SSD
+SBLsamkit.Processor.SS_SSD
+SBLsamkit.SS_SSD
+SBLsamkit.Stats.SS_SSD
+SBLsamkit.Stream.SS_SSD" class="py-name" href="#" onclick="return doclink('link-214', 'SS_SSD', 'link-36');">SS_SSD</a></tt><tt class="py-op">,</tt> <tt class="py-string">':MME     :read is either fr or rf'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-215" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FX
+SBLsamkit.Operators.SS_FX
+SBLsamkit.Parser.SS_FX
+SBLsamkit.Processor.SS_FX
+SBLsamkit.SS_FX
+SBLsamkit.Stats.SS_FX
+SBLsamkit.Stream.SS_FX" class="py-name" href="#" onclick="return doclink('link-215', 'SS_FX', 'link-37');">SS_FX</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':MX'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-216" class="py-name"><a title="SBLsamkit.MultiProcess.SS_RX
+SBLsamkit.Operators.SS_RX
+SBLsamkit.Parser.SS_RX
+SBLsamkit.Processor.SS_RX
+SBLsamkit.SS_RX
+SBLsamkit.Stats.SS_RX
+SBLsamkit.Stream.SS_RX" class="py-name" href="#" onclick="return doclink('link-216', 'SS_RX', 'link-38');">SS_RX</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':MX'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-217" class="py-name"><a title="SBLsamkit.MultiProcess.SS_FF
+SBLsamkit.Operators.SS_FF
+SBLsamkit.Parser.SS_FF
+SBLsamkit.Processor.SS_FF
+SBLsamkit.SS_FF
+SBLsamkit.Stats.SS_FF
+SBLsamkit.Stream.SS_FF" class="py-name" href="#" onclick="return doclink('link-217', 'SS_FF', 'link-39');">SS_FF</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':MM'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-218" class="py-name"><a title="SBLsamkit.MultiProcess.SS_RR
+SBLsamkit.Operators.SS_RR
+SBLsamkit.Parser.SS_RR
+SBLsamkit.Processor.SS_RR
+SBLsamkit.SS_RR
+SBLsamkit.Stats.SS_RR
+SBLsamkit.Stream.SS_RR" class="py-name" href="#" onclick="return doclink('link-218', 'SS_RR', 'link-40');">SS_RR</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':MM'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-219" class="py-name"><a title="SBLsamkit.MultiProcess.SS_SSE
+SBLsamkit.Operators.SS_SSE
+SBLsamkit.Parser.SS_SSE
+SBLsamkit.Processor.SS_SSE
+SBLsamkit.SS_SSE
+SBLsamkit.Stats.SS_SSE
+SBLsamkit.Stream.SS_SSE" class="py-name" href="#" onclick="return doclink('link-219', 'SS_SSE', 'link-41');">SS_SSE</a></tt><tt class="py-op">,</tt> <tt class="py-string">':MM      :record is either ff or rr'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line">  <tt class="py-string">'  %s\t%s'</tt> <tt class="py-op">%</tt> <tt class="py-op">(</tt><tt id="link-220" class="py-name"><a title="SBLsamkit.MultiProcess.SS_AA
+SBLsamkit.Operators.SS_AA
+SBLsamkit.Parser.SS_AA
+SBLsamkit.Processor.SS_AA
+SBLsamkit.SS_AA
+SBLsamkit.Stats.SS_AA
+SBLsamkit.Stream.SS_AA" class="py-name" href="#" onclick="return doclink('link-220', 'SS_AA', 'link-42');">SS_AA</a></tt><tt class="py-op">,</tt>  <tt class="py-string">':AA      :all records'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line">  <tt class="py-string">''</tt><tt class="py-op">)</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="SBLsamkit-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar  7 00:44:14 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
